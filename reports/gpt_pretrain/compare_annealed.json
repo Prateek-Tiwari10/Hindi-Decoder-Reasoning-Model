@@ -1,0 +1,109 @@
+{
+  "language": "hindi",
+  "split": "val",
+  "comparison": {
+    "requested_step": 1200,
+    "rows": [
+      {
+        "variant": "baseline",
+        "architecture": "24K / 448 / 7L",
+        "parameter_count": 27882176,
+        "step": 1200,
+        "tokens": 39321600,
+        "val_ce_nats_per_token": 4.344004774093628,
+        "val_ppl": 77.01535165261805,
+        "bytes_per_token": 10.862339,
+        "val_bpb": 0.5769543875571237,
+        "schedule_position": {
+          "lr_at_step": 0.00030000000000000003,
+          "peak_lr_seen": 0.0029849216154039233,
+          "fraction_of_peak_lr": 0.10050515177746255,
+          "run_final_step": 1200,
+          "is_runs_final_point": true,
+          "fully_annealed": true
+        }
+      },
+      {
+        "variant": "16k",
+        "architecture": "16K / 384 / 11L",
+        "parameter_count": 25860480,
+        "step": 1200,
+        "tokens": 39321600,
+        "val_ce_nats_per_token": 4.254228868484497,
+        "val_ppl": 70.40250665918816,
+        "bytes_per_token": 10.456195625,
+        "val_bpb": 0.5869778178876842,
+        "schedule_position": {
+          "lr_at_step": 0.00030000000000000003,
+          "peak_lr_seen": 0.0029849216154039233,
+          "fraction_of_peak_lr": 0.10050515177746255,
+          "run_final_step": 1200,
+          "is_runs_final_point": true,
+          "fully_annealed": true
+        }
+      }
+    ],
+    "runs_that_never_reached_that_step": [],
+    "winner": "baseline",
+    "note": "Validation loss at a matched step, converted to bits per byte so recipes with different vocabularies are on one axis. Perplexity is shown per row but must NOT be compared across rows: the 16K and 24K tokenizers cut the same text into differently sized pieces, so their per-token losses answer different questions. These are 50-batch validation estimates; the headline numbers come from lm.evaluate's full sequential pass over the test split.",
+    "schedule_warning": null
+  },
+  "runs": [
+    {
+      "language": "hindi",
+      "variant": "baseline",
+      "architecture": "24K / 448 / 7L",
+      "vocab_size": 24000,
+      "d_model": 448,
+      "n_layers": 7,
+      "n_heads": 8,
+      "d_k": 56,
+      "parameter_count": 27882176,
+      "bytes_per_token": 10.862339,
+      "bytes_per_token_measured_on": {
+        "language": "hindi",
+        "variant": "",
+        "split": "val",
+        "vocab_size": 24000,
+        "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_24000.model",
+        "tokens_measured": 8000000,
+        "utf8_bytes": 86898712,
+        "bytes_per_token": 10.862339
+      },
+      "log": "report/phase2/lr_sweep_24k.json",
+      "final": {
+        "step": 1200,
+        "val_loss": 4.344004774093628,
+        "lr": 0.00030000000000000003
+      }
+    },
+    {
+      "language": "hindi",
+      "variant": "16k",
+      "architecture": "16K / 384 / 11L",
+      "vocab_size": 16000,
+      "d_model": 384,
+      "n_layers": 11,
+      "n_heads": 6,
+      "d_k": 64,
+      "parameter_count": 25860480,
+      "bytes_per_token": 10.456195625,
+      "bytes_per_token_measured_on": {
+        "language": "hindi",
+        "variant": "16k",
+        "split": "val",
+        "vocab_size": 16000,
+        "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_16000.model",
+        "tokens_measured": 8000000,
+        "utf8_bytes": 83649565,
+        "bytes_per_token": 10.456195625
+      },
+      "log": "report/phase2/lr_sweep_16k_round1.json",
+      "final": {
+        "step": 1200,
+        "val_loss": 4.254228868484497,
+        "lr": 0.00030000000000000003
+      }
+    }
+  ]
+}

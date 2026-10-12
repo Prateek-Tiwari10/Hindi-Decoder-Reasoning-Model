@@ -1,0 +1,145 @@
+# Dataset build plan for the Hindi reasoning corpus.
+#
+# Sizes, mixtures and slice definitions live here rather than in hi.yaml so the
+# build plan is separate from the surface strings and name pools.
+
+# Master seed.  Everything below derives from it, so one number reproduces both
+# datasets byte for byte (invariant §8, check G7).
+seed: 20260910
+
+# The four domains that may appear in training.  `speed` is deliberately absent
+# and is named only by the xdom slice (§4, §12).
+core_domains: [height, age, wealth, weight]
+
+# Task-family mixture for the training pool (§8: relation-heavy).
+family_mix:
+  relation: 0.7
+  numeric: 0.2
+  mixed: 0.1
+
+# Question-type mixture, per family.
+#
+# `bound` is the numeric bound-question variant of pairwise (§6).  It is
+# recorded as question_type="pairwise" with question_variant="bound" so the
+# record schema in §3 keeps its three declared question_type values.
+question_mix:
+  relation:
+    extremum: 0.34
+    pairwise: 0.33
+    ordering: 0.33
+  numeric:
+    bound: 1.0
+  mixed:
+    bound: 0.4
+    extremum: 0.2
+    pairwise: 0.2
+    ordering: 0.2
+
+# Redundant non-consecutive premises (§5.3).
+#
+# Only the "add k redundant edges" mode is implemented.  The "replace
+# consecutive edges with a spanning set of non-consecutive edges" mode of
+# §5.3(b) is mathematically impossible under the §5.4 uniqueness gate: the
+# transitive reduction of a total order IS its chain of consecutive edges, so
+# dropping any one of them leaves the pair it covered underdetermined.  See
+# RESULTS_part1.md.
+nonconsecutive:
+  min_depth: 3        # depth 2 has no non-consecutive pair at all
+  k_min: 1
+  k_max: 2
+
+# From this depth up, a bound question's queried entity may not be directly
+# linked to the anchor entity by a stated premise -- so answering needs a real
+# chain rather than one hop.
+bound_nonadjacent_min_depth: 3
+
+# Attempts allowed to resolve a duplicate prompt before giving up on a record.
+max_resample_attempts: 40
+
+# ---------------------------------------------------------------------------
+# Splits and factored test slices (§8).
+#
+# Training mixes families, depths and question types in one pool.  Every test
+# slice isolates exactly ONE variable against the `rel_id_d23` floor, so each
+# claim in Part 3 is attributable to a single change.
+# ---------------------------------------------------------------------------
+slices:
+  train_mix:
+    split: train
+    size: 40000
+    depths: [2, 3]
+    pool: train
+    domains: core
+    families: {relation: 0.7, numeric: 0.2, mixed: 0.1}
+
+  val_mix:
+    split: val
+    size: 2000
+    depths: [2, 3]
+    pool: train
+    domains: core
+    families: {relation: 0.7, numeric: 0.2, mixed: 0.1}
+
+  rel_id_d23:            # in-distribution generalization -- the Part-1 floor
+    split: test
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: core
+    families: {relation: 1.0}
+
+  rel_ood_d4:            # depth OOD -- the headline claim
+    split: test
+    size: 1500
+    depths: [4]
+    pool: test
+    domains: core
+    families: {relation: 1.0}
+
+  rel_ood_d5:            # deeper OOD
+    split: test
+    size: 1500
+    depths: [5]
+    pool: test
+    domains: core
+    families: {relation: 1.0}
+
+  rel_ood_d6:            # stress depth
+    split: test
+    size: 1500
+    depths: [6]
+    pool: test
+    domains: core
+    families: {relation: 1.0}
+
+  num_id_d23:            # numeric capability
+    split: test
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: core
+    families: {numeric: 1.0}
+
+  num_ood_d4:            # numeric depth OOD
+    split: test
+    size: 1500
+    depths: [4]
+    pool: test
+    domains: core
+    families: {numeric: 1.0}
+
+  mix_ood_d4:            # hardest combination
+    split: test
+    size: 1500
+    depths: [4]
+    pool: test
+    domains: core
+    families: {mixed: 1.0}
+
+  xdom_d34:              # transfer to a surface template never trained on
+    split: test
+    size: 1500
+    depths: [3, 4]
+    pool: test
+    domains: [speed]
+    families: {relation: 1.0}

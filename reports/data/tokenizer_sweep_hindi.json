@@ -1,0 +1,90 @@
+{
+  "language": "hindi",
+  "swept_at": "2026-08-18 07:53:09",
+  "vocab_sizes": [
+    16000,
+    24000
+  ],
+  "model_types": [
+    "bpe",
+    "unigram"
+  ],
+  "train_chars_used": 800000000,
+  "d_model_assumed": 384,
+  "results": [
+    {
+      "eval_lines": 6066,
+      "tokens": 1753312,
+      "characters": 6878278,
+      "words": 1336329,
+      "chars_per_token": 3.9230199759084523,
+      "tokens_per_word": 1.3120361827065041,
+      "unk_rate": 0.0,
+      "model_type": "bpe",
+      "vocab_size": 16000,
+      "embedding_parameters": 6144000,
+      "train_seconds": 53.9,
+      "model_path": "hindi/tokenizer_sweep/hindi_bpe_16000.model"
+    },
+    {
+      "eval_lines": 6066,
+      "tokens": 1684900,
+      "characters": 6878278,
+      "words": 1336329,
+      "chars_per_token": 4.082306368330465,
+      "tokens_per_word": 1.260842202780902,
+      "unk_rate": 0.0,
+      "model_type": "bpe",
+      "vocab_size": 24000,
+      "embedding_parameters": 9216000,
+      "train_seconds": 50.8,
+      "model_path": "hindi/tokenizer_sweep/hindi_bpe_24000.model"
+    },
+    {
+      "eval_lines": 6066,
+      "tokens": 1727800,
+      "characters": 6878278,
+      "words": 1336329,
+      "chars_per_token": 3.9809457113091793,
+      "tokens_per_word": 1.2929450756512806,
+      "unk_rate": 0.0,
+      "model_type": "unigram",
+      "vocab_size": 16000,
+      "embedding_parameters": 6144000,
+      "train_seconds": 1077.4,
+      "model_path": "hindi/tokenizer_sweep/hindi_unigram_16000.model"
+    },
+    {
+      "eval_lines": 6066,
+      "tokens": 1668193,
+      "characters": 6878278,
+      "words": 1336329,
+      "chars_per_token": 4.123190781881952,
+      "tokens_per_word": 1.2483400420106125,
+      "unk_rate": 0.0,
+      "model_type": "unigram",
+      "vocab_size": 24000,
+      "embedding_parameters": 9216000,
+      "train_seconds": 1081.4,
+      "model_path": "hindi/tokenizer_sweep/hindi_unigram_24000.model"
+    }
+  ],
+  "chosen": {
+    "eval_lines": 6066,
+    "tokens": 1684900,
+    "characters": 6878278,
+    "words": 1336329,
+    "chars_per_token": 4.082306368330465,
+    "tokens_per_word": 1.260842202780902,
+    "unk_rate": 0.0,
+    "model_type": "bpe",
+    "vocab_size": 24000,
+    "embedding_parameters": 9216000,
+    "train_seconds": 50.8,
+    "model_path": "hindi/tokenizer_sweep/hindi_bpe_24000.model",
+    "embedding_share_of_budget": 0.3686,
+    "affordable_layers_at_d_model": 8,
+    "selection_note": "largest vocabulary whose embedding table stays within 50% of the 25M parameter budget, and whose fertility gain over the next size down exceeds 2%; leaves ~8 decoder layers at d_model=384"
+  },
+  "elapsed_seconds": 2290.0
+}

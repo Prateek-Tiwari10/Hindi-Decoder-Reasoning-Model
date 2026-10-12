@@ -1,0 +1,82 @@
+{
+  "hindi": {
+    "language": "hindi",
+    "eval_split": "val",
+    "eval_lines": 6066,
+    "note": "Measured by re-loading the saved model and re-reading the held-out val split. The test split is never read.",
+    "final": {
+      "eval_lines": 6066,
+      "tokens": 1676047,
+      "characters": 6878278,
+      "words": 1336329,
+      "chars_per_token": 4.103869402230367,
+      "tokens_per_word": 1.2542173371976513,
+      "unk_rate": 0.0,
+      "vocab_size_loaded": 24000,
+      "model_path": "hindi/tokenizer/hindi_bpe_24000.model",
+      "bytes_per_token": 10.455688891779287,
+      "reported_tokens_per_word": 1.2542173371976513,
+      "reported_chars_per_token": 4.103869402230367,
+      "matches_training_report": true
+    },
+    "chosen": {
+      "model_type": "bpe",
+      "vocab_size": 24000,
+      "trained_on": "complete corpus"
+    },
+    "sweep_candidates": [
+      {
+        "eval_lines": 6066,
+        "tokens": 1753312,
+        "characters": 6878278,
+        "words": 1336329,
+        "chars_per_token": 3.9230199759084523,
+        "tokens_per_word": 1.3120361827065041,
+        "unk_rate": 0.0,
+        "vocab_size_loaded": 16000,
+        "model_path": "sweep_outputs/hindi_tokenizer_sweep/hindi_bpe_16000.model",
+        "bytes_per_token": 9.99492731470497,
+        "name": "hindi_bpe_16000"
+      },
+      {
+        "eval_lines": 6066,
+        "tokens": 1684900,
+        "characters": 6878278,
+        "words": 1336329,
+        "chars_per_token": 4.082306368330465,
+        "tokens_per_word": 1.260842202780902,
+        "unk_rate": 0.0,
+        "vocab_size_loaded": 24000,
+        "model_path": "sweep_outputs/hindi_tokenizer_sweep/hindi_bpe_24000.model",
+        "bytes_per_token": 10.400751379903852,
+        "name": "hindi_bpe_24000"
+      },
+      {
+        "eval_lines": 6066,
+        "tokens": 1727800,
+        "characters": 6878278,
+        "words": 1336329,
+        "chars_per_token": 3.9809457113091793,
+        "tokens_per_word": 1.2929450756512806,
+        "unk_rate": 0.0,
+        "vocab_size_loaded": 16000,
+        "model_path": "sweep_outputs/hindi_tokenizer_sweep/hindi_unigram_16000.model",
+        "bytes_per_token": 10.14250839217502,
+        "name": "hindi_unigram_16000"
+      },
+      {
+        "eval_lines": 6066,
+        "tokens": 1668193,
+        "characters": 6878278,
+        "words": 1336329,
+        "chars_per_token": 4.123190781881952,
+        "tokens_per_word": 1.2483400420106125,
+        "unk_rate": 0.0,
+        "vocab_size_loaded": 24000,
+        "model_path": "sweep_outputs/hindi_tokenizer_sweep/hindi_unigram_24000.model",
+        "bytes_per_token": 10.504915198661067,
+        "name": "hindi_unigram_24000"
+      }
+    ]
+  }
+}

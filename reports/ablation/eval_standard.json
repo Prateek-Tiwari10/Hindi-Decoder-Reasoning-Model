@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "language": "hindi",
+      "split": "test",
+      "checkpoint": "hindi/model/final_16k.pt",
+      "tokens_in_split": 35903951,
+      "tokens_scored": 2048000,
+      "utf8_bytes": 20605518,
+      "bytes_per_token": 10.0612880859375,
+      "total_ce_nats": 6903089.916015625,
+      "mean_ce_nats": 3.3706493730545044,
+      "perplexity": 29.097416002055034,
+      "bits_per_token": 4.862819135081227,
+      "bits_per_byte": 0.48331973933615036
+    }
+  ],
+  "table_markdown": "| Model | Split | Tokens | UTF-8 bytes | CE (nats/tok) | PPL | BPB |\n|---|---|---:|---:|---:|---:|---:|\n| Hindi | test | 2,048,000 | 20,605,518 | 3.3706 | 29.10 | 0.4833 |\n"
+}

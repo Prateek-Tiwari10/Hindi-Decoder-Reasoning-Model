@@ -1,0 +1,95 @@
+{
+  "chars_per_token_measured": 4.166,
+  "splits": {
+    "test": {
+      "documents": 3191,
+      "characters": 6792609,
+      "tokens": 1630487
+    },
+    "train": {
+      "documents": 1449618,
+      "characters": 3092748076,
+      "tokens": 742378318
+    },
+    "val": {
+      "documents": 3167,
+      "characters": 6879643,
+      "tokens": 1651378
+    }
+  },
+  "by_source_type": {
+    "manual": {
+      "documents": 240741,
+      "characters": 518744845,
+      "tokens": 124518685
+    },
+    "public": {
+      "documents": 1215235,
+      "characters": 2587675483,
+      "tokens": 621141498
+    }
+  },
+  "by_source": {
+    "sangraha_verified": {
+      "characters": 2390719546,
+      "tokens": 573864509
+    },
+    "BBC Hindi": {
+      "characters": 243628554,
+      "tokens": 58480209
+    },
+    "Hindustan (Live Hindustan)": {
+      "characters": 204120709,
+      "tokens": 48996809
+    },
+    "wikipedia": {
+      "characters": 196955937,
+      "tokens": 47276989
+    },
+    "ABP Live Hindi": {
+      "characters": 35338639,
+      "tokens": 8482630
+    },
+    "Dainik Bhaskar": {
+      "characters": 24959154,
+      "tokens": 5991155
+    },
+    "Prabhat Khabar": {
+      "characters": 7415455,
+      "tokens": 1779993
+    },
+    "Patrika": {
+      "characters": 2706730,
+      "tokens": 649719
+    },
+    "Aaj Tak": {
+      "characters": 462959,
+      "tokens": 111127
+    },
+    "Navbharat Times": {
+      "characters": 65328,
+      "tokens": 15681
+    },
+    "Amar Ujala": {
+      "characters": 47317,
+      "tokens": 11357
+    }
+  },
+  "train_manual_tokens": 123958116,
+  "train_public_tokens": 618420202,
+  "train_total_tokens": 742378318,
+  "manual_share": 0.167,
+  "meets_floor": false,
+  "comfortable": false,
+  "language": "hindi",
+  "assembly_plan": {
+    "feasible": true,
+    "target_tokens": 500000000,
+    "manual_tokens": 123958116,
+    "public_tokens_kept": 376041884,
+    "public_tokens_discarded": 242378318,
+    "public_keep_fraction": 0.6081,
+    "total_tokens": 500000000,
+    "manual_share": 0.2479
+  }
+}

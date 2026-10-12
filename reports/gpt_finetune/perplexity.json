@@ -1,0 +1,149 @@
+{
+  "hindi": {
+    "pretrained": {
+      "in-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 92459,
+        "utf8_bytes": 705663,
+        "mean_ce_nats": 2.861985415440412,
+        "perplexity": 17.49622976013439,
+        "bits_per_token": 4.128972165952423,
+        "bits_per_byte": 0.5409956841889046
+      },
+      "in-domain d4-6": {
+        "n_examples": 1500,
+        "supervised_tokens": 159692,
+        "utf8_bytes": 1246277,
+        "mean_ce_nats": 2.7281960242049528,
+        "perplexity": 15.305251796986218,
+        "bits_per_token": 3.935954874693472,
+        "bits_per_byte": 0.5043345145979183
+      },
+      "cross-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 74269,
+        "utf8_bytes": 591037,
+        "mean_ce_nats": 3.0427518176927175,
+        "perplexity": 20.96284987843564,
+        "bits_per_token": 4.389762958041163,
+        "bits_per_byte": 0.5516123442876827
+      }
+    },
+    "ft_10k": {
+      "in-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 92459,
+        "utf8_bytes": 705663,
+        "mean_ce_nats": 0.01813479921280049,
+        "perplexity": 1.0183002332083615,
+        "bits_per_token": 0.026162984891824344,
+        "bits_per_byte": 0.003427986758712285
+      },
+      "in-domain d4-6": {
+        "n_examples": 1500,
+        "supervised_tokens": 159692,
+        "utf8_bytes": 1246277,
+        "mean_ce_nats": 0.8902296266730048,
+        "perplexity": 2.435688886215206,
+        "bits_per_token": 1.2843298676535773,
+        "bits_per_byte": 0.16456791325310108
+      },
+      "cross-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 74269,
+        "utf8_bytes": 591037,
+        "mean_ce_nats": 0.18647489139018464,
+        "perplexity": 1.2049943659724884,
+        "bits_per_token": 0.26902640105892744,
+        "bits_per_byte": 0.03380553464545449
+      }
+    },
+    "ft_30k": {
+      "in-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 92459,
+        "utf8_bytes": 705663,
+        "mean_ce_nats": 0.02611562820502542,
+        "perplexity": 1.0264596292963513,
+        "bits_per_token": 0.03767688730109011,
+        "bits_per_byte": 0.004936587752186937
+      },
+      "in-domain d4-6": {
+        "n_examples": 1500,
+        "supervised_tokens": 159692,
+        "utf8_bytes": 1246277,
+        "mean_ce_nats": 1.414135345854758,
+        "perplexity": 4.112928667240993,
+        "bits_per_token": 2.0401660506104586,
+        "bits_per_byte": 0.2614171624398792
+      },
+      "cross-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 74269,
+        "utf8_bytes": 591037,
+        "mean_ce_nats": 0.2834239474911212,
+        "perplexity": 1.327667903999103,
+        "bits_per_token": 0.4088943235146145,
+        "bits_per_byte": 0.05138116989817373
+      }
+    },
+    "ft_50k": {
+      "in-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 92459,
+        "utf8_bytes": 705663,
+        "mean_ce_nats": 0.01990317688696579,
+        "perplexity": 1.0201025657389868,
+        "bits_per_token": 0.028714214592761383,
+        "bits_per_byte": 0.0037622598422081426
+      },
+      "in-domain d4-6": {
+        "n_examples": 1500,
+        "supervised_tokens": 159692,
+        "utf8_bytes": 1246277,
+        "mean_ce_nats": 1.0995579266244782,
+        "perplexity": 3.0028382556387316,
+        "bits_per_token": 1.5863267679112854,
+        "bits_per_byte": 0.20326435794072184
+      },
+      "cross-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 74269,
+        "utf8_bytes": 591037,
+        "mean_ce_nats": 0.2177740602884935,
+        "perplexity": 1.2433061236551652,
+        "bits_per_token": 0.31418155681246374,
+        "bits_per_byte": 0.039479677317841126
+      }
+    },
+    "ft_60k": {
+      "in-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 92459,
+        "utf8_bytes": 705663,
+        "mean_ce_nats": 0.018782761327470105,
+        "perplexity": 1.018960266996191,
+        "bits_per_token": 0.027097796621342124,
+        "bits_per_byte": 0.003550469810394865
+      },
+      "in-domain d4-6": {
+        "n_examples": 1500,
+        "supervised_tokens": 159692,
+        "utf8_bytes": 1246277,
+        "mean_ce_nats": 1.0856853888038582,
+        "perplexity": 2.9614688809257697,
+        "bits_per_token": 1.5663129263929325,
+        "bits_per_byte": 0.20069987959461674
+      },
+      "cross-domain d2-3": {
+        "n_examples": 1500,
+        "supervised_tokens": 74269,
+        "utf8_bytes": 591037,
+        "mean_ce_nats": 0.2288017037497369,
+        "perplexity": 1.257092737516798,
+        "bits_per_token": 0.3300910833466912,
+        "bits_per_byte": 0.04147884932597352
+      }
+    }
+  }
+}

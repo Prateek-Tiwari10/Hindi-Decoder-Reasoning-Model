@@ -1,0 +1,35 @@
+{
+  "language": "hindi",
+  "swept_at": "2026-08-23 20:23:30",
+  "results": [
+    {
+      "eval_lines": 20000,
+      "tokens": 5490483,
+      "characters": 22456038,
+      "words": 4303888,
+      "chars_per_token": 4.089993175463798,
+      "tokens_per_word": 1.275703038740785,
+      "unk_rate": 0.0,
+      "model_type": "bpe",
+      "vocab_size": 16000,
+      "embedding_parameters": 6144000,
+      "train_seconds": 427.4,
+      "model_path": "/home/prateek/LMA_project1/tokenizers/hindi/tokenizer/hindi_bpe_16000.model"
+    }
+  ],
+  "chosen": {
+    "eval_lines": 20000,
+    "tokens": 5490483,
+    "characters": 22456038,
+    "words": 4303888,
+    "chars_per_token": 4.089993175463798,
+    "tokens_per_word": 1.275703038740785,
+    "unk_rate": 0.0,
+    "model_type": "bpe",
+    "vocab_size": 16000,
+    "embedding_parameters": 6144000,
+    "train_seconds": 427.4,
+    "model_path": "/home/prateek/LMA_project1/tokenizers/hindi/tokenizer/hindi_bpe_16000.model"
+  },
+  "selection_note": "16,000-token BPE from the Phase 1 sweep, selected for the Model2 / Model3 variants rather than by the Phase 1 rule that chose 24,000. The smaller vocabulary frees ~3.1M embedding parameters at d_model=384, which the variants spend on depth."
+}

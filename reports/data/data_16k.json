@@ -1,0 +1,112 @@
+{
+  "hindi": {
+    "language": "hindi",
+    "variant": "384x11",
+    "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_16000.model",
+    "tokenizer_vocab": 16000,
+    "expected_vocab": 16000,
+    "splits": {
+      "train": {
+        "language": "hindi",
+        "variant": "384x11",
+        "vocab_size": 16000,
+        "split": "train",
+        "path": "hindi/data/bin/train_16k.bin",
+        "tokens": 528404893,
+        "bytes": 1056809786,
+        "dtype": "uint16",
+        "max_token_id": 15999,
+        "min_token_id": 2,
+        "sha1_head_64mb": "fed26595988c369ba075c7bfc958053f262fd67d",
+        "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_16000.model",
+        "tokenizer_md5": "e50d13a005839869fb9b466ef89d2aa7",
+        "checks": {
+          "ids_within_vocab": true,
+          "y_is_x_shifted_by_one": true,
+          "shapes": [
+            [
+              4,
+              512
+            ],
+            [
+              4,
+              512
+            ]
+          ]
+        },
+        "decoded_samples": [
+          "हान\" है। एक असामान्य व्यक्ति उसका बेटा था - एक ग्रामीण डॉक्टरFedor Solonitsyn। हर प्रांतीय चिकित्सक न्यू यॉर्क में कृत्रिम निद्रावस्था का समाज में ले जा। डॉक्टर, जो सम्मोहन के माध्यम से लोगों के इलाज ",
+          "ो में बढ़ोतरी की जाएगी। इसलिए उम्मीद किया जा सकता है कि ओला S1 और S1 Pro की कीमतें लगभग 5,000 रुपये से 7,000 रुपये तक महंगी हो जाएंगी। ओला एस1 और एस1 प्रो इलेक्ट्रिक स्कूटर की मौजूदा कीमत दिल्ली में ए"
+        ]
+      },
+      "val": {
+        "language": "hindi",
+        "variant": "384x11",
+        "vocab_size": 16000,
+        "split": "val",
+        "path": "hindi/data/bin/val_16k.bin",
+        "tokens": 35779979,
+        "bytes": 71559958,
+        "dtype": "uint16",
+        "max_token_id": 15999,
+        "min_token_id": 2,
+        "sha1_head_64mb": "c680f3a7fa6157dab4cb2eb197c7bf5679d7c960",
+        "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_16000.model",
+        "tokenizer_md5": "e50d13a005839869fb9b466ef89d2aa7",
+        "checks": {
+          "ids_within_vocab": true,
+          "y_is_x_shifted_by_one": true,
+          "shapes": [
+            [
+              4,
+              512
+            ],
+            [
+              4,
+              512
+            ]
+          ]
+        },
+        "decoded_samples": [
+          "ित प्रति देखी और देखा कि देश के नाम के अक्षरों के बीच में काफी जगह है और उसके कैपिटल अक्षर कैसलोन टाइप फेस में हैं। उन्होंने विमान के पॉलिश किये हुए एल्यूमीनियम धड़ को नीचे के हिस्से में दिखाना पसंद क",
+          "खरीदी गई कई प्रॉपर्टी बिक्री के लिए बाजार में आ रही हैं. दोबारा बिकने वाली 60% से ज्यादा प्रॉपर्टी इसी दशक में खरीदी गई थीं. इनमें करीब 89% रिहायशी प्रॉपर्टी हैं. यानी विदेश में रहने वाले भारतीय अब भा"
+        ]
+      },
+      "test": {
+        "language": "hindi",
+        "variant": "384x11",
+        "vocab_size": 16000,
+        "split": "test",
+        "path": "hindi/data/bin/test_16k.bin",
+        "tokens": 35903951,
+        "bytes": 71807902,
+        "dtype": "uint16",
+        "max_token_id": 15999,
+        "min_token_id": 2,
+        "sha1_head_64mb": "4e2e425dba27df23d9f730a12e51e845285bf21c",
+        "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_16000.model",
+        "tokenizer_md5": "e50d13a005839869fb9b466ef89d2aa7",
+        "checks": {
+          "ids_within_vocab": true,
+          "y_is_x_shifted_by_one": true,
+          "shapes": [
+            [
+              4,
+              512
+            ],
+            [
+              4,
+              512
+            ]
+          ]
+        },
+        "decoded_samples": [
+          "आज हम रूसी संघ के साथ बात कर सकते हैं कि कई मुद्दे हैं जो यूक्रेनी राज्य के लिए मौलिक हैंः यूक्रेन कभी भी जनमत संग्रह और क्रीमिया के कब्जे को मान्यता नहीं देगा। आज, रूसी संघ के साथ हमारे संबंध सबसे कठ",
+          "प्राचीर तथा अपर तीन दिशाओं में प्राकार और परिवादि निर्माण किये थे। मिरटू-इ-सिर्फ। हरि नामक मुसलमानी इतिहास पढ़नेसे मालूम होता है, कि अहमदनगरराज सुलतान बहादुरकी आज्ञासे 1526 ई0 में यहांका गढ़ और परिखा "
+        ]
+      }
+    },
+    "total_tokens": 600088823,
+    "all_checks_passed": true
+  }
+}

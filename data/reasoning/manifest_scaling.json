@@ -1,0 +1,515 @@
+{
+  "subset_seed": 20260912,
+  "master_seed": 20260910,
+  "sizes": [
+    10000,
+    30000,
+    50000,
+    60000
+  ],
+  "unseen_domains": [
+    "speed",
+    "strength",
+    "diligence",
+    "temperature"
+  ],
+  "languages": {
+    "hi": {
+      "train": {
+        "10k": {
+          "path": "phase3/data_perf/train/hi/train_10k.jsonl",
+          "records": 10000,
+          "sha256": "26dabc54491885ed3a23f3fe4b69eeb51046addb78b31746dbee5fb09e749d09",
+          "recurrence": {
+            "name_slots": 24994,
+            "pool_size": 3675,
+            "names_used": 3667,
+            "names_unused": 8,
+            "min": 0,
+            "median": 7,
+            "mean": 6.8,
+            "max": 18,
+            "headroom_vs_memorization": 66.9
+          },
+          "family_pct": {
+            "mixed": 20.01,
+            "numeric": 29.67,
+            "relation": 50.32
+          },
+          "depth_pct": {
+            "2": 50.06,
+            "3": 49.94
+          },
+          "domain_pct": {
+            "age": 24.76,
+            "height": 24.98,
+            "wealth": 24.55,
+            "weight": 25.71
+          }
+        },
+        "30k": {
+          "path": "phase3/data_perf/train/hi/train_30k.jsonl",
+          "records": 30000,
+          "sha256": "52f8d9384eaca2372666f60f4ec5eb797b0266a370062bd9549abd24e4511d30",
+          "recurrence": {
+            "name_slots": 74771,
+            "pool_size": 3675,
+            "names_used": 3675,
+            "names_unused": 0,
+            "min": 7,
+            "median": 20,
+            "mean": 20.35,
+            "max": 40,
+            "headroom_vs_memorization": 22.4
+          },
+          "family_pct": {
+            "mixed": 19.77,
+            "numeric": 30.06,
+            "relation": 50.17
+          },
+          "depth_pct": {
+            "2": 50.76,
+            "3": 49.24
+          },
+          "domain_pct": {
+            "age": 25.12,
+            "height": 24.92,
+            "wealth": 24.77,
+            "weight": 25.2
+          }
+        },
+        "50k": {
+          "path": "phase3/data_perf/train/hi/train_50k.jsonl",
+          "records": 50000,
+          "sha256": "e022550b48ee3326f715d0837b842f34e4f4bfc1197fa010634a781062c128fe",
+          "recurrence": {
+            "name_slots": 124785,
+            "pool_size": 3675,
+            "names_used": 3675,
+            "names_unused": 0,
+            "min": 15,
+            "median": 34,
+            "mean": 33.96,
+            "max": 59,
+            "headroom_vs_memorization": 13.4
+          },
+          "family_pct": {
+            "mixed": 19.87,
+            "numeric": 29.87,
+            "relation": 50.26
+          },
+          "depth_pct": {
+            "2": 50.43,
+            "3": 49.57
+          },
+          "domain_pct": {
+            "age": 24.99,
+            "height": 25.15,
+            "wealth": 24.92,
+            "weight": 24.94
+          }
+        },
+        "60k": {
+          "path": "phase3/data_perf/train/hi/train_60k.jsonl",
+          "records": 60000,
+          "sha256": "46f1c3b6889fcab72450691d57163038799d80317b72acf0d63faa120a668632",
+          "recurrence": {
+            "name_slots": 149788,
+            "pool_size": 3675,
+            "names_used": 3675,
+            "names_unused": 0,
+            "min": 20,
+            "median": 41,
+            "mean": 40.76,
+            "max": 66,
+            "headroom_vs_memorization": 11.2
+          },
+          "family_pct": {
+            "mixed": 19.93,
+            "numeric": 29.82,
+            "relation": 50.25
+          },
+          "depth_pct": {
+            "2": 50.35,
+            "3": 49.65
+          },
+          "domain_pct": {
+            "age": 25.0,
+            "height": 25.19,
+            "wealth": 24.86,
+            "weight": 24.96
+          }
+        }
+      },
+      "validation": {
+        "val_mix": {
+          "path": "phase3/data_perf/validation/hi/val_mix.jsonl",
+          "records": 2000,
+          "sha256": "350b16f22a628e9da5e7f3101e98cc3135b85960493752bb0057caceebf80f47"
+        },
+        "val_heldout": {
+          "path": "phase3/data_perf/validation/hi/val_heldout.jsonl",
+          "records": 1500,
+          "sha256": "2d16d0725966b3d19417d397b8c61efbf539fd083457c5703648bcbadadc2295"
+        }
+      },
+      "test": {
+        "in_domain/rel_id_d23": {
+          "path": "phase3/data_perf/test/hi/in_domain/rel_id_d23.jsonl",
+          "records": 1500,
+          "sha256": "bd42971a9f0493cfbbe5033de64f39b4808dfc7d0f5089afb81808c83f2641df",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            2,
+            3
+          ],
+          "domains": [
+            "age",
+            "height",
+            "wealth",
+            "weight"
+          ],
+          "unseen_domain": false
+        },
+        "in_domain/num_id_d23": {
+          "path": "phase3/data_perf/test/hi/in_domain/num_id_d23.jsonl",
+          "records": 1500,
+          "sha256": "397bed0b74af8a6ee626db5b25064869dafd29fe29b98742636a0eacc6260bae",
+          "family": [
+            "numeric"
+          ],
+          "depths": [
+            2,
+            3
+          ],
+          "domains": [
+            "age",
+            "height",
+            "wealth",
+            "weight"
+          ],
+          "unseen_domain": false
+        },
+        "in_domain/mix_id_d23": {
+          "path": "phase3/data_perf/test/hi/in_domain/mix_id_d23.jsonl",
+          "records": 1500,
+          "sha256": "a07b57734c41708cfb931c4cfde1c2421e842775d823f621112c8e4e00736e28",
+          "family": [
+            "mixed"
+          ],
+          "depths": [
+            2,
+            3
+          ],
+          "domains": [
+            "age",
+            "height",
+            "wealth",
+            "weight"
+          ],
+          "unseen_domain": false
+        },
+        "in_domain/rel_ood_d4": {
+          "path": "phase3/data_perf/test/hi/in_domain/rel_ood_d4.jsonl",
+          "records": 1500,
+          "sha256": "d98727150c2f5c65187cfcbff3079cebed43d99eb22d282e32260c03daf9f392",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            4
+          ],
+          "domains": [
+            "age",
+            "height",
+            "wealth",
+            "weight"
+          ],
+          "unseen_domain": false
+        },
+        "in_domain/rel_ood_d5": {
+          "path": "phase3/data_perf/test/hi/in_domain/rel_ood_d5.jsonl",
+          "records": 1500,
+          "sha256": "b7fa4bfcc82afa507170f2ad8ab186311ca22e70cfe1c811b93c8ad909062334",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            5
+          ],
+          "domains": [
+            "age",
+            "height",
+            "wealth",
+            "weight"
+          ],
+          "unseen_domain": false
+        },
+        "in_domain/rel_ood_d6": {
+          "path": "phase3/data_perf/test/hi/in_domain/rel_ood_d6.jsonl",
+          "records": 1500,
+          "sha256": "7d8db9b98b0e669c87a5ed19293a722e18f9f4b6ccaa56e619bcd747cc8625be",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            6
+          ],
+          "domains": [
+            "age",
+            "height",
+            "wealth",
+            "weight"
+          ],
+          "unseen_domain": false
+        },
+        "cross_domain/speed/xdom_speed_id_d23": {
+          "path": "phase3/data_perf/test/hi/cross_domain/speed/xdom_speed_id_d23.jsonl",
+          "records": 1500,
+          "sha256": "81750b99e40fb58f93655ea6a1164bef78e5ecb19c2c187c12d98d6d29a9341f",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            2,
+            3
+          ],
+          "domains": [
+            "speed"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/speed/xdom_speed_ood_d4": {
+          "path": "phase3/data_perf/test/hi/cross_domain/speed/xdom_speed_ood_d4.jsonl",
+          "records": 1500,
+          "sha256": "ba3fb27386590887b0c77a0c219c6879832b5e4f47455ea3bfd01f4984d0ca17",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            4
+          ],
+          "domains": [
+            "speed"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/speed/xdom_speed_ood_d5": {
+          "path": "phase3/data_perf/test/hi/cross_domain/speed/xdom_speed_ood_d5.jsonl",
+          "records": 1500,
+          "sha256": "f1d1dce7ff17edcd0a66f96b1fd63347f933434a0d9a2b1e2aae10e543e81b92",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            5
+          ],
+          "domains": [
+            "speed"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/speed/xdom_speed_ood_d6": {
+          "path": "phase3/data_perf/test/hi/cross_domain/speed/xdom_speed_ood_d6.jsonl",
+          "records": 1500,
+          "sha256": "1272e2a55c5bfe3a6f5857e1a4c9854e345059fdd315b2c0b3b63ecf624b6883",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            6
+          ],
+          "domains": [
+            "speed"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/strength/xdom_strength_id_d23": {
+          "path": "phase3/data_perf/test/hi/cross_domain/strength/xdom_strength_id_d23.jsonl",
+          "records": 1500,
+          "sha256": "1916662c05f3713675cb7310785f5e67f70f16c4b3657a9e3124bceba1251734",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            2,
+            3
+          ],
+          "domains": [
+            "strength"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/strength/xdom_strength_ood_d4": {
+          "path": "phase3/data_perf/test/hi/cross_domain/strength/xdom_strength_ood_d4.jsonl",
+          "records": 1500,
+          "sha256": "e46bf1387f1dd756df55d9eda113de5b5e827eb8e80562a01b14f1e638cb147b",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            4
+          ],
+          "domains": [
+            "strength"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/strength/xdom_strength_ood_d5": {
+          "path": "phase3/data_perf/test/hi/cross_domain/strength/xdom_strength_ood_d5.jsonl",
+          "records": 1500,
+          "sha256": "d1b22d058a28b63e09b7366352267fbdec7a2f9d6bf7e046a7215745fafbb09f",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            5
+          ],
+          "domains": [
+            "strength"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/strength/xdom_strength_ood_d6": {
+          "path": "phase3/data_perf/test/hi/cross_domain/strength/xdom_strength_ood_d6.jsonl",
+          "records": 1500,
+          "sha256": "28a5b8c4ab32518892d0517da3bb319365f05cc51c1380cc645f1a1e70a3ad39",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            6
+          ],
+          "domains": [
+            "strength"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/diligence/xdom_diligence_id_d23": {
+          "path": "phase3/data_perf/test/hi/cross_domain/diligence/xdom_diligence_id_d23.jsonl",
+          "records": 1500,
+          "sha256": "eecd912893d10966367a48e7bf1d91439a0bd3c4b4de8b2caa6145bb7efa6377",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            2,
+            3
+          ],
+          "domains": [
+            "diligence"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/diligence/xdom_diligence_ood_d4": {
+          "path": "phase3/data_perf/test/hi/cross_domain/diligence/xdom_diligence_ood_d4.jsonl",
+          "records": 1500,
+          "sha256": "4f29926b53ccf18ac55696e1aceb1fbd2a2c1f07f29ff0d270356a7228e8a243",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            4
+          ],
+          "domains": [
+            "diligence"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/diligence/xdom_diligence_ood_d5": {
+          "path": "phase3/data_perf/test/hi/cross_domain/diligence/xdom_diligence_ood_d5.jsonl",
+          "records": 1500,
+          "sha256": "f17d6f2ebe72733db3f7c7bd820dfb8d54a9778de1bba0779adbc1d492219cd7",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            5
+          ],
+          "domains": [
+            "diligence"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/diligence/xdom_diligence_ood_d6": {
+          "path": "phase3/data_perf/test/hi/cross_domain/diligence/xdom_diligence_ood_d6.jsonl",
+          "records": 1500,
+          "sha256": "62c40319d37de30ef2a126d237d20ec022520c400ade46fed4f65ae7db3d0ded",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            6
+          ],
+          "domains": [
+            "diligence"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/temperature/xdom_temperature_id_d23": {
+          "path": "phase3/data_perf/test/hi/cross_domain/temperature/xdom_temperature_id_d23.jsonl",
+          "records": 1500,
+          "sha256": "d287981de38b0ec48e00cce157e1d8cd7471096c3daf8c6e366e0e24cc4ea7d3",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            2,
+            3
+          ],
+          "domains": [
+            "temperature"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/temperature/xdom_temperature_ood_d4": {
+          "path": "phase3/data_perf/test/hi/cross_domain/temperature/xdom_temperature_ood_d4.jsonl",
+          "records": 1500,
+          "sha256": "dd953687810bba51632d301f11705f21edf26993706b58d7da14d877d29671c2",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            4
+          ],
+          "domains": [
+            "temperature"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/temperature/xdom_temperature_ood_d5": {
+          "path": "phase3/data_perf/test/hi/cross_domain/temperature/xdom_temperature_ood_d5.jsonl",
+          "records": 1500,
+          "sha256": "4ad01072bb387509200df168731b11ccc890807f3d79551532101600cd17494a",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            5
+          ],
+          "domains": [
+            "temperature"
+          ],
+          "unseen_domain": true
+        },
+        "cross_domain/temperature/xdom_temperature_ood_d6": {
+          "path": "phase3/data_perf/test/hi/cross_domain/temperature/xdom_temperature_ood_d6.jsonl",
+          "records": 1500,
+          "sha256": "fb2804898821b7bc2f0f7853ad4b54b12fb48a29a4b72e0485fa9f1e24bead52",
+          "family": [
+            "relation"
+          ],
+          "depths": [
+            6
+          ],
+          "domains": [
+            "temperature"
+          ],
+          "unseen_domain": true
+        }
+      }
+    }
+  }
+}

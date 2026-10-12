@@ -1,0 +1,243 @@
+# Hindi given-name pool -- TRAIN side.
+#
+# Format: <name>\t<gender>   where gender is `m` or `f`.
+# Lines beginning with `#` and blank lines are ignored.
+#
+# The gender tag is LOAD-BEARING as of revision Fix B: predicate adjectives
+# agree with the subject entity's gender, and this tag is where that gender
+# comes from.  Gender is a property of the sampled name and not a new random
+# draw, so seed-determinism (check G7) is unaffected.
+#
+# THIS SPLIT IS STRATIFIED BY SUBWORD LENGTH, not hand-assigned.  The train and
+# test pools are matched on mean tokens per name under this language's Phase 2
+# 16K BPE tokenizer, so that a drop in test accuracy cannot be attributed to
+# test names simply being harder to tokenize.  Regenerate with
+# `python phase3/data_gen/balance_pools.py`.
+#
+# The two pools are DISJOINT -- the primary leakage control (§9.1), asserted by
+# check G6.  Overlap with the OTHER language's pools is irrelevant: the two
+# models share no data, vocabulary or weights.
+#
+# HUMAN REVIEW REQUESTED (§9.1): a native speaker should confirm that none of
+# these read as rare, regional-only, or as imports from the other language.
+
+अंजलि	f
+अंबिका	f
+अनुपमा	f
+अपर्णा	f
+अर्चना	f
+आभा	f
+आशा	f
+आस्था	f
+इंदिरा	f
+उमा	f
+उर्मिला	f
+उषा	f
+कनिका	f
+कमला	f
+कल्याणी	f
+कविता	f
+कामिनी	f
+काव्या	f
+कीर्ति	f
+कुंती	f
+कौशल्या	f
+क्षमा	f
+गरिमा	f
+गीता	f
+चंद्रिका	f
+चंपा	f
+चमेली	f
+जूही	f
+ज्योति	f
+दामिनी	f
+दिव्या	f
+दीपिका	f
+दीप्ति	f
+दुर्गा	f
+देवकी	f
+नंदा	f
+नमिता	f
+निर्मला	f
+नेहा	f
+पल्लवी	f
+पार्वती	f
+प्रतिभा	f
+प्रिया	f
+बबीता	f
+बीना	f
+भवानी	f
+भव्या	f
+भामिनी	f
+मनीषा	f
+महिमा	f
+माधुरी	f
+मालती	f
+मालिनी	f
+मीना	f
+मीरा	f
+मेधा	f
+यशोदा	f
+रचना	f
+रमा	f
+राधा	f
+राधिका	f
+रिया	f
+रीता	f
+रीना	f
+रुक्मिणी	f
+रुचि	f
+रेखा	f
+लक्ष्मी	f
+ललिता	f
+वंदना	f
+वंशिका	f
+वर्षा	f
+वाणी	f
+विनीता	f
+विभा	f
+विमला	f
+शारदा	f
+शालिनी	f
+शिखा	f
+शिवानी	f
+शोभा	f
+श्रद्धा	f
+सरस्वती	f
+सरिता	f
+सविता	f
+सीता	f
+सीमा	f
+सुधा	f
+सुनंदा	f
+सुनीता	f
+सुमेधा	f
+स्नेहा	f
+स्मृति	f
+हर्षिता	f
+हेमा	f
+अंकित	m
+अजय	m
+अजीत	m
+अनिल	m
+अनुज	m
+अनुराग	m
+अनूप	m
+अभिषेक	m
+अरविंद	m
+अर्जुन	m
+अशोक	m
+आदित्य	m
+आनंद	m
+आलोक	m
+आशीष	m
+उदय	m
+उपेंद्र	m
+उमेश	m
+कपिल	m
+करण	m
+कार्तिक	m
+कुणाल	m
+कृष्ण	m
+केतन	m
+केशव	m
+गजेंद्र	m
+गणेश	m
+गिरधारी	m
+गोकुल	m
+गोपाल	m
+गौरव	m
+चंदन	m
+चंद्रकांत	m
+जगदीश	m
+जयकांत	m
+जितेंद्र	m
+तरुण	m
+तुषार	m
+त्रिलोक	m
+दिनेश	m
+दिवाकर	m
+दीपक	m
+दुर्गेश	m
+देवेंद्र	m
+धर्मेंद्र	m
+धीरज	m
+नरेंद्र	m
+नरेश	m
+नवीन	m
+निखिल	m
+नितिन	m
+नीरज	m
+पंकज	m
+पुनीत	m
+प्रकाश	m
+प्रताप	m
+प्रदीप	m
+प्रभाकर	m
+प्रमोद	m
+प्रवीण	m
+प्रशांत	m
+प्रीतम	m
+बिहारी	m
+भरत	m
+भानु	m
+भास्कर	m
+भूपाल	m
+भूपेंद्र	m
+भूषण	m
+मयंक	m
+महेंद्र	m
+महेश	m
+माधव	m
+मुकुंद	m
+मुकेश	m
+मुरारी	m
+मोहन	m
+मोहित	m
+यश	m
+योगेश	m
+रत्नाकर	m
+रमाकांत	m
+रमेश	m
+रवींद्र	m
+राकेश	m
+राजेंद्र	m
+राजेश	m
+राहुल	m
+रोहन	m
+रोहित	m
+लक्ष्मण	m
+लोकेश	m
+वरुण	m
+वसंत	m
+विकास	m
+विक्रम	m
+विजय	m
+विनायक	m
+विनीत	m
+विनोद	m
+विवेक	m
+विशाल	m
+वैभव	m
+शंकर	m
+शशांक	m
+शशिकांत	m
+शिव	m
+श्याम	m
+संजय	m
+संदीप	m
+समीर	m
+सुजीत	m
+सुधाकर	m
+सुनील	m
+सुमन	m
+सुरेंद्र	m
+सुशांत	m
+सूरज	m
+सोहन	m
+सौरभ	m
+स्वरूप	m
+हरि	m
+हर्ष	m
+हिमांशु	m
+हेमंत	m

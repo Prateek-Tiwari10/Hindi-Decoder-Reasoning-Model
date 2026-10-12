@@ -1,0 +1,167 @@
+{
+  "language": "hindi",
+  "variant": "384x11",
+  "model_config": {
+    "language": "hindi",
+    "vocab_size": 16000,
+    "d_model": 384,
+    "n_layers": 11,
+    "n_heads": 6,
+    "d_ff": 1536,
+    "context_len": 512,
+    "dropout": 0.1,
+    "positional": "learned_absolute",
+    "pre_norm": true,
+    "activation": "gelu",
+    "tie_weights": true,
+    "layer_norm_eps": 1e-05,
+    "d_k": 64,
+    "parameter_count": 25860480
+  },
+  "grid": [
+    0.0015,
+    0.003
+  ],
+  "steps_per_run": 1200,
+  "warmup": 150,
+  "tokens_per_run": 39321600,
+  "effective_batch_tokens": 32768,
+  "results": [
+    {
+      "language": "hindi",
+      "steps": 1200,
+      "final_val_loss": 4.406587333679199,
+      "best_val_loss": 4.406587333679199,
+      "peak_lr": 0.0015,
+      "tokens_seen": 39321600,
+      "wall_seconds": 1377.4,
+      "interrupted": false,
+      "stable": true,
+      "instability": "",
+      "val_curve": [
+        {
+          "step": 100,
+          "val_loss": 6.473084936141968
+        },
+        {
+          "step": 200,
+          "val_loss": 5.8402409172058105
+        },
+        {
+          "step": 300,
+          "val_loss": 5.498132390975952
+        },
+        {
+          "step": 400,
+          "val_loss": 5.223615016937256
+        },
+        {
+          "step": 500,
+          "val_loss": 5.024353847503662
+        },
+        {
+          "step": 600,
+          "val_loss": 4.85917402267456
+        },
+        {
+          "step": 700,
+          "val_loss": 4.738915176391601
+        },
+        {
+          "step": 800,
+          "val_loss": 4.63508807182312
+        },
+        {
+          "step": 900,
+          "val_loss": 4.549192161560058
+        },
+        {
+          "step": 1000,
+          "val_loss": 4.48362717628479
+        },
+        {
+          "step": 1100,
+          "val_loss": 4.436902694702148
+        },
+        {
+          "step": 1200,
+          "val_loss": 4.406587333679199
+        }
+      ]
+    },
+    {
+      "language": "hindi",
+      "steps": 1200,
+      "final_val_loss": 4.254228868484497,
+      "best_val_loss": 4.254228868484497,
+      "peak_lr": 0.003,
+      "tokens_seen": 39321600,
+      "wall_seconds": 1356.3,
+      "interrupted": false,
+      "stable": true,
+      "instability": "",
+      "val_curve": [
+        {
+          "step": 100,
+          "val_loss": 6.3701558017730715
+        },
+        {
+          "step": 200,
+          "val_loss": 5.826877498626709
+        },
+        {
+          "step": 300,
+          "val_loss": 5.468709354400635
+        },
+        {
+          "step": 400,
+          "val_loss": 5.183750333786011
+        },
+        {
+          "step": 500,
+          "val_loss": 4.978899383544922
+        },
+        {
+          "step": 600,
+          "val_loss": 4.810561971664429
+        },
+        {
+          "step": 700,
+          "val_loss": 4.6758988666534425
+        },
+        {
+          "step": 800,
+          "val_loss": 4.549164743423462
+        },
+        {
+          "step": 900,
+          "val_loss": 4.436155166625976
+        },
+        {
+          "step": 1000,
+          "val_loss": 4.352416610717773
+        },
+        {
+          "step": 1100,
+          "val_loss": 4.292970523834229
+        },
+        {
+          "step": 1200,
+          "val_loss": 4.254228868484497
+        }
+      ]
+    }
+  ],
+  "decision": {
+    "winner": 0.003,
+    "final_val_loss": 4.254228868484497,
+    "discarded_unstable": [],
+    "at_grid_edge": true,
+    "extend_grid_with": 0.0045,
+    "reason": "winner 3.0e-03 sits at the high edge of the grid; the plan says extend one notch to 4.5e-03 and re-check"
+  },
+  "figures": [
+    "/kaggle/working/figures/sweep_val_curves_384x11.png",
+    "/kaggle/working/figures/sweep_val_loss_vs_lr_384x11.png"
+  ]
+}

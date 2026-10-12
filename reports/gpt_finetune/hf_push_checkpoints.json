@@ -1,0 +1,46 @@
+[
+  {
+    "step": 1000,
+    "best_step": 1000,
+    "best_em": 0.758,
+    "size_mb": 311,
+    "language": "hindi",
+    "size": "10k",
+    "path_in_repo": "hindi/ft_10k/checkpoint.pt",
+    "ok": true,
+    "url": "https://huggingface.co/Prateek-Tiwari10/LMA_phase3/blob/main/hindi/ft_10k/checkpoint.pt"
+  },
+  {
+    "step": 3000,
+    "best_step": 3000,
+    "best_em": 0.958,
+    "size_mb": 311,
+    "language": "hindi",
+    "size": "30k",
+    "path_in_repo": "hindi/ft_30k/checkpoint.pt",
+    "ok": true,
+    "url": "https://huggingface.co/Prateek-Tiwari10/LMA_phase3/blob/main/hindi/ft_30k/checkpoint.pt"
+  },
+  {
+    "step": 1000,
+    "best_step": 1000,
+    "best_em": 0.956,
+    "size_mb": 311,
+    "language": "hindi",
+    "size": "50k",
+    "path_in_repo": "hindi/ft_50k/checkpoint.pt",
+    "ok": true,
+    "url": "https://huggingface.co/Prateek-Tiwari10/LMA_phase3/blob/main/hindi/ft_50k/checkpoint.pt"
+  },
+  {
+    "step": 1000,
+    "best_step": 1000,
+    "best_em": 0.954,
+    "size_mb": 311,
+    "language": "hindi",
+    "size": "60k",
+    "path_in_repo": "hindi/ft_60k/checkpoint.pt",
+    "ok": true,
+    "url": "https://huggingface.co/Prateek-Tiwari10/LMA_phase3/blob/main/hindi/ft_60k/checkpoint.pt"
+  }
+]

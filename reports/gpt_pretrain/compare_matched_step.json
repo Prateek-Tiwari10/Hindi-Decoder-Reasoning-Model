@@ -1,0 +1,109 @@
+{
+  "language": "hindi",
+  "split": "val",
+  "comparison": {
+    "requested_step": 4500,
+    "rows": [
+      {
+        "variant": "384x11",
+        "architecture": "16K / 384 / 11L",
+        "parameter_count": 25860480,
+        "step": 4500,
+        "tokens": 147456000,
+        "val_ce_nats_per_token": 3.637425408363342,
+        "val_ppl": 37.99389193915705,
+        "bytes_per_token": 10.456195625,
+        "val_bpb": 0.5018742749707599,
+        "schedule_position": {
+          "lr_at_step": 0.0003000004380001716,
+          "peak_lr_seen": 0.002990287625763178,
+          "fraction_of_peak_lr": 0.10032494379988138,
+          "run_final_step": 4500,
+          "is_runs_final_point": true,
+          "fully_annealed": true
+        }
+      },
+      {
+        "variant": "baseline",
+        "architecture": "24K / 448 / 7L",
+        "parameter_count": 27882176,
+        "step": 4500,
+        "tokens": 147456000,
+        "val_ce_nats_per_token": 3.9394996213912963,
+        "val_ppl": 51.39287896833576,
+        "bytes_per_token": 10.862339,
+        "val_bpb": 0.5232295334702012,
+        "schedule_position": {
+          "lr_at_step": 0.0025931057143459553,
+          "peak_lr_seen": 0.003,
+          "fraction_of_peak_lr": 0.8643685714486518,
+          "run_final_step": 15521,
+          "is_runs_final_point": false,
+          "fully_annealed": false
+        }
+      }
+    ],
+    "runs_that_never_reached_that_step": [],
+    "winner": "384x11",
+    "note": "Validation loss at a matched step, converted to bits per byte so recipes with different vocabularies are on one axis. Perplexity is shown per row but must NOT be compared across rows: the 16K and 24K tokenizers cut the same text into differently sized pieces, so their per-token losses answer different questions. These are 50-batch validation estimates; the headline numbers come from lm.evaluate's full sequential pass over the test split.",
+    "schedule_warning": "NOT A LIKE-FOR-LIKE READ. 384x11 had fully annealed by this step, while baseline at 86% of peak LR. An annealed model settles into a lower loss than a mid-schedule one at the same token count, so this comparison is biased IN FAVOUR OF 384x11. Read it accordingly: if an annealed run still loses, that is strong evidence; if it wins narrowly, the anneal alone may account for the gap."
+  },
+  "runs": [
+    {
+      "language": "hindi",
+      "variant": "baseline",
+      "architecture": "24K / 448 / 7L",
+      "vocab_size": 24000,
+      "d_model": 448,
+      "n_layers": 7,
+      "n_heads": 8,
+      "d_k": 56,
+      "parameter_count": 27882176,
+      "bytes_per_token": 10.862339,
+      "bytes_per_token_measured_on": {
+        "language": "hindi",
+        "variant": "",
+        "split": "val",
+        "vocab_size": 24000,
+        "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_24000.model",
+        "tokens_measured": 8000000,
+        "utf8_bytes": 86898712,
+        "bytes_per_token": 10.862339
+      },
+      "log": "logs/phase2/train_hindi/log.jsonl",
+      "final": {
+        "step": 15521,
+        "val_loss": 3.5391555213928223,
+        "lr": 0.00030000003053400135
+      }
+    },
+    {
+      "language": "hindi",
+      "variant": "384x11",
+      "architecture": "16K / 384 / 11L",
+      "vocab_size": 16000,
+      "d_model": 384,
+      "n_layers": 11,
+      "n_heads": 6,
+      "d_k": 64,
+      "parameter_count": 25860480,
+      "bytes_per_token": 10.456195625,
+      "bytes_per_token_measured_on": {
+        "language": "hindi",
+        "variant": "384x11",
+        "split": "val",
+        "vocab_size": 16000,
+        "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_16000.model",
+        "tokens_measured": 8000000,
+        "utf8_bytes": 83649565,
+        "bytes_per_token": 10.456195625
+      },
+      "log": "logs/phase2/train_384x11_hindi/log.jsonl",
+      "final": {
+        "step": 4500,
+        "val_loss": 3.637425408363342,
+        "lr": 0.0003000004380001716
+      }
+    }
+  ]
+}

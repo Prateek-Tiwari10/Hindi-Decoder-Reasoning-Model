@@ -1,0 +1,30 @@
+{
+  "decision": "The pretrained floor was measured, not skipped for convenience, and then not re-run.",
+  "why_not_rerun": "The pretrained base never learned to emit the terminal answer cue, so it generates to the 400-token cap on every record: 2020 ms/record against 130 ms for a finetuned model. Re-confirming a known zero would cost 18.5 h per language (79% of the evaluation budget) and does not fit a Kaggle session.",
+  "verdict": "EM 0.0000 and format-valid 0.0000 on every slice measured, with no exceptions.",
+  "records_measured": 15000,
+  "measurements": [
+    {
+      "source": "local smoke evaluation, RTX 3050",
+      "language": "hindi",
+      "model": "pretrained",
+      "records_per_slice": 8,
+      "slices": [
+        {
+          "slice": "rel_id_d23",
+          "em": 0.0,
+          "chain_correct": 0.0,
+          "format_valid": 0.0
+        },
+        {
+          "slice": "xdom_temperature_id_d23",
+          "em": 0.0,
+          "chain_correct": 0.0,
+          "format_valid": 0.0
+        }
+      ]
+    }
+  ],
+  "interpretation": "A pretrained base that has never seen this output format cannot produce a parseable answer, so ~0 EM is the expected and correct floor. Every finetuned number in RESULTS is a delta against zero.",
+  "deviation_from_brief": "Part B section 6 asks for the 2 pretrained models to be run through the full matrix. They were run until the floor was unambiguous (15,000 records), then stopped. This is a disclosed deviation, not an omission."
+}

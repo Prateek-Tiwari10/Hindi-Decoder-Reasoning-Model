@@ -1,0 +1,28 @@
+{
+  "variant": "384x11",
+  "language": "hindi",
+  "steps_per_run": 1200,
+  "warmup": 150,
+  "tokens_per_run": 39321600,
+  "effective_batch_tokens": 32768,
+  "grid_combined": [
+    0.0015,
+    0.003,
+    0.0045,
+    0.006
+  ],
+  "final_val_loss": {
+    "1.5e-03": 4.406587333679199,
+    "3.0e-03": 4.254228868484497,
+    "4.5e-03": 4.2905277919769285,
+    "6.0e-03": 4.420202140808105
+  },
+  "winner": 0.003,
+  "interior_minimum": true,
+  "all_runs_stable": true,
+  "rounds": {
+    "round1": "report/phase2_lr_sweep_384x11.json",
+    "round2": "report/phase2_lr_sweep_384x11_round2.json"
+  },
+  "note": "3e-3 is worse on both sides, so it is an interior optimum rather than a boundary. The baseline's own sweep never achieved this -- it ran monotone to its grid edge and stopped. Round 2's 3e-3 reproduced round 1's loss bit-for-bit in a separate session, confirming the runs are deterministic under seed 1337."
+}

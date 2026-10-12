@@ -1,0 +1,141 @@
+# Dataset build plan -- PERFORMANCE BUILD.
+#
+# Optimized for measured accuracy on the task exactly as the assignment PDF
+# defines it: two or three entities, transitive/ordering comparison, with
+# multi-hop chaining.  Three differences from build.yaml, each a deliberate
+# lever against a failure Part 3A measured:
+#
+#   1. The name pools are ~17x larger (see expand_names.py), cutting
+#      repetitions per name from roughly 455 to roughly 40.  Part 3A showed the
+#      models were recalling names from a small memorised inventory instead of
+#      copying them out of the prompt; at 455 repetitions memorising is the
+#      cheaper strategy, and this is the lever that changes that.
+#
+#   2. Depths 4-6 are gone from training.  The PDF specifies two or three
+#      entities, so every parameter goes to the regime actually graded.  The
+#      depth 4-6 slices are still WRITTEN to disk for reference, but nothing
+#      trains on them and nothing is tuned for them.
+#
+#   3. Training mixes all three families, so every family that gets tested is
+#      in-distribution.  Part 3A's `mix_ood_d4` was out of distribution in two
+#      ways at once, which made its number uninterpretable.
+#
+# Everything else is held identical to build.yaml so the comparison against the
+# Part 2 baseline is attributable to these three changes.
+
+seed: 20260910
+
+core_domains: [height, age, wealth, weight]
+
+# Relation-heavy still, but numeric and mixed carry enough weight to be learned
+# rather than merely sampled.
+family_mix:
+  relation: 0.5
+  numeric: 0.3
+  mixed: 0.2
+
+question_mix:
+  relation:
+    extremum: 0.34
+    pairwise: 0.33
+    ordering: 0.33
+  numeric:
+    bound: 1.0
+  mixed:
+    bound: 0.4
+    extremum: 0.2
+    pairwise: 0.2
+    ordering: 0.2
+
+nonconsecutive:
+  min_depth: 3
+  k_min: 1
+  k_max: 2
+
+bound_nonadjacent_min_depth: 3
+
+# Raised from 40: the name pool is ~17x larger, so a colliding prompt is rarer,
+# but the training pool is also 50% larger and the budget costs nothing.
+max_resample_attempts: 60
+
+slices:
+  # ---- training -------------------------------------------------------
+  train_mix:
+    split: train
+    size: 60000
+    depths: [2, 3]
+    pool: train
+    domains: core
+    families: {relation: 0.5, numeric: 0.3, mixed: 0.2}
+
+  # Train-pool names.  Kept ONLY so the report can show the contrast: this is
+  # the validation set that hid the memorization in Part 2, and checkpoint
+  # selection must not use it.
+  val_mix:
+    split: val
+    size: 2000
+    depths: [2, 3]
+    pool: train
+    domains: core
+    families: {relation: 0.5, numeric: 0.3, mixed: 0.2}
+
+  # The honest validation set: held-out names, full mix.  Early stopping and
+  # best-checkpoint selection read THIS and nothing else.
+  val_heldout:
+    split: val_heldout
+    filename: val_heldout.jsonl
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: core
+    families: {relation: 0.5, numeric: 0.3, mixed: 0.2}
+
+  # ---- graded test slices (depth 2-3, held-out names) ------------------
+  rel_id_d23:
+    split: test
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: core
+    families: {relation: 1.0}
+
+  num_id_d23:
+    split: test
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: core
+    families: {numeric: 1.0}
+
+  mix_id_d23:
+    split: test
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: core
+    families: {mixed: 1.0}
+
+  # ---- reference only: written to disk, never trained on or tuned for ---
+  rel_ood_d4:
+    split: test
+    size: 1500
+    depths: [4]
+    pool: test
+    domains: core
+    families: {relation: 1.0}
+
+  rel_ood_d5:
+    split: test
+    size: 1500
+    depths: [5]
+    pool: test
+    domains: core
+    families: {relation: 1.0}
+
+  rel_ood_d6:
+    split: test
+    size: 1500
+    depths: [6]
+    pool: test
+    domains: core
+    families: {relation: 1.0}

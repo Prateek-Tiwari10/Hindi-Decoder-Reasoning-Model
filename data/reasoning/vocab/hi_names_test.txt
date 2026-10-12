@@ -1,0 +1,93 @@
+# Hindi given-name pool -- TEST side.
+#
+# Format: <name>\t<gender>   where gender is `m` or `f`.
+# Lines beginning with `#` and blank lines are ignored.
+#
+# The gender tag is LOAD-BEARING as of revision Fix B: predicate adjectives
+# agree with the subject entity's gender, and this tag is where that gender
+# comes from.  Gender is a property of the sampled name and not a new random
+# draw, so seed-determinism (check G7) is unaffected.
+#
+# THIS SPLIT IS STRATIFIED BY SUBWORD LENGTH, not hand-assigned.  The train and
+# test pools are matched on mean tokens per name under this language's Phase 2
+# 16K BPE tokenizer, so that a drop in test accuracy cannot be attributed to
+# test names simply being harder to tokenize.  Regenerate with
+# `python phase3/data_gen/balance_pools.py`.
+#
+# The two pools are DISJOINT -- the primary leakage control (§9.1), asserted by
+# check G6.  Overlap with the OTHER language's pools is irrelevant: the two
+# models share no data, vocabulary or weights.
+#
+# HUMAN REVIEW REQUESTED (§9.1): a native speaker should confirm that none of
+# these read as rare, regional-only, or as imports from the other language.
+
+अनीता	f
+आनंदी	f
+आरती	f
+कल्पना	f
+केतकी	f
+गौरी	f
+दिशा	f
+द्रौपदी	f
+नंदिनी	f
+निशा	f
+निष्ठा	f
+नीता	f
+पद्मा	f
+पूजा	f
+प्रतिमा	f
+प्रभा	f
+प्रीति	f
+भारती	f
+मोनिका	f
+यामिनी	f
+रश्मि	f
+रोहिणी	f
+लेखा	f
+विद्या	f
+वृंदा	f
+शांति	f
+शीला	f
+शुचि	f
+संगीता	f
+साधना	f
+सुंदरी	f
+सुभद्रा	f
+सुमित्रा	f
+सुरभि	f
+सुशीला	f
+अखिलेश	m
+अभय	m
+अमित	m
+अरुण	m
+आकाश	m
+उमाकांत	m
+कमलेश	m
+कुलदीप	m
+गिरीश	m
+गोविंद	m
+चेतन	m
+जतिन	m
+जयंत	m
+ज्ञानेंद्र	m
+निशांत	m
+पराग	m
+प्रतीक	m
+बलराम	m
+मनीष	m
+मनोज	m
+रंजीत	m
+राम	m
+विभोर	m
+वीरेंद्र	m
+शैलेंद्र	m
+संतोष	m
+सचिन	m
+सतीश	m
+सरोज	m
+सागर	m
+सुधांशु	m
+सुमित	m
+सुरेश	m
+हरीश	m
+हितेश	m

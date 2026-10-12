@@ -1,0 +1,93 @@
+{
+  "language": "hindi",
+  "device": "cuda",
+  "grid": [
+    0.0002,
+    0.0003,
+    0.0004
+  ],
+  "fraction_of_epoch": 0.5,
+  "effective_batch": 64,
+  "runs": [
+    {
+      "peak_lr": 0.0002,
+      "steps": 468,
+      "planned_total_steps": 7496,
+      "fraction_of_epoch": 0.5,
+      "best_val_em": 0.698,
+      "best_step": 468,
+      "final_val_loss": 0.014730767098555298,
+      "final_val_em": 0.698,
+      "final_no_answer_cue": 0,
+      "final_hit_length_cap": 0,
+      "wall_clock_seconds": 262.4,
+      "out_dir": "phase3/runs/sweep_perf_hindi/lr_0.0002",
+      "diverged": false
+    },
+    {
+      "peak_lr": 0.0003,
+      "steps": 468,
+      "planned_total_steps": 7496,
+      "fraction_of_epoch": 0.5,
+      "best_val_em": 0.714,
+      "best_step": 468,
+      "final_val_loss": 0.014941949226726772,
+      "final_val_em": 0.714,
+      "final_no_answer_cue": 0,
+      "final_hit_length_cap": 0,
+      "wall_clock_seconds": 256.4,
+      "out_dir": "phase3/runs/sweep_perf_hindi/lr_0.0003",
+      "diverged": false
+    },
+    {
+      "peak_lr": 0.0004,
+      "steps": 468,
+      "planned_total_steps": 7496,
+      "fraction_of_epoch": 0.5,
+      "best_val_em": 0.704,
+      "best_step": 468,
+      "final_val_loss": 0.013537201023805057,
+      "final_val_em": 0.704,
+      "final_no_answer_cue": 1,
+      "final_hit_length_cap": 1,
+      "wall_clock_seconds": 279.1,
+      "out_dir": "phase3/runs/sweep_perf_hindi/lr_0.0004",
+      "diverged": false
+    }
+  ],
+  "winner": {
+    "peak_lr": 0.0003,
+    "best_val_em": 0.714,
+    "argmax_peak_lr": 0.0003,
+    "argmax_val_em": 0.714,
+    "standard_error": 0.02021,
+    "em_subset": 500,
+    "tied_within_one_se": [
+      0.0002,
+      0.0003,
+      0.0004
+    ],
+    "bracketed": true,
+    "reason": "within one standard error (0.0202) of the best on the grid, and bracketed -- both neighbours score lower -- so this is an interior optimum rather than a grid edge",
+    "ranking": [
+      {
+        "peak_lr": 0.0003,
+        "best_val_em": 0.714,
+        "final_val_loss": 0.014941949226726772,
+        "bracketed": true
+      },
+      {
+        "peak_lr": 0.0004,
+        "best_val_em": 0.704,
+        "final_val_loss": 0.013537201023805057,
+        "bracketed": false
+      },
+      {
+        "peak_lr": 0.0002,
+        "best_val_em": 0.698,
+        "final_val_loss": 0.014730767098555298,
+        "bracketed": false
+      }
+    ]
+  }
+}

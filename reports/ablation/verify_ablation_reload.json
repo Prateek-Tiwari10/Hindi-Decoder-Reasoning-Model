@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "language": "hindi",
+      "split": "test",
+      "checkpoint": "artifacts/checkpoints/ablation/ablated_hindi.pt",
+      "tokens_in_split": 35903951,
+      "tokens_scored": 2048000,
+      "utf8_bytes": 20605518,
+      "bytes_per_token": 10.0612880859375,
+      "total_ce_nats": 6952813.4306640625,
+      "mean_ce_nats": 3.3949284329414366,
+      "perplexity": 29.812519804237965,
+      "bits_per_token": 4.89784641437755,
+      "bits_per_byte": 0.4868011304857866
+    }
+  ],
+  "table_markdown": "| Model | Split | Tokens | UTF-8 bytes | CE (nats/tok) | PPL | BPB |\n|---|---|---:|---:|---:|---:|---:|\n| Hindi | test | 2,048,000 | 20,605,518 | 3.3949 | 29.81 | 0.4868 |\n"
+}

@@ -1,0 +1,1974 @@
+{
+  "build_config": {
+    "seed": 20260910,
+    "core_domains": [
+      "height",
+      "age",
+      "wealth",
+      "weight"
+    ],
+    "family_mix": {
+      "relation": 0.7,
+      "numeric": 0.2,
+      "mixed": 0.1
+    },
+    "question_mix": {
+      "relation": {
+        "extremum": 0.34,
+        "pairwise": 0.33,
+        "ordering": 0.33
+      },
+      "numeric": {
+        "bound": 1.0
+      },
+      "mixed": {
+        "bound": 0.4,
+        "extremum": 0.2,
+        "pairwise": 0.2,
+        "ordering": 0.2
+      }
+    },
+    "nonconsecutive": {
+      "min_depth": 3,
+      "k_min": 1,
+      "k_max": 2
+    },
+    "bound_nonadjacent_min_depth": 3,
+    "max_resample_attempts": 40,
+    "slices": {
+      "train_mix": {
+        "split": "train",
+        "size": 40000,
+        "depths": [
+          2,
+          3
+        ],
+        "pool": "train",
+        "domains": "core",
+        "families": {
+          "relation": 0.7,
+          "numeric": 0.2,
+          "mixed": 0.1
+        }
+      },
+      "val_mix": {
+        "split": "val",
+        "size": 2000,
+        "depths": [
+          2,
+          3
+        ],
+        "pool": "train",
+        "domains": "core",
+        "families": {
+          "relation": 0.7,
+          "numeric": 0.2,
+          "mixed": 0.1
+        }
+      },
+      "rel_id_d23": {
+        "split": "test",
+        "size": 1500,
+        "depths": [
+          2,
+          3
+        ],
+        "pool": "test",
+        "domains": "core",
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "rel_ood_d4": {
+        "split": "test",
+        "size": 1500,
+        "depths": [
+          4
+        ],
+        "pool": "test",
+        "domains": "core",
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "rel_ood_d5": {
+        "split": "test",
+        "size": 1500,
+        "depths": [
+          5
+        ],
+        "pool": "test",
+        "domains": "core",
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "rel_ood_d6": {
+        "split": "test",
+        "size": 1500,
+        "depths": [
+          6
+        ],
+        "pool": "test",
+        "domains": "core",
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "num_id_d23": {
+        "split": "test",
+        "size": 1500,
+        "depths": [
+          2,
+          3
+        ],
+        "pool": "test",
+        "domains": "core",
+        "families": {
+          "numeric": 1.0
+        }
+      },
+      "num_ood_d4": {
+        "split": "test",
+        "size": 1500,
+        "depths": [
+          4
+        ],
+        "pool": "test",
+        "domains": "core",
+        "families": {
+          "numeric": 1.0
+        }
+      },
+      "mix_ood_d4": {
+        "split": "test",
+        "size": 1500,
+        "depths": [
+          4
+        ],
+        "pool": "test",
+        "domains": "core",
+        "families": {
+          "mixed": 1.0
+        }
+      },
+      "xdom_d34": {
+        "split": "test",
+        "size": 1500,
+        "depths": [
+          3,
+          4
+        ],
+        "pool": "test",
+        "domains": [
+          "speed"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      }
+    }
+  },
+  "languages": [
+    {
+      "language": "hindi",
+      "code": "hi",
+      "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_16000.model",
+      "files": {
+        "train_mix": "phase3/data/hi/train.jsonl",
+        "val_mix": "phase3/data/hi/val.jsonl",
+        "rel_id_d23": "phase3/data/hi/test_rel_id_d23.jsonl",
+        "rel_ood_d4": "phase3/data/hi/test_rel_ood_d4.jsonl",
+        "rel_ood_d5": "phase3/data/hi/test_rel_ood_d5.jsonl",
+        "rel_ood_d6": "phase3/data/hi/test_rel_ood_d6.jsonl",
+        "num_id_d23": "phase3/data/hi/test_num_id_d23.jsonl",
+        "num_ood_d4": "phase3/data/hi/test_num_ood_d4.jsonl",
+        "mix_ood_d4": "phase3/data/hi/test_mix_ood_d4.jsonl",
+        "xdom_d34": "phase3/data/hi/test_xdom_d34.jsonl"
+      },
+      "digests": {
+        "train_mix": "8a13fc0b34280862dcd22fdc3fb3e0888fcf3a5168c6465ac7cfaf6072bb16c5",
+        "val_mix": "3e8942d5b74c3f6047dce3ac9bfa2997b83cbff996a2389265c1d1c912673afe",
+        "rel_id_d23": "202902402a11ea8500f2767c30ee6a98827a15a81833115d6361bd617b37b569",
+        "rel_ood_d4": "5d13bec7022eafec1b3290205c6bde84d09db79847f6b2f5011a4848d5df2f68",
+        "rel_ood_d5": "be299b92fce910f5482ba2cf7c86f1bc79028b1873bbd189c66831478ce16a2b",
+        "rel_ood_d6": "9ad61664664bc8cac3fe9f81e3028f0ab0c72f709ab2558d282deb72f008338d",
+        "num_id_d23": "3d5401978a5d00ce2b6305365f15e994737cb710589eba12cfc173a758c30fe5",
+        "num_ood_d4": "8f06db465484e4ab334a7d2f269dcabd74906de144cb502fb9bb8e1daf35d936",
+        "mix_ood_d4": "b6d13b598731ce1b1be48c274efcfa0767a9c2a0ee2a81f9803040afa1009ab7",
+        "xdom_d34": "6625c65ac92af4795b908cd7f4e11ba888c45f654990d2eb1a1560adc58cec1b"
+      },
+      "slice_stats": {
+        "train_mix": {
+          "size": 40000,
+          "prompt_collisions_resampled": 109,
+          "depth_ge_min": 19942,
+          "depth_ge_min_with_nonconsecutive": 14938,
+          "depth_ge_min_eligible": 14938,
+          "depth_ge_min_eligible_with_nonconsecutive": 14938,
+          "bound_adjacency_relaxed": 4865
+        },
+        "val_mix": {
+          "size": 2000,
+          "prompt_collisions_resampled": 6,
+          "depth_ge_min": 1003,
+          "depth_ge_min_with_nonconsecutive": 739,
+          "depth_ge_min_eligible": 739,
+          "depth_ge_min_eligible_with_nonconsecutive": 739,
+          "bound_adjacency_relaxed": 252
+        },
+        "rel_id_d23": {
+          "size": 1500,
+          "prompt_collisions_resampled": 3,
+          "depth_ge_min": 740,
+          "depth_ge_min_with_nonconsecutive": 517,
+          "depth_ge_min_eligible": 517,
+          "depth_ge_min_eligible_with_nonconsecutive": 517,
+          "bound_adjacency_relaxed": 0
+        },
+        "rel_ood_d4": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "rel_ood_d5": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "rel_ood_d6": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "num_id_d23": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 735,
+          "depth_ge_min_with_nonconsecutive": 735,
+          "depth_ge_min_eligible": 735,
+          "depth_ge_min_eligible_with_nonconsecutive": 735,
+          "bound_adjacency_relaxed": 735
+        },
+        "num_ood_d4": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 496
+        },
+        "mix_ood_d4": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 202
+        },
+        "xdom_d34": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1276,
+          "depth_ge_min_eligible": 1276,
+          "depth_ge_min_eligible_with_nonconsecutive": 1276,
+          "bound_adjacency_relaxed": 0
+        }
+      },
+      "counts": {
+        "train_mix": {
+          "split": "train",
+          "size": 40000,
+          "family": {
+            "numeric": 7992,
+            "mixed": 4028,
+            "relation": 27980
+          },
+          "depth": {
+            "2": 20058,
+            "3": 19942
+          },
+          "question_type": {
+            "bound": 9763,
+            "ordering": 12409,
+            "pairwise": 5004,
+            "extremum": 12824
+          },
+          "domain": {
+            "wealth": 9851,
+            "height": 10126,
+            "age": 9970,
+            "weight": 10053
+          }
+        },
+        "val_mix": {
+          "split": "val",
+          "size": 2000,
+          "family": {
+            "relation": 1416,
+            "mixed": 187,
+            "numeric": 397
+          },
+          "depth": {
+            "2": 997,
+            "3": 1003
+          },
+          "question_type": {
+            "ordering": 604,
+            "bound": 497,
+            "extremum": 635,
+            "pairwise": 264
+          },
+          "domain": {
+            "wealth": 536,
+            "height": 491,
+            "weight": 500,
+            "age": 473
+          }
+        },
+        "rel_id_d23": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "2": 760,
+            "3": 740
+          },
+          "question_type": {
+            "pairwise": 223,
+            "ordering": 619,
+            "extremum": 658
+          },
+          "domain": {
+            "age": 405,
+            "wealth": 374,
+            "height": 379,
+            "weight": 342
+          }
+        },
+        "rel_ood_d4": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "4": 1500
+          },
+          "question_type": {
+            "pairwise": 492,
+            "extremum": 508,
+            "ordering": 500
+          },
+          "domain": {
+            "weight": 375,
+            "age": 406,
+            "wealth": 340,
+            "height": 379
+          }
+        },
+        "rel_ood_d5": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "5": 1500
+          },
+          "question_type": {
+            "extremum": 511,
+            "ordering": 513,
+            "pairwise": 476
+          },
+          "domain": {
+            "wealth": 395,
+            "weight": 333,
+            "height": 393,
+            "age": 379
+          }
+        },
+        "rel_ood_d6": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "6": 1500
+          },
+          "question_type": {
+            "ordering": 478,
+            "pairwise": 507,
+            "extremum": 515
+          },
+          "domain": {
+            "height": 376,
+            "age": 376,
+            "weight": 359,
+            "wealth": 389
+          }
+        },
+        "num_id_d23": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "numeric": 1500
+          },
+          "depth": {
+            "2": 765,
+            "3": 735
+          },
+          "question_type": {
+            "bound": 1500
+          },
+          "domain": {
+            "weight": 401,
+            "wealth": 378,
+            "age": 358,
+            "height": 363
+          }
+        },
+        "num_ood_d4": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "numeric": 1500
+          },
+          "depth": {
+            "4": 1500
+          },
+          "question_type": {
+            "bound": 1500
+          },
+          "domain": {
+            "age": 366,
+            "weight": 365,
+            "wealth": 393,
+            "height": 376
+          }
+        },
+        "mix_ood_d4": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "mixed": 1500
+          },
+          "depth": {
+            "4": 1500
+          },
+          "question_type": {
+            "extremum": 305,
+            "bound": 618,
+            "pairwise": 283,
+            "ordering": 294
+          },
+          "domain": {
+            "weight": 355,
+            "wealth": 402,
+            "height": 391,
+            "age": 352
+          }
+        },
+        "xdom_d34": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "3": 737,
+            "4": 763
+          },
+          "question_type": {
+            "pairwise": 468,
+            "ordering": 506,
+            "extremum": 526
+          },
+          "domain": {
+            "speed": 1500
+          }
+        }
+      },
+      "variety": {
+        "domains": 5,
+        "families": 3,
+        "question_types": 4,
+        "depths": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "polarity_patterns": 254,
+        "family_domain_question_depth_combinations": 118
+      },
+      "samples": [
+        {
+          "group": [
+            "mixed",
+            "extremum",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-mix-000033",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "height",
+            "question_type": "extremum",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: स्नेहा की ऊँचाई 171 सेमी है। स्नेहा नरेश से छोटी है। शशिकांत स्नेहा से छोटा है। शशिकांत नरेश से छोटा है। सबसे लम्बा कौन है?\nउत्तर:",
+            "completion": " स्नेहा = 171 सेमी। स्नेहा < नरेश यानी नरेश > स्नेहा, शशिकांत < स्नेहा यानी स्नेहा > शशिकांत, शशिकांत < नरेश यानी नरेश > शशिकांत। क्रम: नरेश > स्नेहा > शशिकांत। सबसे लम्बा नरेश है। उत्तर: नरेश।",
+            "answer": "नरेश",
+            "true_order": [
+              "नरेश",
+              "स्नेहा",
+              "शशिकांत"
+            ],
+            "premises": [
+              {
+                "a": "स्नेहा",
+                "b": "नरेश",
+                "rel": "<"
+              },
+              {
+                "a": "शशिकांत",
+                "b": "स्नेहा",
+                "rel": "<"
+              },
+              {
+                "a": "शशिकांत",
+                "b": "नरेश",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "स्नेहा",
+              "value": 171,
+              "unit": "सेमी"
+            },
+            "query": {
+              "kind": "extremum",
+              "end": "max"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019397759,
+            "n_nonconsecutive_premises": 1,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "mixed",
+            "extremum",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-mix-000081",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "weight",
+            "question_type": "extremum",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: मीरा का वज़न 57 किलो है। मीरा शिवानी से हल्की है। सबसे हल्का कौन है?\nउत्तर:",
+            "completion": " मीरा = 57 किलो। मीरा < शिवानी यानी शिवानी > मीरा। क्रम: शिवानी > मीरा। सबसे हल्की मीरा है। उत्तर: मीरा।",
+            "answer": "मीरा",
+            "true_order": [
+              "शिवानी",
+              "मीरा"
+            ],
+            "premises": [
+              {
+                "a": "मीरा",
+                "b": "शिवानी",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "मीरा",
+              "value": 57,
+              "unit": "किलो"
+            },
+            "query": {
+              "kind": "extremum",
+              "end": "min"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019399247,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "mixed",
+            "ordering",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-mix-000031",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "weight",
+            "question_type": "ordering",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: उमा का वज़न 88 किलो है। श्याम उमा से भारी है। सभी को वज़न के घटते क्रम में लगाओ।\nउत्तर:",
+            "completion": " उमा = 88 किलो। श्याम > उमा। क्रम: श्याम > उमा। इसलिए सही क्रम यही है। उत्तर: श्याम > उमा।",
+            "answer": "श्याम > उमा",
+            "true_order": [
+              "श्याम",
+              "उमा"
+            ],
+            "premises": [
+              {
+                "a": "श्याम",
+                "b": "उमा",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "उमा",
+              "value": 88,
+              "unit": "किलो"
+            },
+            "query": {
+              "kind": "ordering"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019397697,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "mixed",
+            "ordering",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-mix-000222",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "age",
+            "question_type": "ordering",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: चंदन की उम्र 80 साल है। चंदन जूही से बड़ा है। सभी को उम्र के घटते क्रम में लगाओ।\nउत्तर:",
+            "completion": " चंदन = 80 साल। चंदन > जूही। क्रम: चंदन > जूही। इसलिए सही क्रम यही है। उत्तर: चंदन > जूही।",
+            "answer": "चंदन > जूही",
+            "true_order": [
+              "चंदन",
+              "जूही"
+            ],
+            "premises": [
+              {
+                "a": "चंदन",
+                "b": "जूही",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "चंदन",
+              "value": 80,
+              "unit": "साल"
+            },
+            "query": {
+              "kind": "ordering"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019403618,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "mixed",
+            "pairwise",
+            "bound"
+          ],
+          "record": {
+            "id": "hi-mix-000001",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "height",
+            "question_type": "pairwise",
+            "question_variant": "bound",
+            "depth": 2,
+            "prompt": "प्रश्न: जितेंद्र की ऊँचाई 188 सेमी है। मेधा जितेंद्र से छोटी है। क्या मेधा की ऊँचाई 188 सेमी से अधिक है?\nउत्तर:",
+            "completion": " जितेंद्र = 188 सेमी। मेधा < जितेंद्र यानी जितेंद्र > मेधा। क्रम: जितेंद्र > मेधा। तो मेधा < जितेंद्र = 188 सेमी। इसलिए मेधा 188 सेमी से कम है। उत्तर: नहीं।",
+            "answer": "नहीं",
+            "true_order": [
+              "जितेंद्र",
+              "मेधा"
+            ],
+            "premises": [
+              {
+                "a": "मेधा",
+                "b": "जितेंद्र",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "जितेंद्र",
+              "value": 188,
+              "unit": "सेमी"
+            },
+            "query": {
+              "kind": "bound",
+              "entity": "मेधा",
+              "anchor": "जितेंद्र",
+              "value": 188,
+              "unit": "सेमी",
+              "direction": "more"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019396767,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "mixed",
+            "pairwise",
+            "bound"
+          ],
+          "record": {
+            "id": "hi-mix-000017",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "height",
+            "question_type": "pairwise",
+            "question_variant": "bound",
+            "depth": 2,
+            "prompt": "प्रश्न: दीपक की ऊँचाई 168 सेमी है। अनिल दीपक से छोटा है। क्या अनिल की ऊँचाई 168 सेमी से कम है?\nउत्तर:",
+            "completion": " दीपक = 168 सेमी। अनिल < दीपक यानी दीपक > अनिल। क्रम: दीपक > अनिल। तो अनिल < दीपक = 168 सेमी। इसलिए अनिल 168 सेमी से कम है। उत्तर: हाँ।",
+            "answer": "हाँ",
+            "true_order": [
+              "दीपक",
+              "अनिल"
+            ],
+            "premises": [
+              {
+                "a": "अनिल",
+                "b": "दीपक",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "दीपक",
+              "value": 168,
+              "unit": "सेमी"
+            },
+            "query": {
+              "kind": "bound",
+              "entity": "अनिल",
+              "anchor": "दीपक",
+              "value": 168,
+              "unit": "सेमी",
+              "direction": "less"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019397263,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "mixed",
+            "pairwise",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-mix-000029",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "wealth",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: दिव्या के पास 50133 रुपये हैं। मोहन दिव्या से ज़्यादा गरीब है। कमला दिव्या से ज़्यादा अमीर है। क्या मोहन, कमला से ज़्यादा गरीब है?\nउत्तर:",
+            "completion": " दिव्या = 50133 रुपये। मोहन < दिव्या यानी दिव्या > मोहन, कमला > दिव्या। क्रम: कमला > दिव्या > मोहन। इसलिए मोहन कमला से ज़्यादा गरीब है। उत्तर: हाँ।",
+            "answer": "हाँ",
+            "true_order": [
+              "कमला",
+              "दिव्या",
+              "मोहन"
+            ],
+            "premises": [
+              {
+                "a": "मोहन",
+                "b": "दिव्या",
+                "rel": "<"
+              },
+              {
+                "a": "कमला",
+                "b": "दिव्या",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "दिव्या",
+              "value": 50133,
+              "unit": "रुपये"
+            },
+            "query": {
+              "kind": "pairwise",
+              "a": "मोहन",
+              "b": "कमला",
+              "direction": "less"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019397635,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "mixed",
+            "pairwise",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-mix-000168",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "age",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: मेधा की उम्र 26 साल है। आनंद मेधा से बड़ा है। मोहित आनंद से बड़ा है। क्या मोहित, मेधा से छोटा है?\nउत्तर:",
+            "completion": " मेधा = 26 साल। आनंद > मेधा, मोहित > आनंद। क्रम: मोहित > आनंद > मेधा। इसलिए मोहित मेधा से बड़ा है। उत्तर: नहीं।",
+            "answer": "नहीं",
+            "true_order": [
+              "मोहित",
+              "आनंद",
+              "मेधा"
+            ],
+            "premises": [
+              {
+                "a": "आनंद",
+                "b": "मेधा",
+                "rel": ">"
+              },
+              {
+                "a": "मोहित",
+                "b": "आनंद",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "मेधा",
+              "value": 26,
+              "unit": "साल"
+            },
+            "query": {
+              "kind": "pairwise",
+              "a": "मोहित",
+              "b": "मेधा",
+              "direction": "less"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019401944,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "numeric",
+            "pairwise",
+            "bound"
+          ],
+          "record": {
+            "id": "hi-num-000000",
+            "language": "hi",
+            "task_family": "numeric",
+            "domain": "wealth",
+            "question_type": "pairwise",
+            "question_variant": "bound",
+            "depth": 2,
+            "prompt": "प्रश्न: पल्लवी के पास 4715 रुपये हैं। सुमन पल्लवी से ज़्यादा अमीर है। क्या सुमन के पास 4715 रुपये से कम हैं?\nउत्तर:",
+            "completion": " पल्लवी = 4715 रुपये। सुमन > पल्लवी। क्रम: सुमन > पल्लवी। तो सुमन > पल्लवी = 4715 रुपये। इसलिए सुमन के पास 4715 रुपये से अधिक हैं। उत्तर: नहीं।",
+            "answer": "नहीं",
+            "true_order": [
+              "सुमन",
+              "पल्लवी"
+            ],
+            "premises": [
+              {
+                "a": "सुमन",
+                "b": "पल्लवी",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "पल्लवी",
+              "value": 4715,
+              "unit": "रुपये"
+            },
+            "query": {
+              "kind": "bound",
+              "entity": "सुमन",
+              "anchor": "पल्लवी",
+              "value": 4715,
+              "unit": "रुपये",
+              "direction": "less"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019396736,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "numeric",
+            "pairwise",
+            "bound"
+          ],
+          "record": {
+            "id": "hi-num-000003",
+            "language": "hi",
+            "task_family": "numeric",
+            "domain": "weight",
+            "question_type": "pairwise",
+            "question_variant": "bound",
+            "depth": 2,
+            "prompt": "प्रश्न: नितिन का वज़न 70 किलो है। तुषार नितिन से हल्का है। क्या तुषार का वज़न 70 किलो से अधिक है?\nउत्तर:",
+            "completion": " नितिन = 70 किलो। तुषार < नितिन यानी नितिन > तुषार। क्रम: नितिन > तुषार। तो तुषार < नितिन = 70 किलो। इसलिए तुषार 70 किलो से कम है। उत्तर: नहीं।",
+            "answer": "नहीं",
+            "true_order": [
+              "नितिन",
+              "तुषार"
+            ],
+            "premises": [
+              {
+                "a": "तुषार",
+                "b": "नितिन",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "नितिन",
+              "value": 70,
+              "unit": "किलो"
+            },
+            "query": {
+              "kind": "bound",
+              "entity": "तुषार",
+              "anchor": "नितिन",
+              "value": 70,
+              "unit": "किलो",
+              "direction": "more"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019396829,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "extremum",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000005",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "wealth",
+            "question_type": "extremum",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: मनीषा रीता से ज़्यादा अमीर है। सबसे गरीब कौन है?\nउत्तर:",
+            "completion": " मनीषा > रीता। क्रम: मनीषा > रीता। सबसे गरीब रीता है। उत्तर: रीता।",
+            "answer": "रीता",
+            "true_order": [
+              "मनीषा",
+              "रीता"
+            ],
+            "premises": [
+              {
+                "a": "मनीषा",
+                "b": "रीता",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "extremum",
+              "end": "min"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019396891,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "extremum",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000013",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "wealth",
+            "question_type": "extremum",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: मोहित दीपिका से ज़्यादा अमीर है। सबसे गरीब कौन है?\nउत्तर:",
+            "completion": " मोहित > दीपिका। क्रम: मोहित > दीपिका। सबसे गरीब दीपिका है। उत्तर: दीपिका।",
+            "answer": "दीपिका",
+            "true_order": [
+              "मोहित",
+              "दीपिका"
+            ],
+            "premises": [
+              {
+                "a": "मोहित",
+                "b": "दीपिका",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "extremum",
+              "end": "min"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019397139,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "ordering",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000002",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "age",
+            "question_type": "ordering",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: अंजलि जितेंद्र से बड़ी है। सभी को उम्र के घटते क्रम में लगाओ।\nउत्तर:",
+            "completion": " अंजलि > जितेंद्र। क्रम: अंजलि > जितेंद्र। इसलिए सही क्रम यही है। उत्तर: अंजलि > जितेंद्र।",
+            "answer": "अंजलि > जितेंद्र",
+            "true_order": [
+              "अंजलि",
+              "जितेंद्र"
+            ],
+            "premises": [
+              {
+                "a": "अंजलि",
+                "b": "जितेंद्र",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "ordering"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019396798,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "ordering",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000007",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "age",
+            "question_type": "ordering",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: आशीष मालिनी से छोटा है। सभी को उम्र के घटते क्रम में लगाओ।\nउत्तर:",
+            "completion": " आशीष < मालिनी यानी मालिनी > आशीष। क्रम: मालिनी > आशीष। इसलिए सही क्रम यही है। उत्तर: मालिनी > आशीष।",
+            "answer": "मालिनी > आशीष",
+            "true_order": [
+              "मालिनी",
+              "आशीष"
+            ],
+            "premises": [
+              {
+                "a": "आशीष",
+                "b": "मालिनी",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "ordering"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019396953,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "pairwise",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000004",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "wealth",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: केतन हर्षिता से ज़्यादा अमीर है। हर्षिता सुशांत से ज़्यादा अमीर है। क्या सुशांत, केतन से ज़्यादा अमीर है?\nउत्तर:",
+            "completion": " केतन > हर्षिता, हर्षिता > सुशांत। क्रम: केतन > हर्षिता > सुशांत। इसलिए सुशांत केतन से ज़्यादा गरीब है। उत्तर: नहीं।",
+            "answer": "नहीं",
+            "true_order": [
+              "केतन",
+              "हर्षिता",
+              "सुशांत"
+            ],
+            "premises": [
+              {
+                "a": "केतन",
+                "b": "हर्षिता",
+                "rel": ">"
+              },
+              {
+                "a": "हर्षिता",
+                "b": "सुशांत",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "pairwise",
+              "a": "सुशांत",
+              "b": "केतन",
+              "direction": "more"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019396860,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "pairwise",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000006",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "weight",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: दीप्ति भानु से भारी है। भानु समीर से भारी है। क्या समीर, दीप्ति से हल्का है?\nउत्तर:",
+            "completion": " दीप्ति > भानु, भानु > समीर। क्रम: दीप्ति > भानु > समीर। इसलिए समीर दीप्ति से हल्का है। उत्तर: हाँ।",
+            "answer": "हाँ",
+            "true_order": [
+              "दीप्ति",
+              "भानु",
+              "समीर"
+            ],
+            "premises": [
+              {
+                "a": "दीप्ति",
+                "b": "भानु",
+                "rel": ">"
+              },
+              {
+                "a": "भानु",
+                "b": "समीर",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "pairwise",
+              "a": "समीर",
+              "b": "दीप्ति",
+              "direction": "less"
+            },
+            "split": "train",
+            "slice": "train_mix",
+            "seed": 20261019396922,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        }
+      ],
+      "agreement_samples": [
+        {
+          "group": [
+            "age — feminine subject"
+          ],
+          "record": {
+            "id": "hi-mix-000025",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "age",
+            "question_type": "extremum",
+            "question_variant": "relation",
+            "depth": 4,
+            "prompt": "प्रश्न: पद्मा की उम्र 69 साल है। गोविंद भारती से बड़ा है। राम गोविंद से छोटा है। भारती राम से बड़ी है। पद्मा गोविंद से बड़ी है। सबसे बड़ा कौन है?\nउत्तर:",
+            "completion": " पद्मा = 69 साल। गोविंद > भारती, राम < गोविंद यानी गोविंद > राम, भारती > राम, पद्मा > गोविंद। क्रम: पद्मा > गोविंद > भारती > राम। सबसे बड़ी पद्मा है। उत्तर: पद्मा।",
+            "answer": "पद्मा",
+            "true_order": [
+              "पद्मा",
+              "गोविंद",
+              "भारती",
+              "राम"
+            ],
+            "premises": [
+              {
+                "a": "गोविंद",
+                "b": "भारती",
+                "rel": ">"
+              },
+              {
+                "a": "राम",
+                "b": "गोविंद",
+                "rel": "<"
+              },
+              {
+                "a": "भारती",
+                "b": "राम",
+                "rel": ">"
+              },
+              {
+                "a": "पद्मा",
+                "b": "गोविंद",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "पद्मा",
+              "value": 69,
+              "unit": "साल"
+            },
+            "query": {
+              "kind": "extremum",
+              "end": "max"
+            },
+            "split": "test",
+            "slice": "mix_ood_d4",
+            "seed": 20261022419625,
+            "n_nonconsecutive_premises": 1,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "height — feminine subject"
+          ],
+          "record": {
+            "id": "hi-mix-000002",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "height",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 4,
+            "prompt": "प्रश्न: प्रतिमा की ऊँचाई 127 सेमी है। निशा अनीता से छोटी है। मनीष प्रतिमा से लम्बा है। मनीष निशा से छोटा है। अनीता प्रतिमा से लम्बी है। क्या प्रतिमा, निशा से छोटी है?\nउत्तर:",
+            "completion": " प्रतिमा = 127 सेमी। निशा < अनीता यानी अनीता > निशा, मनीष > प्रतिमा, मनीष < निशा यानी निशा > मनीष, अनीता > प्रतिमा। क्रम: अनीता > निशा > मनीष > प्रतिमा। इसलिए प्रतिमा निशा से छोटी है। उत्तर: हाँ।",
+            "answer": "हाँ",
+            "true_order": [
+              "अनीता",
+              "निशा",
+              "मनीष",
+              "प्रतिमा"
+            ],
+            "premises": [
+              {
+                "a": "निशा",
+                "b": "अनीता",
+                "rel": "<"
+              },
+              {
+                "a": "मनीष",
+                "b": "प्रतिमा",
+                "rel": ">"
+              },
+              {
+                "a": "मनीष",
+                "b": "निशा",
+                "rel": "<"
+              },
+              {
+                "a": "अनीता",
+                "b": "प्रतिमा",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "प्रतिमा",
+              "value": 127,
+              "unit": "सेमी"
+            },
+            "query": {
+              "kind": "pairwise",
+              "a": "प्रतिमा",
+              "b": "निशा",
+              "direction": "less"
+            },
+            "split": "test",
+            "slice": "mix_ood_d4",
+            "seed": 20261022418912,
+            "n_nonconsecutive_premises": 1,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "speed — feminine subject"
+          ],
+          "record": {
+            "id": "hi-rel-000000",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "speed",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: नंदिनी सुमित से धीमी है। सुमित भारती से धीमा है। क्या नंदिनी, भारती से धीमी है?\nउत्तर:",
+            "completion": " नंदिनी < सुमित यानी सुमित > नंदिनी, सुमित < भारती यानी भारती > सुमित। क्रम: भारती > सुमित > नंदिनी। इसलिए नंदिनी भारती से धीमी है। उत्तर: हाँ।",
+            "answer": "हाँ",
+            "true_order": [
+              "भारती",
+              "सुमित",
+              "नंदिनी"
+            ],
+            "premises": [
+              {
+                "a": "नंदिनी",
+                "b": "सुमित",
+                "rel": "<"
+              },
+              {
+                "a": "सुमित",
+                "b": "भारती",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "pairwise",
+              "a": "नंदिनी",
+              "b": "भारती",
+              "direction": "less"
+            },
+            "split": "test",
+            "slice": "xdom_d34",
+            "seed": 20261000173289,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "wealth — feminine subject"
+          ],
+          "record": {
+            "id": "hi-mix-000014",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "wealth",
+            "question_type": "extremum",
+            "question_variant": "relation",
+            "depth": 4,
+            "prompt": "प्रश्न: मनोज के पास 24227 रुपये हैं। सुभद्रा मनोज से ज़्यादा अमीर है। सुरभि मनोज से ज़्यादा अमीर है। सुभद्रा सुरभि से ज़्यादा गरीब है। सुशीला सुरभि से ज़्यादा अमीर है। सुभद्रा सुशीला से ज़्यादा गरीब है। सबसे अमीर कौन है?\nउत्तर:",
+            "completion": " मनोज = 24227 रुपये। सुभद्रा > मनोज, सुरभि > मनोज, सुभद्रा < सुरभि यानी सुरभि > सुभद्रा, सुशीला > सुरभि, सुभद्रा < सुशीला यानी सुशीला > सुभद्रा। क्रम: सुशीला > सुरभि > सुभद्रा > मनोज। सबसे अमीर सुशीला है। उत्तर: सुशीला।",
+            "answer": "सुशीला",
+            "true_order": [
+              "सुशीला",
+              "सुरभि",
+              "सुभद्रा",
+              "मनोज"
+            ],
+            "premises": [
+              {
+                "a": "सुभद्रा",
+                "b": "मनोज",
+                "rel": ">"
+              },
+              {
+                "a": "सुरभि",
+                "b": "मनोज",
+                "rel": ">"
+              },
+              {
+                "a": "सुभद्रा",
+                "b": "सुरभि",
+                "rel": "<"
+              },
+              {
+                "a": "सुशीला",
+                "b": "सुरभि",
+                "rel": ">"
+              },
+              {
+                "a": "सुभद्रा",
+                "b": "सुशीला",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "मनोज",
+              "value": 24227,
+              "unit": "रुपये"
+            },
+            "query": {
+              "kind": "extremum",
+              "end": "max"
+            },
+            "split": "test",
+            "slice": "mix_ood_d4",
+            "seed": 20261022419284,
+            "n_nonconsecutive_premises": 2,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "wealth — numeric anchor"
+          ],
+          "record": {
+            "id": "hi-mix-000001",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "wealth",
+            "question_type": "pairwise",
+            "question_variant": "bound",
+            "depth": 4,
+            "prompt": "प्रश्न: उमाकांत के पास 74150 रुपये हैं। रंजीत रोहिणी से ज़्यादा गरीब है। बलराम उमाकांत से ज़्यादा गरीब है। रोहिणी बलराम से ज़्यादा गरीब है। रंजीत उमाकांत से ज़्यादा गरीब है। रंजीत बलराम से ज़्यादा गरीब है। क्या रोहिणी के पास 74150 रुपये से अधिक हैं?\nउत्तर:",
+            "completion": " उमाकांत = 74150 रुपये। रंजीत < रोहिणी यानी रोहिणी > रंजीत, बलराम < उमाकांत यानी उमाकांत > बलराम, रोहिणी < बलराम यानी बलराम > रोहिणी, रंजीत < उमाकांत यानी उमाकांत > रंजीत, रंजीत < बलराम यानी बलराम > रंजीत। क्रम: उमाकांत > बलराम > रोहिणी > रंजीत। तो रोहिणी < उमाकांत = 74150 रुपये। इसलिए रोहिणी के पास 74150 रुपये से कम हैं। उत्तर: नहीं।",
+            "answer": "नहीं",
+            "true_order": [
+              "उमाकांत",
+              "बलराम",
+              "रोहिणी",
+              "रंजीत"
+            ],
+            "premises": [
+              {
+                "a": "रंजीत",
+                "b": "रोहिणी",
+                "rel": "<"
+              },
+              {
+                "a": "बलराम",
+                "b": "उमाकांत",
+                "rel": "<"
+              },
+              {
+                "a": "रोहिणी",
+                "b": "बलराम",
+                "rel": "<"
+              },
+              {
+                "a": "रंजीत",
+                "b": "उमाकांत",
+                "rel": "<"
+              },
+              {
+                "a": "रंजीत",
+                "b": "बलराम",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "उमाकांत",
+              "value": 74150,
+              "unit": "रुपये"
+            },
+            "query": {
+              "kind": "bound",
+              "entity": "रोहिणी",
+              "anchor": "उमाकांत",
+              "value": 74150,
+              "unit": "रुपये",
+              "direction": "more"
+            },
+            "split": "test",
+            "slice": "mix_ood_d4",
+            "seed": 20261022418881,
+            "n_nonconsecutive_premises": 2,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "wealth — relational"
+          ],
+          "record": {
+            "id": "hi-rel-000001",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "wealth",
+            "question_type": "ordering",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: चेतन वृंदा से ज़्यादा गरीब है। सभी को धन के घटते क्रम में लगाओ।\nउत्तर:",
+            "completion": " चेतन < वृंदा यानी वृंदा > चेतन। क्रम: वृंदा > चेतन। इसलिए सही क्रम यही है। उत्तर: वृंदा > चेतन।",
+            "answer": "वृंदा > चेतन",
+            "true_order": [
+              "वृंदा",
+              "चेतन"
+            ],
+            "premises": [
+              {
+                "a": "चेतन",
+                "b": "वृंदा",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "ordering"
+            },
+            "split": "test",
+            "slice": "rel_id_d23",
+            "seed": 20261016514751,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "weight — feminine subject"
+          ],
+          "record": {
+            "id": "hi-mix-000000",
+            "language": "hi",
+            "task_family": "mixed",
+            "domain": "weight",
+            "question_type": "extremum",
+            "question_variant": "relation",
+            "depth": 4,
+            "prompt": "प्रश्न: वृंदा का वज़न 91 किलो है। सुधांशु सुरेश से भारी है। सुधांशु वृंदा से हल्का है। वृंदा अनीता से हल्की है। वृंदा सुरेश से भारी है। अनीता सुधांशु से भारी है। सबसे भारी कौन है?\nउत्तर:",
+            "completion": " वृंदा = 91 किलो। सुधांशु > सुरेश, सुधांशु < वृंदा यानी वृंदा > सुधांशु, वृंदा < अनीता यानी अनीता > वृंदा, वृंदा > सुरेश, अनीता > सुधांशु। क्रम: अनीता > वृंदा > सुधांशु > सुरेश। सबसे भारी अनीता है। उत्तर: अनीता।",
+            "answer": "अनीता",
+            "true_order": [
+              "अनीता",
+              "वृंदा",
+              "सुधांशु",
+              "सुरेश"
+            ],
+            "premises": [
+              {
+                "a": "सुधांशु",
+                "b": "सुरेश",
+                "rel": ">"
+              },
+              {
+                "a": "सुधांशु",
+                "b": "वृंदा",
+                "rel": "<"
+              },
+              {
+                "a": "वृंदा",
+                "b": "अनीता",
+                "rel": "<"
+              },
+              {
+                "a": "वृंदा",
+                "b": "सुरेश",
+                "rel": ">"
+              },
+              {
+                "a": "अनीता",
+                "b": "सुधांशु",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": {
+              "entity": "वृंदा",
+              "value": 91,
+              "unit": "किलो"
+            },
+            "query": {
+              "kind": "extremum",
+              "end": "max"
+            },
+            "split": "test",
+            "slice": "mix_ood_d4",
+            "seed": 20261022418850,
+            "n_nonconsecutive_premises": 2,
+            "bound_adjacency_relaxed": false
+          }
+        }
+      ],
+      "total_records": 54000,
+      "checks": [
+        {
+          "check": "G1",
+          "status": "PASS",
+          "detail": "54000/54000 uniquely determined",
+          "numbers": {
+            "total": 54000,
+            "underdetermined": 0,
+            "examples": []
+          }
+        },
+        {
+          "check": "G2",
+          "status": "PASS",
+          "detail": "0 answer / 0 order mismatches over 54000 records",
+          "numbers": {
+            "total": 54000,
+            "answer_mismatches": 0,
+            "order_mismatches": 0,
+            "examples": []
+          }
+        },
+        {
+          "check": "G3",
+          "status": "PASS",
+          "detail": "7717/7717 relational pairwise questions query an underived pair",
+          "numbers": {
+            "checked": 7717,
+            "violations": 0,
+            "examples": []
+          }
+        },
+        {
+          "check": "G4",
+          "status": "PASS",
+          "detail": "1.0000 of eligible depth>=3 problems carry >=1 non-consecutive premise, mean 1.16 each; over ALL depth>=3 problems the mean is 0.95, below the target of 1 because depth-3 relational pairwise items cannot carry one",
+          "numbers": {
+            "depth_ge_min": 31420,
+            "with_nonconsecutive": 25705,
+            "eligible": 25705,
+            "eligible_with_nonconsecutive": 25705,
+            "eligible_fraction": 1.0,
+            "mean_nonconsecutive_eligible": 1.1638,
+            "mean_nonconsecutive_all": 0.9521,
+            "structurally_excluded": 5715,
+            "all_fraction": 0.818109
+          }
+        },
+        {
+          "check": "G5",
+          "status": "PASS",
+          "detail": "longest sequence 237 tokens against a 512-token context (275 to spare)",
+          "numbers": {
+            "context_len": 512,
+            "warn_at": 400,
+            "overall_max": 237,
+            "overflowing": [],
+            "warned": [],
+            "per_slice": {
+              "mix_ood_d4": {
+                "n": 1500,
+                "mean": 136.2,
+                "p99": 179,
+                "max": 205
+              },
+              "num_id_d23": {
+                "n": 1500,
+                "mean": 99.4,
+                "p99": 144,
+                "max": 156
+              },
+              "num_ood_d4": {
+                "n": 1500,
+                "mean": 144.7,
+                "p99": 185,
+                "max": 214
+              },
+              "rel_id_d23": {
+                "n": 1500,
+                "mean": 64.9,
+                "p99": 110,
+                "max": 122
+              },
+              "rel_ood_d4": {
+                "n": 1500,
+                "mean": 115.0,
+                "p99": 157,
+                "max": 185
+              },
+              "rel_ood_d5": {
+                "n": 1500,
+                "mean": 135.2,
+                "p99": 182,
+                "max": 204
+              },
+              "rel_ood_d6": {
+                "n": 1500,
+                "mean": 155.8,
+                "p99": 202,
+                "max": 237
+              },
+              "train_mix": {
+                "n": 40000,
+                "mean": 74.1,
+                "p99": 136,
+                "max": 166
+              },
+              "val_mix": {
+                "n": 2000,
+                "mean": 73.9,
+                "p99": 135,
+                "max": 151
+              },
+              "xdom_d34": {
+                "n": 1500,
+                "mean": 98.1,
+                "p99": 149,
+                "max": 171
+              }
+            }
+          }
+        },
+        {
+          "check": "G6.names",
+          "status": "PASS",
+          "detail": "train pool 220, test pool 70, 0 shared",
+          "numbers": {
+            "train_pool": 220,
+            "test_pool": 70,
+            "overlap": []
+          }
+        },
+        {
+          "check": "G6.name_length",
+          "status": "PASS",
+          "detail": "train 1.427 vs test 1.429 tokens per name, gap +0.001 (tolerance 0.15)",
+          "numbers": {
+            "train_mean": 1.4273,
+            "test_mean": 1.4286,
+            "gap": 0.0013,
+            "tolerance": 0.15
+          }
+        },
+        {
+          "check": "G6.prompts",
+          "status": "PASS",
+          "detail": "54000 records, 54000 distinct prompts, 0 collisions",
+          "numbers": {
+            "records": 54000,
+            "distinct_prompts": 54000,
+            "collisions": 0,
+            "colliding_pairs": []
+          }
+        },
+        {
+          "check": "G6.balance",
+          "status": "PASS",
+          "detail": "yes/no 0.0036 (z=-1.07), max/min 0.0024 (z=-0.62); |z| limit 3.5",
+          "numbers": {
+            "max_z": 3.5,
+            "worst_z": 1.068,
+            "boolean": {
+              "counts": {
+                "नहीं": 10876,
+                "हाँ": 10719
+              },
+              "n": 21595,
+              "deviation": 0.003635,
+              "z": -1.068
+            },
+            "extremum": {
+              "counts": {
+                "min": 8281,
+                "max": 8201
+              },
+              "n": 16482,
+              "deviation": 0.002427,
+              "z": -0.623
+            }
+          }
+        },
+        {
+          "check": "G6.extremum_gender",
+          "status": "PASS",
+          "detail": "10264/10264 extremum prompts use the gender-neutral (masculine) adjective, leaking nothing about the answer's gender",
+          "numbers": {
+            "checked": 10264,
+            "violations": 0,
+            "examples": []
+          }
+        },
+        {
+          "check": "G6.names_carry_no_label",
+          "status": "PASS",
+          "detail": "chi2=279.7 on 289 df, p=0.641; max |z|=2.80 against a Bonferroni limit of 4.14; max raw deviation 0.1147, mean |deviation| 0.0301",
+          "numbers": {
+            "names_scored": 290,
+            "pooled_answer_rate": 0.369585,
+            "chi_square": 279.742,
+            "dof": 289,
+            "p_value": 0.641149,
+            "min_p_value": 0.001,
+            "max_abs_z": 2.799,
+            "z_threshold": 4.142,
+            "family_alpha": 0.01,
+            "max_raw_deviation": 0.114657,
+            "mean_abs_deviation": 0.030121,
+            "worst": [
+              {
+                "name": "अर्जुन",
+                "z": -2.799,
+                "raw_deviation": -0.1147,
+                "appearances": 141,
+                "expected": 59.17,
+                "observed": 43
+              },
+              {
+                "name": "जतिन",
+                "z": -2.508,
+                "raw_deviation": -0.0828,
+                "appearances": 166,
+                "expected": 41.75,
+                "observed": 28
+              },
+              {
+                "name": "प्रतिमा",
+                "z": -2.447,
+                "raw_deviation": -0.0729,
+                "appearances": 200,
+                "expected": 48.58,
+                "observed": 34
+              },
+              {
+                "name": "प्रताप",
+                "z": 2.39,
+                "raw_deviation": 0.1,
+                "appearances": 135,
+                "expected": 56.5,
+                "observed": 70
+              },
+              {
+                "name": "धर्मेंद्र",
+                "z": -2.247,
+                "raw_deviation": -0.0945,
+                "appearances": 134,
+                "expected": 56.67,
+                "observed": 44
+              }
+            ]
+          }
+        },
+        {
+          "check": "G6.ood_domain",
+          "status": "PASS",
+          "detail": "OOD-only domains ['speed'] absent from every training file",
+          "numbers": {
+            "ood_domains": [
+              "speed"
+            ],
+            "offenders": {}
+          }
+        },
+        {
+          "check": "G7",
+          "status": "PASS",
+          "detail": "10/10 slices reproduced byte-identically from the same seed",
+          "numbers": {
+            "slices": 10,
+            "mismatches": [],
+            "digests": {
+              "train_mix": "8a13fc0b34280862dcd22fdc3fb3e0888fcf3a5168c6465ac7cfaf6072bb16c5",
+              "val_mix": "3e8942d5b74c3f6047dce3ac9bfa2997b83cbff996a2389265c1d1c912673afe",
+              "rel_id_d23": "202902402a11ea8500f2767c30ee6a98827a15a81833115d6361bd617b37b569",
+              "rel_ood_d4": "5d13bec7022eafec1b3290205c6bde84d09db79847f6b2f5011a4848d5df2f68",
+              "rel_ood_d5": "be299b92fce910f5482ba2cf7c86f1bc79028b1873bbd189c66831478ce16a2b",
+              "rel_ood_d6": "9ad61664664bc8cac3fe9f81e3028f0ab0c72f709ab2558d282deb72f008338d",
+              "num_id_d23": "3d5401978a5d00ce2b6305365f15e994737cb710589eba12cfc173a758c30fe5",
+              "num_ood_d4": "8f06db465484e4ab334a7d2f269dcabd74906de144cb502fb9bb8e1daf35d936",
+              "mix_ood_d4": "b6d13b598731ce1b1be48c274efcfa0767a9c2a0ee2a81f9803040afa1009ab7",
+              "xdom_d34": "6625c65ac92af4795b908cd7f4e11ba888c45f654990d2eb1a1560adc58cec1b"
+            }
+          }
+        },
+        {
+          "check": "G8",
+          "status": "PASS",
+          "detail": "54000/54000 answers recovered by the rule 'text between the last answer cue and the final danda'",
+          "numbers": {
+            "total": 54000,
+            "failures": 0,
+            "examples": []
+          }
+        }
+      ],
+      "name_lengths": {
+        "train": {
+          "n": 220,
+          "mean": 1.427,
+          "max": 4,
+          "min": 1
+        },
+        "test": {
+          "n": 70,
+          "mean": 1.429,
+          "max": 3,
+          "min": 1
+        },
+        "gap_mean": 0.002
+      }
+    }
+  ]
+}

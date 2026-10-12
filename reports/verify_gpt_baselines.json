@@ -1,0 +1,38 @@
+{
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "torch": "2.13.0+cu130",
+  "pretrained_test_loss": {
+    "measured": {
+      "mean_ce_nats": 3.4079521428864856,
+      "perplexity": 30.20332878231432,
+      "bits_per_byte": 0.4891641523826906
+    },
+    "recorded": {
+      "mean_ce_nats": 3.4079521466706377,
+      "perplexity": 30.20332889660831,
+      "bits_per_byte": 0.489164152925853
+    },
+    "abs_diff": {
+      "mean_ce_nats": 3.784152102781491e-09,
+      "perplexity": 1.1429398938389568e-07,
+      "bits_per_byte": 5.431624039431426e-10
+    },
+    "tokens_scored": 35903488,
+    "passed": true
+  },
+  "finetuned_heldout_em": {
+    "measured_em": 0.954,
+    "correct": 477,
+    "total": 500,
+    "recorded_em": 0.954,
+    "abs_diff": 0.0,
+    "train_stats": {
+      "examples": 60000,
+      "tokens_total": 5782373,
+      "tokens_supervised": 3523166
+    },
+    "train_stats_match": true,
+    "passed": true
+  }
+}

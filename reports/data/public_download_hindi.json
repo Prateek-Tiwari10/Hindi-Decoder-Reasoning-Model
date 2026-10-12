@@ -1,0 +1,53 @@
+{
+  "language": "hindi",
+  "target_tokens": 700000000,
+  "target_note": "Raised from 400M to 650-700M on 2026-08-15 per instructor guidance: cleaning only removes tokens and cannot be undone once the crawl window closes, so over-collect and subsample later.",
+  "chars_per_token_note": "Per-source MEASURED values (report/chars_per_token_measurement.json, 2026-08-14), not the old 4.0 guess: sangraha_verified 4.141, wikipedia 4.311. Corpus-weighted aggregate 4.155.",
+  "sources": [
+    {
+      "source": "sangraha_verified",
+      "documents": 1211722,
+      "characters": 2670991511,
+      "chars_per_token": 4.141,
+      "estimated_tokens": 645011714,
+      "documents_skipped": 12854,
+      "shards_used": 8,
+      "shards_available": 100
+    },
+    {
+      "source": "wikipedia",
+      "documents": 123011,
+      "characters": 240097176,
+      "chars_per_token": 4.311,
+      "estimated_tokens": 55694543,
+      "documents_skipped": 38536,
+      "shards_used": 2,
+      "shards_available": 2,
+      "note": "source exhausted: all available Hindi Wikipedia articles used"
+    }
+  ],
+  "total_documents": 1334733,
+  "total_characters": 2911088687,
+  "total_estimated_tokens": 700706257,
+  "aggregate_chars_per_token": 4.155,
+  "runs": [
+    {
+      "run": "initial",
+      "date": "2026-08-13",
+      "target_tokens": 400000000,
+      "documents": 738749,
+      "characters": 1602965547,
+      "note": "Reported 400.7M tokens at the time using the 4.0 guess; really 384.8M measured."
+    },
+    {
+      "run": "expansion-to-700M",
+      "date": "2026-08-15 10:33",
+      "target_tokens": 315000000,
+      "documents": 595984,
+      "characters": 1308123140,
+      "estimated_tokens": 315895469,
+      "command": "python -m common.public_corpus --language hindi --out hindi/data/public --source sangraha_verified --skip-shards 4 --target-tokens 315000000 --chars-per-token 4.141 --report report/public_download_hindi_topup.json",
+      "note": "92 of 100 Sangraha Hindi shards remain unread; supply is not a constraint."
+    }
+  ]
+}

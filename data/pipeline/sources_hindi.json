@@ -1,0 +1,115 @@
+{
+  "language": "hindi",
+  "iso639_1": "hi",
+  "script": "Devanagari",
+  "_comment": [
+    "Manual-collection source inventory for Model H (Hindi).",
+    "Every entry here is crawled by us and tagged source_type='manual' at ingest,",
+    "which is what substantiates the >=20% manual requirement in the spec.",
+    "Discovery routes were verified live on 2026-08-13 (see report/phase1.md).",
+    "Excluded after probing: ndtv.in, hindi.news18.com, pib.gov.in (HTTP 403 to",
+    "our crawler). hi.wikipedia.org is NOT crawled - Wikipedia is taken from the",
+    "official dump and counted as a downloaded/public source, not manual."
+  ],
+  "crawl_defaults": {
+    "requests_per_second_per_host": 1.0,
+    "max_concurrent_hosts": 8,
+    "timeout_seconds": 30,
+    "max_retries": 3,
+    "user_agent": "Mozilla/5.0 (compatible; LMA-course-research-crawler/1.0; academic monolingual corpus construction)",
+    "respect_robots_txt": true,
+    "raw_html_sample_rate": 0.05
+  },
+  "_site_order_note": "BBC is listed last deliberately: its archive index fans out into 122 large child sitemaps and takes roughly an hour to walk, so the faster sites are discovered first and the crawl can start while BBC is still enumerating.",
+  "sites": [
+    {
+      "host": "www.jagran.com",
+      "name": "Dainik Jagran",
+      "discovery": "sitemap_index",
+      "sitemaps": [
+        "https://www.jagran.com/all-news-sitemap.xml",
+        "https://www.jagran.com/sitemap.xml"
+      ],
+      "notes": "all-news-sitemap is an archive index, not a 48h window - the largest single Hindi discovery source found."
+    },
+    {
+      "host": "www.amarujala.com",
+      "name": "Amar Ujala",
+      "discovery": "sitemap_index",
+      "sitemaps": [
+        "https://www.amarujala.com/sitemap/sitemap-index.xml",
+        "https://www.amarujala.com/sitemap.xml"
+      ]
+    },
+    {
+      "host": "www.livehindustan.com",
+      "name": "Hindustan (Live Hindustan)",
+      "discovery": "sitemap_index",
+      "sitemaps": ["https://www.livehindustan.com/sitemap-index.xml"]
+    },
+    {
+      "host": "www.bhaskar.com",
+      "name": "Dainik Bhaskar",
+      "discovery": "sitemap_index",
+      "sitemaps": ["https://www.bhaskar.com/sitemaps-v1--sitemap-google-news-index.xml"],
+      "notes": "Only a news-window index is advertised; expect fewer URLs than Jagran."
+    },
+    {
+      "host": "www.prabhatkhabar.com",
+      "name": "Prabhat Khabar",
+      "discovery": "sitemap_index",
+      "sitemaps": [
+        "https://www.prabhatkhabar.com/sitemap-today.xml",
+        "https://www.prabhatkhabar.com/prabhatkhabar-category.xml"
+      ]
+    },
+    {
+      "host": "www.patrika.com",
+      "name": "Patrika",
+      "discovery": "sitemap_index",
+      "sitemaps": [
+        "https://www.patrika.com/newurlsitemapindex.xml",
+        "https://www.patrika.com/sitemap.xml"
+      ]
+    },
+    {
+      "host": "www.abplive.com",
+      "name": "ABP Live Hindi",
+      "discovery": "sitemap_index",
+      "sitemaps": [
+        "https://www.abplive.com/news-sitemap.xml",
+        "https://www.abplive.com/google-news-sitemap.xml",
+        "https://www.abplive.com/web-sitemap.xml"
+      ],
+      "notes": "Per-day sitemaps (news-DD-MM-YYYY.xml) were reported earlier as an unused lever worth ~390k URLs. Re-probed live on 2026-08-14: that pattern does NOT resolve. Tried news-DD-MM-YYYY.xml, sitemap/daily/news-DD-MM-YYYY.xml, news-sitemap-YYYY-MM-DD.xml, sitemap-DD-MM-YYYY.xml and /archive/DD-MM-YYYY - all 404/500/no-route. robots.txt advertises only 7 sitemaps, all current-window, and web-sitemap.xml is a flat urlset of section pages rather than a dated archive. ABP is therefore a small source, not a 390k-URL reserve; the Hindi headroom is Amar Ujala and the per-site cap instead."
+    },
+    {
+      "host": "navbharattimes.indiatimes.com",
+      "name": "Navbharat Times",
+      "discovery": "sitemap_index",
+      "sitemaps": ["https://navbharattimes.indiatimes.com/sitemapxml.cms"]
+    },
+    {
+      "host": "www.aajtak.in",
+      "name": "Aaj Tak",
+      "discovery": "sitemap_index",
+      "sitemaps": ["https://www.aajtak.in/rssfeeds/sitemap.xml"]
+    },
+    {
+      "host": "www.bbc.com",
+      "name": "BBC Hindi",
+      "discovery": "sitemap_index",
+      "sitemaps": ["https://www.bbc.com/sitemaps/https-index-com-archive.xml"],
+      "url_filter": "/hindi/",
+      "notes": "Archive sitemap indexes the full back catalogue - the single largest Hindi source, ~1500 Hindi URLs per child sitemap across 122 children. Listed last because walking it takes ~1h; URLs are committed incrementally so the crawl can start meanwhile."
+    }
+  ],
+  "planned_ocr_sources": {
+    "_comment": "Long-form/literary text for domain diversity beyond news. Target ~5-10M tokens; see report for the OCR error-rate audit.",
+    "candidates": [
+      "archive.org public-domain Hindi books (Devanagari, pre-1960 imprints)",
+      "Hindi Wikisource (public-domain literature, has a text layer - no OCR needed)",
+      "NCERT Hindi textbooks (PDF text layer where available)"
+    ]
+  }
+}

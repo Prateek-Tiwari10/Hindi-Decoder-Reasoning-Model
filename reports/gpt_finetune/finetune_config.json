@@ -1,0 +1,30 @@
+{
+  "language": "hindi",
+  "variant": "16k",
+  "peak_lr": 0.0003,
+  "warmup_ratio": 0.03,
+  "floor_ratio": 0.1,
+  "epochs": 8,
+  "micro_batch": 16,
+  "grad_accum": 4,
+  "weight_decay": 0.1,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "eps": 1e-08,
+  "grad_clip": 1.0,
+  "precision": "fp16",
+  "seed": 1337,
+  "eval_interval": 500,
+  "em_subset": 500,
+  "em_max_new_tokens": 160,
+  "ckpt_interval": 500,
+  "length_bucket": 512,
+  "families": null,
+  "run_name": "scaling_60k",
+  "data_dir": "data_scaling_60k",
+  "em_file": "val_heldout.jsonl",
+  "early_stop_patience": 2,
+  "max_len": 384
+}

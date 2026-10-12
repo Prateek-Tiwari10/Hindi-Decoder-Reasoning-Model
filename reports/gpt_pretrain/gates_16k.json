@@ -1,0 +1,68 @@
+{
+  "language": "hindi",
+  "variant": "384x11",
+  "model_config": {
+    "language": "hindi",
+    "vocab_size": 16000,
+    "d_model": 384,
+    "n_layers": 11,
+    "n_heads": 6,
+    "d_ff": 1536,
+    "context_len": 512,
+    "dropout": 0.1,
+    "positional": "learned_absolute",
+    "pre_norm": true,
+    "activation": "gelu",
+    "tie_weights": true,
+    "layer_norm_eps": 1e-05,
+    "d_k": 64,
+    "parameter_count": 25860480
+  },
+  "device": "cuda",
+  "gates": [
+    {
+      "name": "Gate A -- overfit a single batch",
+      "steps": 200,
+      "batch": [
+        8,
+        64
+      ],
+      "initial_loss": 9.806035995483398,
+      "final_loss": 0.0008433091570623219,
+      "trajectory": [
+        9.806,
+        3.822,
+        0.5773,
+        0.0558,
+        0.0162,
+        0.0086,
+        0.0054,
+        0.0035,
+        0.0022,
+        0.0014
+      ],
+      "passed": true
+    },
+    {
+      "name": "Gate B -- kill and resume",
+      "resumed": true,
+      "step_at_kill": 12,
+      "step_after_resume": 12,
+      "step_continuous": true,
+      "lr_at_kill": 6.5e-05,
+      "lr_after_resume": 6.5e-05,
+      "lr_continuous": true,
+      "optimizer_state_tensors": [
+        180,
+        180
+      ],
+      "optimizer_state_restored": true,
+      "loss_before_kill": 9.2031,
+      "loss_after_resume": 9.1178,
+      "spike": -0.0853,
+      "spike_in_noise_units": -0.95,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

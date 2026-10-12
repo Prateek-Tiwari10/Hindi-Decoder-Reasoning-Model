@@ -1,0 +1,20 @@
+{
+  "language": "hindi",
+  "target_tokens": 315000000,
+  "chars_per_token_used": 4.141,
+  "sources": [
+    {
+      "source": "sangraha_verified",
+      "documents": 595984,
+      "characters": 1308123140,
+      "estimated_tokens": 315895469,
+      "documents_skipped": 6303,
+      "shards_used": 4,
+      "shards_skipped": 4,
+      "shards_available": 100
+    }
+  ],
+  "total_documents": 595984,
+  "total_characters": 1308123140,
+  "total_estimated_tokens": 315895469
+}

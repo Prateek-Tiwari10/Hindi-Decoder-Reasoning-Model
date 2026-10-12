@@ -1,0 +1,196 @@
+# Cross-domain generalization probe -- Phase 3 scaling study, Part A.
+#
+# This plan emits NOTHING but the unseen-domain test slices.  The core corpus
+# (train / val / val_heldout / the six in-domain test slices) is NOT rebuilt by
+# this plan: those files are the already-validated data_perf build and are
+# carried over by sha256 verification, never regenerated.
+#
+# Four unseen domains, relation family only, test name pool only, four depth
+# slices each -> 16 slices per language, 32 files in total.
+#
+#   speed, strength, diligence   -- the three named in PHASE3_SCALING_PARTA_data.md
+#   temperature                  -- added at Prateek's request on top of that brief
+#
+# All four are person attributes drawn from the same disjoint test name pool the
+# rel_* slices use, so a cross-domain test item changes the DOMAIN and nothing
+# else.  See RESULTS_scaling_data.md section 8 for the one caveat on
+# temperature's surface construction.
+#
+# Master seed is deliberately unchanged from build_perf.yaml: every slice must
+# reproduce byte-identically on rerun (G7), and the slice tags are new, so the
+# derived per-record seeds cannot collide with any existing slice.
+
+seed: 20260910
+
+# Present for schema completeness only -- every slice below names its domain
+# explicitly, so `domains: core` is never resolved by this plan.
+core_domains: [height, age, wealth, weight]
+
+# Relation family only: the probe must not confound an unseen domain with an
+# unseen family, and a relation-only probe needs no numeric anchor, which is
+# what lets domains without a natural measurement unit (strength, diligence)
+# take part at all.
+family_mix:
+  relation: 1.0
+
+question_mix:
+  relation:
+    extremum: 0.34
+    pairwise: 0.33
+    ordering: 0.33
+  numeric:
+    bound: 1.0
+  mixed:
+    bound: 0.4
+    extremum: 0.2
+    pairwise: 0.2
+    ordering: 0.2
+
+# Identical to build_perf.yaml so chain structure is held constant and only the
+# domain varies.
+nonconsecutive:
+  min_depth: 3
+  k_min: 1
+  k_max: 2
+
+bound_nonadjacent_min_depth: 3
+
+max_resample_attempts: 60
+
+slices:
+  # ---- speed ----------------------------------------------------
+  xdom_speed_id_d23:
+    split: test
+    filename: xdom_speed_id_d23.jsonl
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: [speed]
+    families: {relation: 1.0}
+  xdom_speed_ood_d4:
+    split: test
+    filename: xdom_speed_ood_d4.jsonl
+    size: 1500
+    depths: [4]
+    pool: test
+    domains: [speed]
+    families: {relation: 1.0}
+  xdom_speed_ood_d5:
+    split: test
+    filename: xdom_speed_ood_d5.jsonl
+    size: 1500
+    depths: [5]
+    pool: test
+    domains: [speed]
+    families: {relation: 1.0}
+  xdom_speed_ood_d6:
+    split: test
+    filename: xdom_speed_ood_d6.jsonl
+    size: 1500
+    depths: [6]
+    pool: test
+    domains: [speed]
+    families: {relation: 1.0}
+
+  # ---- strength ----------------------------------------------------
+  xdom_strength_id_d23:
+    split: test
+    filename: xdom_strength_id_d23.jsonl
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: [strength]
+    families: {relation: 1.0}
+  xdom_strength_ood_d4:
+    split: test
+    filename: xdom_strength_ood_d4.jsonl
+    size: 1500
+    depths: [4]
+    pool: test
+    domains: [strength]
+    families: {relation: 1.0}
+  xdom_strength_ood_d5:
+    split: test
+    filename: xdom_strength_ood_d5.jsonl
+    size: 1500
+    depths: [5]
+    pool: test
+    domains: [strength]
+    families: {relation: 1.0}
+  xdom_strength_ood_d6:
+    split: test
+    filename: xdom_strength_ood_d6.jsonl
+    size: 1500
+    depths: [6]
+    pool: test
+    domains: [strength]
+    families: {relation: 1.0}
+
+  # ---- diligence ----------------------------------------------------
+  xdom_diligence_id_d23:
+    split: test
+    filename: xdom_diligence_id_d23.jsonl
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: [diligence]
+    families: {relation: 1.0}
+  xdom_diligence_ood_d4:
+    split: test
+    filename: xdom_diligence_ood_d4.jsonl
+    size: 1500
+    depths: [4]
+    pool: test
+    domains: [diligence]
+    families: {relation: 1.0}
+  xdom_diligence_ood_d5:
+    split: test
+    filename: xdom_diligence_ood_d5.jsonl
+    size: 1500
+    depths: [5]
+    pool: test
+    domains: [diligence]
+    families: {relation: 1.0}
+  xdom_diligence_ood_d6:
+    split: test
+    filename: xdom_diligence_ood_d6.jsonl
+    size: 1500
+    depths: [6]
+    pool: test
+    domains: [diligence]
+    families: {relation: 1.0}
+
+  # ---- temperature ----------------------------------------------------
+  xdom_temperature_id_d23:
+    split: test
+    filename: xdom_temperature_id_d23.jsonl
+    size: 1500
+    depths: [2, 3]
+    pool: test
+    domains: [temperature]
+    families: {relation: 1.0}
+  xdom_temperature_ood_d4:
+    split: test
+    filename: xdom_temperature_ood_d4.jsonl
+    size: 1500
+    depths: [4]
+    pool: test
+    domains: [temperature]
+    families: {relation: 1.0}
+  xdom_temperature_ood_d5:
+    split: test
+    filename: xdom_temperature_ood_d5.jsonl
+    size: 1500
+    depths: [5]
+    pool: test
+    domains: [temperature]
+    families: {relation: 1.0}
+  xdom_temperature_ood_d6:
+    split: test
+    filename: xdom_temperature_ood_d6.jsonl
+    size: 1500
+    depths: [6]
+    pool: test
+    domains: [temperature]
+    families: {relation: 1.0}
+

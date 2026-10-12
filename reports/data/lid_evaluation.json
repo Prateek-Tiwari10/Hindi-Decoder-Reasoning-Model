@@ -1,0 +1,111 @@
+{
+  "order": 4,
+  "n_docs_per_language": 4000,
+  "vocabulary_size": 143179,
+  "n_train_docs": {
+    "hi": 1496
+  },
+  "chosen_min_abs_logratio": 0.0,
+  "target_precision": 0.995,
+  "calibrated_on_stratum_words": 30,
+  "threshold_sweep": {
+    "0.000": {
+      "precision_min": 1.0,
+      "recall_mean": 0.919,
+      "leaked_docs": 0
+    },
+    "0.002": {
+      "precision_min": 1.0,
+      "recall_mean": 0.919,
+      "leaked_docs": 0
+    },
+    "0.005": {
+      "precision_min": 1.0,
+      "recall_mean": 0.919,
+      "leaked_docs": 0
+    },
+    "0.010": {
+      "precision_min": 1.0,
+      "recall_mean": 0.919,
+      "leaked_docs": 0
+    },
+    "0.020": {
+      "precision_min": 1.0,
+      "recall_mean": 0.919,
+      "leaked_docs": 0
+    },
+    "0.030": {
+      "precision_min": 1.0,
+      "recall_mean": 0.919,
+      "leaked_docs": 0
+    },
+    "0.050": {
+      "precision_min": 1.0,
+      "recall_mean": 0.919,
+      "leaked_docs": 0
+    },
+    "0.080": {
+      "precision_min": 1.0,
+      "recall_mean": 0.919,
+      "leaked_docs": 0
+    }
+  },
+  "metrics_by_document_length": {
+    "30w": {
+      "precision_hi": 1.0,
+      "recall_hi": 0.92184,
+      "leaked_docs": 0,
+      "rejected_docs": 80
+    },
+    "60w": {
+      "precision_hi": 1.0,
+      "recall_hi": 1.0,
+      "leaked_docs": 0,
+      "rejected_docs": 4
+    },
+    "120w": {
+      "precision_hi": 1.0,
+      "recall_hi": 1.0,
+      "leaked_docs": 0,
+      "rejected_docs": 1
+    },
+    "300w": {
+      "precision_hi": 1.0,
+      "recall_hi": 0.998,
+      "leaked_docs": 0,
+      "rejected_docs": 2
+    },
+    "full": {
+      "precision_hi": 1.0,
+      "recall_hi": 0.998,
+      "leaked_docs": 0,
+      "rejected_docs": 2
+    }
+  },
+  "margin_distribution": {
+    "hi": {
+      "language": "hi",
+      "n": 499,
+      "p05": 1.13874,
+      "p25": 1.60324,
+      "median": 1.84695,
+      "p75": 2.03018,
+      "p95": 2.33193,
+      "mean": 1.80246
+    }
+  },
+  "held_out_metrics": {
+    "hi": {
+      "precision": 1.0,
+      "recall": 0.9979959919839679,
+      "rejected_as_ambiguous": 1,
+      "leaked_into_other_corpus": 0
+    }
+  },
+  "confusion": {
+    "hi": {
+      "hi": 498,
+      "ambiguous": 1
+    }
+  }
+}

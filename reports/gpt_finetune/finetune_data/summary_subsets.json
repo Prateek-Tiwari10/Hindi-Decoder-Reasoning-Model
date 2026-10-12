@@ -1,0 +1,255 @@
+{
+  "subset_seed": 20260912,
+  "sizes": [
+    10000,
+    30000,
+    50000,
+    60000
+  ],
+  "languages": {
+    "hi": {
+      "subsets": {
+        "10000": {
+          "file": "train_10k.jsonl",
+          "records": 10000,
+          "sha256": "26dabc54491885ed3a23f3fe4b69eeb51046addb78b31746dbee5fb09e749d09",
+          "composition": {
+            "family": {
+              "counts": {
+                "mixed": 2001,
+                "numeric": 2967,
+                "relation": 5032
+              },
+              "pct": {
+                "mixed": 20.01,
+                "numeric": 29.67,
+                "relation": 50.32
+              }
+            },
+            "depth": {
+              "counts": {
+                "2": 5006,
+                "3": 4994
+              },
+              "pct": {
+                "2": 50.06,
+                "3": 49.94
+              }
+            },
+            "domain": {
+              "counts": {
+                "age": 2476,
+                "height": 2498,
+                "wealth": 2455,
+                "weight": 2571
+              },
+              "pct": {
+                "age": 24.76,
+                "height": 24.98,
+                "wealth": 24.55,
+                "weight": 25.71
+              }
+            }
+          },
+          "recurrence": {
+            "name_slots": 24994,
+            "pool_size": 3675,
+            "names_used": 3667,
+            "names_unused": 8,
+            "min": 0,
+            "median": 7,
+            "mean": 6.8,
+            "max": 18,
+            "headroom_vs_memorization": 66.9
+          }
+        },
+        "30000": {
+          "file": "train_30k.jsonl",
+          "records": 30000,
+          "sha256": "52f8d9384eaca2372666f60f4ec5eb797b0266a370062bd9549abd24e4511d30",
+          "composition": {
+            "family": {
+              "counts": {
+                "mixed": 5931,
+                "numeric": 9018,
+                "relation": 15051
+              },
+              "pct": {
+                "mixed": 19.77,
+                "numeric": 30.06,
+                "relation": 50.17
+              }
+            },
+            "depth": {
+              "counts": {
+                "2": 15229,
+                "3": 14771
+              },
+              "pct": {
+                "2": 50.76,
+                "3": 49.24
+              }
+            },
+            "domain": {
+              "counts": {
+                "age": 7535,
+                "height": 7475,
+                "wealth": 7431,
+                "weight": 7559
+              },
+              "pct": {
+                "age": 25.12,
+                "height": 24.92,
+                "wealth": 24.77,
+                "weight": 25.2
+              }
+            }
+          },
+          "recurrence": {
+            "name_slots": 74771,
+            "pool_size": 3675,
+            "names_used": 3675,
+            "names_unused": 0,
+            "min": 7,
+            "median": 20,
+            "mean": 20.35,
+            "max": 40,
+            "headroom_vs_memorization": 22.4
+          }
+        },
+        "50000": {
+          "file": "train_50k.jsonl",
+          "records": 50000,
+          "sha256": "e022550b48ee3326f715d0837b842f34e4f4bfc1197fa010634a781062c128fe",
+          "composition": {
+            "family": {
+              "counts": {
+                "mixed": 9937,
+                "numeric": 14934,
+                "relation": 25129
+              },
+              "pct": {
+                "mixed": 19.87,
+                "numeric": 29.87,
+                "relation": 50.26
+              }
+            },
+            "depth": {
+              "counts": {
+                "2": 25215,
+                "3": 24785
+              },
+              "pct": {
+                "2": 50.43,
+                "3": 49.57
+              }
+            },
+            "domain": {
+              "counts": {
+                "age": 12495,
+                "height": 12576,
+                "wealth": 12460,
+                "weight": 12469
+              },
+              "pct": {
+                "age": 24.99,
+                "height": 25.15,
+                "wealth": 24.92,
+                "weight": 24.94
+              }
+            }
+          },
+          "recurrence": {
+            "name_slots": 124785,
+            "pool_size": 3675,
+            "names_used": 3675,
+            "names_unused": 0,
+            "min": 15,
+            "median": 34,
+            "mean": 33.96,
+            "max": 59,
+            "headroom_vs_memorization": 13.4
+          }
+        },
+        "60000": {
+          "file": "train_60k.jsonl",
+          "records": 60000,
+          "sha256": "46f1c3b6889fcab72450691d57163038799d80317b72acf0d63faa120a668632",
+          "composition": {
+            "family": {
+              "counts": {
+                "mixed": 11961,
+                "numeric": 17891,
+                "relation": 30148
+              },
+              "pct": {
+                "mixed": 19.93,
+                "numeric": 29.82,
+                "relation": 50.25
+              }
+            },
+            "depth": {
+              "counts": {
+                "2": 30212,
+                "3": 29788
+              },
+              "pct": {
+                "2": 50.35,
+                "3": 49.65
+              }
+            },
+            "domain": {
+              "counts": {
+                "age": 14997,
+                "height": 15112,
+                "wealth": 14916,
+                "weight": 14975
+              },
+              "pct": {
+                "age": 25.0,
+                "height": 25.19,
+                "wealth": 24.86,
+                "weight": 24.96
+              }
+            }
+          },
+          "recurrence": {
+            "name_slots": 149788,
+            "pool_size": 3675,
+            "names_used": 3675,
+            "names_unused": 0,
+            "min": 20,
+            "median": 41,
+            "mean": 40.76,
+            "max": 66,
+            "headroom_vs_memorization": 11.2
+          }
+        }
+      },
+      "nesting": [
+        {
+          "smaller": 10000,
+          "larger": 30000,
+          "smaller_ids": 10000,
+          "larger_ids": 30000,
+          "is_subset": true
+        },
+        {
+          "smaller": 30000,
+          "larger": 50000,
+          "smaller_ids": 30000,
+          "larger_ids": 50000,
+          "is_subset": true
+        },
+        {
+          "smaller": 50000,
+          "larger": 60000,
+          "smaller_ids": 50000,
+          "larger_ids": 60000,
+          "is_subset": true
+        }
+      ],
+      "all_nested": true
+    }
+  }
+}

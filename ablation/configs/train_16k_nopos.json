@@ -1,0 +1,22 @@
+{
+  "language": "hindi",
+  "peak_lr": 0.003,
+  "warmup_steps": 750,
+  "max_steps": 16125,
+  "floor_ratio": 0.1,
+  "micro_batch": 32,
+  "grad_accum": 2,
+  "weight_decay": 0.1,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "eps": 1e-08,
+  "grad_clip": 1.0,
+  "eval_interval": 250,
+  "eval_batches": 50,
+  "ckpt_interval": 500,
+  "seed": 1337,
+  "precision": "fp16",
+  "run_name": "ablation_nopos_hindi"
+}

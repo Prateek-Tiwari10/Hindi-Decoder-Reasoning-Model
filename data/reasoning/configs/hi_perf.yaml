@@ -1,0 +1,186 @@
+# PERFORMANCE BUILD CONFIG.
+#
+# Identical to configs/hi.yaml in every surface string, template and
+# domain -- the ONLY difference is that it points at the large
+# `*_perf` name pools built by expand_names.py.  Deriving it from the
+# base config rather than hand-copying is what guarantees that: any
+# other difference would confound the comparison against the Part 2
+# baseline, which is the whole point of this build.
+#
+# Hindi surface configuration for the reasoning generator.
+#
+# Everything language-specific lives here; generator.py holds no Hindi
+# strings at all.
+#
+# TWO REVISIONS APPLIED (PHASE3_PART1_revision.md):
+#
+#   Fix A -- the `price` domain is replaced by `wealth`.  Pricing a person
+#   ("अर्जुन की कीमत 341 रुपये है") is not something anyone would say.  Wealth
+#   is the same strict total order over the same single name pool, so every §9
+#   leakage control is untouched, but the sentences are natural.  Wealth uses
+#   possession phrasing (`X के पास N रुपये हैं`) rather than the `X की <attr>`
+#   construction, which is why domains may override templates below.
+#
+#   Fix B -- predicate adjectives now AGREE with the subject entity's gender.
+#   Each adjective is given as {m, f}; invariant adjectives simply repeat the
+#   same string, which is more explicit than a separate flag.  The gender comes
+#   from the name pool's tag, not from a new random draw, so seed-determinism
+#   (G7) is unaffected.
+
+language: hindi
+code: hi
+
+# The Phase 2 16K BPE tokenizer for this language.  Loaded READ-ONLY, and only
+# for the sequence-length and name-length checks (§9.5, G5) -- never retrained
+# and never modified (§12).
+tokenizer: tokenizers/hindi/tokenizer/hindi_bpe_16000.model
+
+names:
+  train: ../vocab/hi_names_train_perf.txt
+  test: ../vocab/hi_names_test_perf.txt
+
+cues:
+  question: "प्रश्न:"
+  answer: "उत्तर:"
+
+# Quoted deliberately: unquoted yes/no are booleans under YAML 1.1.
+labels:
+  affirmative: "हाँ"
+  negative: "नहीं"
+
+connectives:
+  namely: "यानी"        # restates a polarity-flipped premise in ">" form
+  therefore: "इसलिए"    # introduces the final natural-language sentence
+  then: "तो"            # introduces the bound-propagation step
+  order: "क्रम:"        # labels the assembled total-order chain
+
+# Each domain is a strict total order on its attribute.  `more` is the
+# adjective for the greater end and `less` for the lesser end, each inflected
+# by the subject's gender.  `range` bounds the integer values drawn for the
+# numeric families.  `possessive` agrees with the ATTRIBUTE's gender, not the
+# entity's.  A domain may override any template in the `templates` block below.
+domains:
+  height:
+    attr: "ऊँचाई"
+    possessive: "की"
+    more: {m: "लम्बा", f: "लम्बी"}
+    less: {m: "छोटा", f: "छोटी"}
+    unit: "सेमी"
+    range: [120, 200]
+  age:
+    attr: "उम्र"
+    possessive: "की"
+    more: {m: "बड़ा", f: "बड़ी"}
+    less: {m: "छोटा", f: "छोटी"}
+    unit: "साल"
+    range: [5, 80]
+  weight:
+    attr: "वज़न"
+    possessive: "का"
+    more: {m: "भारी", f: "भारी"}
+    less: {m: "हल्का", f: "हल्की"}
+    unit: "किलो"
+    range: [30, 120]
+  # Fix A.  अमीर and गरीब are gender-invariant, so this domain needs no
+  # agreement -- but it does need possession phrasing and the ज़्यादा
+  # intensifier, hence the template overrides.
+  wealth:
+    attr: "धन"
+    possessive: "का"
+    more: {m: "अमीर", f: "अमीर"}
+    less: {m: "गरीब", f: "गरीब"}
+    unit: "रुपये"
+    range: [50, 100000]
+    templates:
+      premise_more: "{hi} {lo} से ज़्यादा {more} है।"
+      premise_less: "{lo} {hi} से ज़्यादा {less} है।"
+      q_pairwise: "क्या {a}, {b} से ज़्यादा {adj} है?"
+      anchor: "{e} के पास {v} {unit} हैं।"
+      q_bound: "क्या {e} के पास {v} {unit} से {bound} हैं?"
+      final_pairwise: "{therefore} {a} {b} से ज़्यादा {adj} है"
+      final_bound: "{therefore} {e} के पास {v} {unit} से {bound} हैं"
+  # OOD ONLY.  Never appears in train_mix or val_mix (§4, §12); it exists so
+  # the xdom slice can measure transfer to a surface template never trained on.
+  speed:
+    attr: "गति"
+    possessive: "की"
+    more: {m: "तेज़", f: "तेज़"}
+    less: {m: "धीमा", f: "धीमी"}
+    unit: "किमी"
+    range: [10, 120]
+    ood_only: true
+
+  # ---- Scaling-study cross-domain probes (Part A).  OOD ONLY. --------
+  # Same person name pool, same relation family, same conventions as the four
+  # core domains -- only the domain changes.  None of these may appear in any
+  # training file; `ood_only` is what the G6 leakage report keys on.
+  strength:
+    attr: "ताकत"
+    possessive: "की"
+    more: {m: "बलवान", f: "बलवान"}
+    less: {m: "कमज़ोर", f: "कमज़ोर"}
+    ood_only: true
+  # मेहनती / आलसी are gender-invariant but are NOT comparatives on their own,
+  # so this domain needs the ज़्यादा intensifier -- the same override pattern
+  # wealth uses, for the same reason.
+  diligence:
+    attr: "मेहनत"
+    possessive: "की"
+    more: {m: "मेहनती", f: "मेहनती"}
+    less: {m: "आलसी", f: "आलसी"}
+    ood_only: true
+    templates:
+      premise_more: "{hi} {lo} से ज़्यादा {more} है।"
+      premise_less: "{lo} {hi} से ज़्यादा {less} है।"
+      q_pairwise: "क्या {a}, {b} से ज़्यादा {adj} है?"
+      final_pairwise: "{therefore} {a} {b} से ज़्यादा {adj} है"
+  # Added at Prateek's request on top of the Part-A brief's three domains.
+  # Body temperature IS a person attribute, so the person name pool is kept and
+  # only the domain changes -- but Hindi has no predicate adjective for it
+  # ("राम गरम है" does not mean what it would have to mean), so this domain
+  # compares the ATTRIBUTE (`X का तापमान Y से ज़्यादा है`) rather than
+  # predicating an adjective of the person.  That is a surface-construction
+  # difference the other three do not have; flagged in RESULTS §8.
+  temperature:
+    attr: "तापमान"
+    possessive: "का"
+    more: {m: "ज़्यादा", f: "ज़्यादा"}
+    less: {m: "कम", f: "कम"}
+    ood_only: true
+    templates:
+      premise_more: "{hi} का तापमान {lo} से {more} है।"
+      premise_less: "{lo} का तापमान {hi} से {less} है।"
+      q_extremum: "किसका तापमान सबसे {adj} है?"
+      q_pairwise: "क्या {a} का तापमान {b} से {adj} है?"
+      final_extremum: "{ans} का तापमान सबसे {adj} है"
+      final_pairwise: "{therefore} {a} का तापमान {b} से {adj} है"
+
+# Surface templates.  `{hi}` is the entity higher on the attribute, `{lo}` the
+# lower one; a premise renders as `premise_more` when stated in the ">"
+# direction and `premise_less` when its polarity was flipped (§5.5).
+#
+# `q_extremum` deliberately takes the MASCULINE adjective whatever the answer's
+# gender: the referent is the interrogative कौन, which is grammatically
+# masculine, and agreeing it with the answer instead would leak the answer's
+# gender into the prompt and narrow the candidate set.
+templates:
+  premise_more: "{hi} {lo} से {more} है।"
+  premise_less: "{lo} {hi} से {less} है।"
+  anchor: "{e} {poss} {attr} {v} {unit} है।"
+  q_extremum: "सबसे {adj} कौन है?"
+  q_pairwise: "क्या {a}, {b} से {adj} है?"
+  q_ordering: "सभी को {attr} के घटते क्रम में लगाओ।"
+  q_bound: "क्या {e} {poss} {attr} {v} {unit} से {bound} है?"
+  cot_direct: "{hi} > {lo}"
+  cot_flipped: "{lo} < {hi} {namely} {hi} > {lo}"
+  cot_anchor: "{e} = {v} {unit}"
+  cot_bound: "{then} {e} {sym} {anchor} = {v} {unit}"
+  final_extremum: "सबसे {adj} {ans} है"
+  final_pairwise: "{therefore} {a} {b} से {adj} है"
+  final_ordering: "{therefore} सही क्रम यही है"
+  final_bound: "{therefore} {e} {v} {unit} से {bound} है"
+
+# Comparison words for the numeric bound question and its answer sentence.
+bounds:
+  more: "अधिक"
+  less: "कम"

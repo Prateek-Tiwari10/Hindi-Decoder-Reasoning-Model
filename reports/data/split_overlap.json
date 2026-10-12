@@ -1,0 +1,44 @@
+{
+  "hindi": {
+    "train_documents": 975528,
+    "train_documents_minhashed": 48776,
+    "exact_overlap_count": 0,
+    "exact_overlap_examples": [],
+    "near_duplicate_count": 2,
+    "near_duplicate_examples": [
+      {
+        "train_doc": 612559,
+        "found_in": "test",
+        "heldout_doc": 38535,
+        "jaccard": 0.9041,
+        "preview": "डर्टी पॉलिटिक्स (2015)(A)। *अस्वीकरणः इस पृष्ठ में प्रदर्शित तस्वीरें उपयोगकर्ताओं द्वारा प्रस्तुत की जाती हैं और माना ज"
+      },
+      {
+        "train_doc": 840419,
+        "found_in": "test",
+        "heldout_doc": 38535,
+        "jaccard": 0.88,
+        "preview": "क्या यही सच है (2011)(U/A)। *अस्वीकरणः इस पृष्ठ में प्रदर्शित तस्वीरें उपयोगकर्ताओं द्वारा प्रस्तुत की जाती हैं और माना "
+      }
+    ],
+    "val_test_shared_documents": 0,
+    "heldout_documents": {
+      "val": 66347,
+      "test": 66330
+    },
+    "tokens": {
+      "train": 508604908,
+      "val": 34443733,
+      "test": 34560377,
+      "total": 577609018,
+      "manual_share": {
+        "train": 0.2084,
+        "val": 0.2079,
+        "test": 0.2107
+      }
+    },
+    "near_duplicate_threshold": 0.8,
+    "sample_every": 20,
+    "clean": false
+  }
+}

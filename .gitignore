@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------------------
+# Large artifacts are never committed.  Checkpoints, token bins, the raw and
+# cleaned corpus and the generated finetuning data all live under artifacts/;
+# README.md links to where each is published (Hugging Face / Kaggle / Drive).
+# ---------------------------------------------------------------------------
+artifacts/
+
+# Checkpoints and weights, wherever they end up
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.idx
+checkpoints/
+runs/
+
+# Tokenized / crawled corpora and generated data
+*.warc
+*.warc.gz
+*.jsonl.gz
+*.jsonl.zst
+*.txt.gz
+*.txt.zst
+*.parquet
+*.db
+
+# JSONL is data unless it is a small committed result log under reports/
+*.jsonl
+!reports/**/*.jsonl
+
+# Kaggle / Hugging Face working copies and outputs
+kaggle/**/output/
+.kaggle*/
+.hf*/
+*.zip
+wandb/
+
+# Logs (training logs worth keeping are copied into reports/ as .jsonl)
+*.log
+
+# Python / environment
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+*.swp
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Local working notes (never pushed)
+/report/
+kaggle/

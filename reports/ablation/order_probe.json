@@ -1,0 +1,42 @@
+{
+  "seed": 20260916,
+  "n_sequences": 256,
+  "seq_len": 128,
+  "models": {
+    "standard": {
+      "variant": "16k",
+      "positional": "learned_absolute",
+      "parameters": 25860480,
+      "prefix_permutation": {
+        "sym_kl_nats": 2.471235752105713,
+        "total_variation": 0.6630251929163933,
+        "top1_agreement": 0.21484375
+      },
+      "adjacent_swap": {
+        "sym_kl_nats": 0.04211247153580189,
+        "total_variation": 0.0472333641955629,
+        "top1_agreement": 0.9296875
+      }
+    },
+    "ablated": {
+      "variant": "16k_nopos",
+      "positional": "none",
+      "parameters": 25663872,
+      "prefix_permutation": {
+        "sym_kl_nats": 2.363664112985134,
+        "total_variation": 0.6443163603544235,
+        "top1_agreement": 0.23828125
+      },
+      "adjacent_swap": {
+        "sym_kl_nats": 0.04227133457607124,
+        "total_variation": 0.04468430229462683,
+        "top1_agreement": 0.91796875
+      }
+    }
+  },
+  "control_one_layer_nopos": {
+    "sym_kl_nats": 1.7414260138071125e-13,
+    "total_variation": 1.7661247397882107e-07,
+    "top1_agreement": 1.0
+  }
+}

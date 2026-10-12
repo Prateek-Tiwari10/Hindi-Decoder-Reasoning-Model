@@ -1,0 +1,83 @@
+{
+  "language": "hindi",
+  "exported_at": "2026-08-23 21:08:00",
+  "tokenizer": {
+    "model_type": "bpe",
+    "vocab_size": 24000,
+    "model_path": "hindi/tokenizer/hindi_bpe_24000.model",
+    "note": "BPE 24k from the PREVIOUS split. Retrain on the new clean/train/ so the tokenizer sees only training text."
+  },
+  "target_tokens": 500000000,
+  "splits": [
+    {
+      "split": "train",
+      "documents": 975528,
+      "tokens": 508515844,
+      "manual_tokens": 106256146,
+      "public_tokens": 402259698,
+      "manual_share": 0.209,
+      "characters": 2084510311,
+      "shards": 8,
+      "bytes_on_disk": 1017031688,
+      "path": "hindi/data/bin/train.bin",
+      "verification": {
+        "tokens_on_disk": 508515844,
+        "expected_tokens": 508515844,
+        "count_matches": true,
+        "max_token_id": 23999,
+        "vocab_size": 24000,
+        "ids_within_vocab": true,
+        "dtype": "uint16"
+      }
+    },
+    {
+      "split": "val",
+      "documents": 66347,
+      "tokens": 34434609,
+      "manual_tokens": 7177645,
+      "public_tokens": 27256964,
+      "manual_share": 0.2084,
+      "characters": 141262716,
+      "shards": 1,
+      "bytes_on_disk": 68869218,
+      "path": "hindi/data/bin/val.bin",
+      "verification": {
+        "tokens_on_disk": 34434609,
+        "expected_tokens": 34434609,
+        "count_matches": true,
+        "max_token_id": 23999,
+        "vocab_size": 24000,
+        "ids_within_vocab": true,
+        "dtype": "uint16"
+      }
+    },
+    {
+      "split": "test",
+      "documents": 66330,
+      "tokens": 34550325,
+      "manual_tokens": 7299627,
+      "public_tokens": 27250698,
+      "manual_share": 0.2113,
+      "characters": 141555230,
+      "shards": 1,
+      "bytes_on_disk": 69100650,
+      "path": "hindi/data/bin/test.bin",
+      "verification": {
+        "tokens_on_disk": 34550325,
+        "expected_tokens": 34550325,
+        "count_matches": true,
+        "max_token_id": 23999,
+        "vocab_size": 24000,
+        "ids_within_vocab": true,
+        "dtype": "uint16"
+      }
+    }
+  ],
+  "total_tokens": 577500778,
+  "elapsed_seconds": 439.2,
+  "assembly": {
+    "method": "assemble-then-split: all manual text kept, public subsampled to a 568M-token pool, then the pool hash-split into train/val/test so every split carries the same manual share by construction",
+    "target_pool_tokens_estimated": 568000000,
+    "heldout_probability_each": 0.059859
+  }
+}

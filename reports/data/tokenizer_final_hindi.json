@@ -1,0 +1,61 @@
+{
+  "language": "hindi",
+  "swept_at": "2026-08-23 20:23:30",
+  "vocab_sizes": [
+    24000,
+    16000
+  ],
+  "model_types": [
+    "bpe"
+  ],
+  "train_chars_used": "complete corpus",
+  "d_model_assumed": 384,
+  "results": [
+    {
+      "eval_lines": 20000,
+      "tokens": 5287869,
+      "characters": 22456038,
+      "words": 4303888,
+      "chars_per_token": 4.24670845665806,
+      "tokens_per_word": 1.2286260701951353,
+      "unk_rate": 0.0,
+      "model_type": "bpe",
+      "vocab_size": 24000,
+      "embedding_parameters": 9216000,
+      "train_seconds": 653.0,
+      "model_path": "/kaggle/working/hindi/tokenizer/hindi_bpe_24000.model"
+    },
+    {
+      "eval_lines": 20000,
+      "tokens": 5490483,
+      "characters": 22456038,
+      "words": 4303888,
+      "chars_per_token": 4.089993175463798,
+      "tokens_per_word": 1.275703038740785,
+      "unk_rate": 0.0,
+      "model_type": "bpe",
+      "vocab_size": 16000,
+      "embedding_parameters": 6144000,
+      "train_seconds": 427.4,
+      "model_path": "/kaggle/working/hindi/tokenizer/hindi_bpe_16000.model"
+    }
+  ],
+  "chosen": {
+    "eval_lines": 20000,
+    "tokens": 5287869,
+    "characters": 22456038,
+    "words": 4303888,
+    "chars_per_token": 4.24670845665806,
+    "tokens_per_word": 1.2286260701951353,
+    "unk_rate": 0.0,
+    "model_type": "bpe",
+    "vocab_size": 24000,
+    "embedding_parameters": 9216000,
+    "train_seconds": 653.0,
+    "model_path": "/kaggle/working/hindi/tokenizer/hindi_bpe_24000.model",
+    "embedding_share_of_budget": 0.3686,
+    "affordable_layers_at_d_model": 8,
+    "selection_note": "largest vocabulary whose embedding table stays within 50% of the 25M parameter budget, and whose fertility gain over the next size down exceeds 2%; leaves ~8 decoder layers at d_model=384"
+  },
+  "elapsed_seconds": 1149.8
+}

@@ -1,0 +1,32 @@
+# Reasoning finetune (SFT) recipe shared by both architectures.
+# Values are exactly the `sft_config` embedded in
+# artifacts/checkpoints/gpt_ft/ft_60k/best.pt (GPT-ft baseline: step 1,000,
+# held-out-name val EM 0.954, early-stopped at step 2,000).
+language: hindi
+variant: 16k
+peak_lr: 0.0003
+warmup_ratio: 0.03         # of the PLANNED steps: int(0.03 x 7,496) = 224
+floor_ratio: 0.1
+epochs: 8                  # 937 steps/epoch x 8 = 7,496 planned cosine horizon
+micro_batch: 16
+grad_accum: 4
+weight_decay: 0.1
+betas: [0.9, 0.95]
+eps: 1.0e-08
+grad_clip: 1.0
+precision: fp16
+seed: 1337                 # epoch order = default_rng(seed*100003 + epoch)
+eval_interval: 500
+em_subset: 500             # fixed subset of em_file, drawn with default_rng(seed + 7)
+em_max_new_tokens: 160
+ckpt_interval: 500
+length_bucket: 512
+families: null
+run_name: scaling_60k
+data_dir: data_scaling_60k # legacy record of the course run's directory name
+# Split files, relative to artifacts/finetune_data/ (sha256 in data/reasoning/manifest_scaling.json)
+train_file: train/hi/train_60k.jsonl
+val_file: validation/hi/val_mix.jsonl
+em_file: validation/hi/val_heldout.jsonl
+early_stop_patience: 2     # on held-out-name EM
+max_len: 384

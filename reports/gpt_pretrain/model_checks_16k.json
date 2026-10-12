@@ -1,0 +1,107 @@
+{
+  "config": {
+    "language": "hindi",
+    "vocab_size": 16000,
+    "d_model": 384,
+    "n_layers": 11,
+    "n_heads": 6,
+    "d_ff": 1536,
+    "context_len": 512,
+    "dropout": 0.1,
+    "positional": "learned_absolute",
+    "pre_norm": true,
+    "activation": "gelu",
+    "tie_weights": true,
+    "layer_norm_eps": 1e-05,
+    "d_k": 64,
+    "parameter_count": 25860480
+  },
+  "checks": [
+    {
+      "name": "2d parameter count",
+      "analytic": 25860480,
+      "live": 25860480,
+      "matches": true,
+      "within_budget": true,
+      "weights_tied": true,
+      "saved_by_tying": 6144000,
+      "breakdown": {
+        "token_embedding_tied": 6144000,
+        "positional": 196608,
+        "blocks": 19519104,
+        "final_norm": 768
+      },
+      "passed": true
+    },
+    {
+      "name": "2a/2c/2d shapes",
+      "embedding": [
+        2,
+        16,
+        384
+      ],
+      "embedding_ok": true,
+      "block_preserves_shape": true,
+      "logits": [
+        2,
+        16,
+        16000
+      ],
+      "logits_ok": true,
+      "n_attention_maps": 11,
+      "attention": [
+        2,
+        6,
+        16,
+        16
+      ],
+      "attention_ok": true,
+      "passed": true
+    },
+    {
+      "name": "2a context cap",
+      "raised": "sequence length 513 exceeds context_len 512; the positional table has no row for position 512",
+      "passed": true
+    },
+    {
+      "name": "2b future-blindness",
+      "perturbed_positions": "16..31",
+      "max_change_at_positions_<=t": 0.0,
+      "max_change_after_t": 1.8415664434432983,
+      "past_unchanged": true,
+      "future_changed": true,
+      "passed": true
+    },
+    {
+      "name": "2b causal mask",
+      "max_weight_on_future": 0.0,
+      "max_row_sum_error": 2.384185791015625e-07,
+      "lower_triangular": true,
+      "rows_sum_to_one": true,
+      "passed": true
+    },
+    {
+      "name": "2b head split/merge",
+      "split_shape": [
+        2,
+        6,
+        9,
+        64
+      ],
+      "split_shape_ok": true,
+      "roundtrip_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "2d initial loss",
+      "loss": 9.792532920837402,
+      "expected_ln_vocab": 9.680344001221918,
+      "deviation": 0.11218891961548394,
+      "params_without_grad": [],
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "language": "hindi",
+  "variant": "16k"
+}

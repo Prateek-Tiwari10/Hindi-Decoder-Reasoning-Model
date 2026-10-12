@@ -1,0 +1,66 @@
+[
+  {
+    "language": "hindi",
+    "size": "10k",
+    "ok": true,
+    "uploaded": true,
+    "path_in_repo": "hindi/ft_10k",
+    "files": [
+      "hindi/ft_10k/README.md",
+      "hindi/ft_10k/config.json",
+      "hindi/ft_10k/hindi_bpe_16000.model",
+      "hindi/ft_10k/hindi_bpe_16000.vocab",
+      "hindi/ft_10k/model.safetensors",
+      "hindi/ft_10k/training.json"
+    ],
+    "url": "https://huggingface.co/Prateek-Tiwari10/LMA_phase3/tree/main/hindi/ft_10k"
+  },
+  {
+    "language": "hindi",
+    "size": "30k",
+    "ok": true,
+    "uploaded": true,
+    "path_in_repo": "hindi/ft_30k",
+    "files": [
+      "hindi/ft_30k/README.md",
+      "hindi/ft_30k/config.json",
+      "hindi/ft_30k/hindi_bpe_16000.model",
+      "hindi/ft_30k/hindi_bpe_16000.vocab",
+      "hindi/ft_30k/model.safetensors",
+      "hindi/ft_30k/training.json"
+    ],
+    "url": "https://huggingface.co/Prateek-Tiwari10/LMA_phase3/tree/main/hindi/ft_30k"
+  },
+  {
+    "language": "hindi",
+    "size": "50k",
+    "ok": true,
+    "uploaded": true,
+    "path_in_repo": "hindi/ft_50k",
+    "files": [
+      "hindi/ft_50k/README.md",
+      "hindi/ft_50k/config.json",
+      "hindi/ft_50k/hindi_bpe_16000.model",
+      "hindi/ft_50k/hindi_bpe_16000.vocab",
+      "hindi/ft_50k/model.safetensors",
+      "hindi/ft_50k/training.json"
+    ],
+    "url": "https://huggingface.co/Prateek-Tiwari10/LMA_phase3/tree/main/hindi/ft_50k"
+  },
+  {
+    "language": "hindi",
+    "size": "60k",
+    "ok": true,
+    "uploaded": true,
+    "path_in_repo": "hindi/ft_60k",
+    "files": [
+      "hindi/ft_60k/README.md",
+      "hindi/ft_60k/config.json",
+      "hindi/ft_60k/hindi_bpe_16000.model",
+      "hindi/ft_60k/hindi_bpe_16000.vocab",
+      "hindi/ft_60k/model.safetensors",
+      "hindi/ft_60k/training.json"
+    ],
+    "url": "https://huggingface.co/Prateek-Tiwari10/LMA_phase3/tree/main/hindi/ft_60k"
+  }
+]

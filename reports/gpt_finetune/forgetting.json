@@ -1,0 +1,63 @@
+{
+  "hindi": {
+    "phase2_full_split_reference": {
+      "perplexity": 30.2033,
+      "bits_per_byte": 0.4892
+    },
+    "protocol": {
+      "split": "test",
+      "batch_size": 8,
+      "max_batches": 500
+    },
+    "models": {
+      "pretrained": {
+        "tokens_scored": 2048000,
+        "utf8_bytes": 20605518,
+        "mean_ce_nats": 3.3706493730545044,
+        "perplexity": 29.097416002055034,
+        "bits_per_token": 4.862819135081227,
+        "bits_per_byte": 0.48331973933615036
+      },
+      "ft_10k": {
+        "tokens_scored": 2048000,
+        "utf8_bytes": 20605518,
+        "mean_ce_nats": 4.555096391677856,
+        "perplexity": 95.11592317714015,
+        "bits_per_token": 6.571614975044855,
+        "bits_per_byte": 0.6531584146000049,
+        "perplexity_ratio_vs_base": 3.2688786925417186,
+        "bpb_delta_vs_base": 0.16983867526385454
+      },
+      "ft_30k": {
+        "tokens_scored": 2048000,
+        "utf8_bytes": 20605518,
+        "mean_ce_nats": 6.037104416847229,
+        "perplexity": 418.67895826706933,
+        "bits_per_token": 8.709700603514355,
+        "bits_per_byte": 0.865664567908334,
+        "perplexity_ratio_vs_base": 14.388870758747089,
+        "bpb_delta_vs_base": 0.38234482857218366
+      },
+      "ft_50k": {
+        "tokens_scored": 2048000,
+        "utf8_bytes": 20605518,
+        "mean_ce_nats": 5.224211598396301,
+        "perplexity": 185.71469502939135,
+        "bits_per_token": 7.536944165560948,
+        "bits_per_byte": 0.749103305778036,
+        "perplexity_ratio_vs_base": 6.382515032134642,
+        "bpb_delta_vs_base": 0.2657835664418856
+      },
+      "ft_60k": {
+        "tokens_scored": 2048000,
+        "utf8_bytes": 20605518,
+        "mean_ce_nats": 5.152162255287171,
+        "perplexity": 172.80473459775595,
+        "bits_per_token": 7.432998935558099,
+        "bits_per_byte": 0.7387721007558745,
+        "perplexity_ratio_vs_base": 5.938834382597803,
+        "bpb_delta_vs_base": 0.25545236141972416
+      }
+    }
+  }
+}

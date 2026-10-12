@@ -1,0 +1,28 @@
+# Everything both architectures share during pretraining.
+# Values are exactly the `train_config` embedded in final_16k.pt; only
+# `peak_lr` may differ per architecture, and only via the LR sweep below.
+language: hindi
+peak_lr: 0.003             # GPT's swept winner; LLaMA gets its own from the sweep
+warmup_steps: 750
+max_steps: 16125           # = 528,404,893 train tokens // 32,768 -> 528,384,000 tokens seen
+floor_ratio: 0.1           # cosine decays to 0.1 x peak
+micro_batch: 32
+grad_accum: 2              # 32 x 2 x 512 = 32,768 tokens / step
+weight_decay: 0.1          # 2-D params only
+betas: [0.9, 0.95]
+eps: 1.0e-08
+grad_clip: 1.0
+eval_interval: 250         # val loss on 50 fixed batches (rng seed + 1 = 1338)
+eval_batches: 50
+ckpt_interval: 500
+seed: 1337                 # torch/np seed and the train-batch sampler
+precision: fp16            # autocast + GradScaler, single T4
+run_name: production
+
+# LR sweep protocol (GPT's, copied exactly for LLaMA). Not a TrainConfig field.
+lr_sweep:
+  steps_per_run: 1200      # 39,321,600 tokens per run
+  warmup_steps: 150
+  grid: [0.0015, 0.003, 0.0045, 0.006]
+  extend_if_edge: true     # add one notch beyond an edge winner
+  gpt_result: {0.0015: 4.4066, 0.003: 4.2542, 0.0045: 4.2905, 0.006: 4.4202}

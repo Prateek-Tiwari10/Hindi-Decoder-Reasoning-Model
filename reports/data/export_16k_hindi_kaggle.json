@@ -1,0 +1,77 @@
+{
+  "language": "hindi",
+  "exported_at": "2026-09-02 19:52:35",
+  "tokenizer": {
+    "model_type": "bpe",
+    "vocab_size": 16000,
+    "model_path": "/kaggle/input/datasets/prateek99491/lma-phase2-code/tokenizers/hindi/tokenizer/hindi_bpe_16000.model"
+  },
+  "target_tokens": 500000000,
+  "splits": [
+    {
+      "split": "train",
+      "documents": 975528,
+      "tokens": 528404893,
+      "manual_tokens": 110051001,
+      "public_tokens": 418353892,
+      "manual_share": 0.2083,
+      "public_documents_skipped": 0,
+      "public_keep_fraction": 1.0,
+      "bytes_on_disk": 1056809786,
+      "path": "/kaggle/working/hindi/train.bin",
+      "verification": {
+        "tokens_on_disk": 528404893,
+        "expected_tokens": 528404893,
+        "count_matches": true,
+        "max_token_id": 15999,
+        "vocab_size": 16000,
+        "ids_within_vocab": true,
+        "dtype": "uint16"
+      }
+    },
+    {
+      "split": "val",
+      "documents": 66347,
+      "tokens": 35779979,
+      "manual_tokens": 7433995,
+      "public_tokens": 28345984,
+      "manual_share": 0.2078,
+      "public_documents_skipped": 0,
+      "public_keep_fraction": 1.0,
+      "bytes_on_disk": 71559958,
+      "path": "/kaggle/working/hindi/val.bin",
+      "verification": {
+        "tokens_on_disk": 35779979,
+        "expected_tokens": 35779979,
+        "count_matches": true,
+        "max_token_id": 15999,
+        "vocab_size": 16000,
+        "ids_within_vocab": true,
+        "dtype": "uint16"
+      }
+    },
+    {
+      "split": "test",
+      "documents": 66330,
+      "tokens": 35903951,
+      "manual_tokens": 7560110,
+      "public_tokens": 28343841,
+      "manual_share": 0.2106,
+      "public_documents_skipped": 0,
+      "public_keep_fraction": 1.0,
+      "bytes_on_disk": 71807902,
+      "path": "/kaggle/working/hindi/test.bin",
+      "verification": {
+        "tokens_on_disk": 35903951,
+        "expected_tokens": 35903951,
+        "count_matches": true,
+        "max_token_id": 15999,
+        "vocab_size": 16000,
+        "ids_within_vocab": true,
+        "dtype": "uint16"
+      }
+    }
+  ],
+  "total_tokens": 600088823,
+  "elapsed_seconds": 2269.1
+}

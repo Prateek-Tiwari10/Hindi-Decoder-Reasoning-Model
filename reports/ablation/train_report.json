@@ -1,0 +1,15 @@
+{
+  "steps_logged": 16125,
+  "final_step": 16125,
+  "final_train_loss": 3.478921055793762,
+  "final_val_loss": 3.426186828613281,
+  "best_val_loss": 3.426186828613281,
+  "fraction_steps_clipped": 0.004342431761786601,
+  "max_grad_norm": 6.606884479522705,
+  "steps_skipped_fp16_overflow": 5,
+  "fraction_steps_skipped": 0.000310077519379845,
+  "figures": [
+    "/kaggle/working/figures/loss_curves_hindi_16k_nopos.png",
+    "/kaggle/working/figures/lr_grad_hindi_16k_nopos.png"
+  ]
+}

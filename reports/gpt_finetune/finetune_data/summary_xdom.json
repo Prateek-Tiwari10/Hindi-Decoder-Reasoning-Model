@@ -1,0 +1,1599 @@
+{
+  "build_config": {
+    "seed": 20260910,
+    "core_domains": [
+      "height",
+      "age",
+      "wealth",
+      "weight"
+    ],
+    "family_mix": {
+      "relation": 1.0
+    },
+    "question_mix": {
+      "relation": {
+        "extremum": 0.34,
+        "pairwise": 0.33,
+        "ordering": 0.33
+      },
+      "numeric": {
+        "bound": 1.0
+      },
+      "mixed": {
+        "bound": 0.4,
+        "extremum": 0.2,
+        "pairwise": 0.2,
+        "ordering": 0.2
+      }
+    },
+    "nonconsecutive": {
+      "min_depth": 3,
+      "k_min": 1,
+      "k_max": 2
+    },
+    "bound_nonadjacent_min_depth": 3,
+    "max_resample_attempts": 60,
+    "slices": {
+      "xdom_speed_id_d23": {
+        "split": "test",
+        "filename": "xdom_speed_id_d23.jsonl",
+        "size": 1500,
+        "depths": [
+          2,
+          3
+        ],
+        "pool": "test",
+        "domains": [
+          "speed"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_speed_ood_d4": {
+        "split": "test",
+        "filename": "xdom_speed_ood_d4.jsonl",
+        "size": 1500,
+        "depths": [
+          4
+        ],
+        "pool": "test",
+        "domains": [
+          "speed"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_speed_ood_d5": {
+        "split": "test",
+        "filename": "xdom_speed_ood_d5.jsonl",
+        "size": 1500,
+        "depths": [
+          5
+        ],
+        "pool": "test",
+        "domains": [
+          "speed"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_speed_ood_d6": {
+        "split": "test",
+        "filename": "xdom_speed_ood_d6.jsonl",
+        "size": 1500,
+        "depths": [
+          6
+        ],
+        "pool": "test",
+        "domains": [
+          "speed"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_strength_id_d23": {
+        "split": "test",
+        "filename": "xdom_strength_id_d23.jsonl",
+        "size": 1500,
+        "depths": [
+          2,
+          3
+        ],
+        "pool": "test",
+        "domains": [
+          "strength"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_strength_ood_d4": {
+        "split": "test",
+        "filename": "xdom_strength_ood_d4.jsonl",
+        "size": 1500,
+        "depths": [
+          4
+        ],
+        "pool": "test",
+        "domains": [
+          "strength"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_strength_ood_d5": {
+        "split": "test",
+        "filename": "xdom_strength_ood_d5.jsonl",
+        "size": 1500,
+        "depths": [
+          5
+        ],
+        "pool": "test",
+        "domains": [
+          "strength"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_strength_ood_d6": {
+        "split": "test",
+        "filename": "xdom_strength_ood_d6.jsonl",
+        "size": 1500,
+        "depths": [
+          6
+        ],
+        "pool": "test",
+        "domains": [
+          "strength"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_diligence_id_d23": {
+        "split": "test",
+        "filename": "xdom_diligence_id_d23.jsonl",
+        "size": 1500,
+        "depths": [
+          2,
+          3
+        ],
+        "pool": "test",
+        "domains": [
+          "diligence"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_diligence_ood_d4": {
+        "split": "test",
+        "filename": "xdom_diligence_ood_d4.jsonl",
+        "size": 1500,
+        "depths": [
+          4
+        ],
+        "pool": "test",
+        "domains": [
+          "diligence"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_diligence_ood_d5": {
+        "split": "test",
+        "filename": "xdom_diligence_ood_d5.jsonl",
+        "size": 1500,
+        "depths": [
+          5
+        ],
+        "pool": "test",
+        "domains": [
+          "diligence"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_diligence_ood_d6": {
+        "split": "test",
+        "filename": "xdom_diligence_ood_d6.jsonl",
+        "size": 1500,
+        "depths": [
+          6
+        ],
+        "pool": "test",
+        "domains": [
+          "diligence"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_temperature_id_d23": {
+        "split": "test",
+        "filename": "xdom_temperature_id_d23.jsonl",
+        "size": 1500,
+        "depths": [
+          2,
+          3
+        ],
+        "pool": "test",
+        "domains": [
+          "temperature"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_temperature_ood_d4": {
+        "split": "test",
+        "filename": "xdom_temperature_ood_d4.jsonl",
+        "size": 1500,
+        "depths": [
+          4
+        ],
+        "pool": "test",
+        "domains": [
+          "temperature"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_temperature_ood_d5": {
+        "split": "test",
+        "filename": "xdom_temperature_ood_d5.jsonl",
+        "size": 1500,
+        "depths": [
+          5
+        ],
+        "pool": "test",
+        "domains": [
+          "temperature"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      },
+      "xdom_temperature_ood_d6": {
+        "split": "test",
+        "filename": "xdom_temperature_ood_d6.jsonl",
+        "size": 1500,
+        "depths": [
+          6
+        ],
+        "pool": "test",
+        "domains": [
+          "temperature"
+        ],
+        "families": {
+          "relation": 1.0
+        }
+      }
+    }
+  },
+  "languages": [
+    {
+      "language": "hindi",
+      "code": "hi",
+      "tokenizer": "tokenizers/hindi/tokenizer/hindi_bpe_16000.model",
+      "files": {
+        "xdom_speed_id_d23": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_speed_id_d23.jsonl",
+        "xdom_speed_ood_d4": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_speed_ood_d4.jsonl",
+        "xdom_speed_ood_d5": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_speed_ood_d5.jsonl",
+        "xdom_speed_ood_d6": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_speed_ood_d6.jsonl",
+        "xdom_strength_id_d23": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_strength_id_d23.jsonl",
+        "xdom_strength_ood_d4": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_strength_ood_d4.jsonl",
+        "xdom_strength_ood_d5": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_strength_ood_d5.jsonl",
+        "xdom_strength_ood_d6": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_strength_ood_d6.jsonl",
+        "xdom_diligence_id_d23": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_diligence_id_d23.jsonl",
+        "xdom_diligence_ood_d4": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_diligence_ood_d4.jsonl",
+        "xdom_diligence_ood_d5": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_diligence_ood_d5.jsonl",
+        "xdom_diligence_ood_d6": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_diligence_ood_d6.jsonl",
+        "xdom_temperature_id_d23": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_temperature_id_d23.jsonl",
+        "xdom_temperature_ood_d4": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_temperature_ood_d4.jsonl",
+        "xdom_temperature_ood_d5": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_temperature_ood_d5.jsonl",
+        "xdom_temperature_ood_d6": "/tmp/claude-1000/-home-prateek-LMA-project1/526d1f22-c1e3-4afd-919e-44b2ede5d800/scratchpad/xdom_staging/hi/xdom_temperature_ood_d6.jsonl"
+      },
+      "digests": {
+        "xdom_speed_id_d23": "81750b99e40fb58f93655ea6a1164bef78e5ecb19c2c187c12d98d6d29a9341f",
+        "xdom_speed_ood_d4": "ba3fb27386590887b0c77a0c219c6879832b5e4f47455ea3bfd01f4984d0ca17",
+        "xdom_speed_ood_d5": "f1d1dce7ff17edcd0a66f96b1fd63347f933434a0d9a2b1e2aae10e543e81b92",
+        "xdom_speed_ood_d6": "1272e2a55c5bfe3a6f5857e1a4c9854e345059fdd315b2c0b3b63ecf624b6883",
+        "xdom_strength_id_d23": "1916662c05f3713675cb7310785f5e67f70f16c4b3657a9e3124bceba1251734",
+        "xdom_strength_ood_d4": "e46bf1387f1dd756df55d9eda113de5b5e827eb8e80562a01b14f1e638cb147b",
+        "xdom_strength_ood_d5": "d1b22d058a28b63e09b7366352267fbdec7a2f9d6bf7e046a7215745fafbb09f",
+        "xdom_strength_ood_d6": "28a5b8c4ab32518892d0517da3bb319365f05cc51c1380cc645f1a1e70a3ad39",
+        "xdom_diligence_id_d23": "eecd912893d10966367a48e7bf1d91439a0bd3c4b4de8b2caa6145bb7efa6377",
+        "xdom_diligence_ood_d4": "4f29926b53ccf18ac55696e1aceb1fbd2a2c1f07f29ff0d270356a7228e8a243",
+        "xdom_diligence_ood_d5": "f17d6f2ebe72733db3f7c7bd820dfb8d54a9778de1bba0779adbc1d492219cd7",
+        "xdom_diligence_ood_d6": "62c40319d37de30ef2a126d237d20ec022520c400ade46fed4f65ae7db3d0ded",
+        "xdom_temperature_id_d23": "d287981de38b0ec48e00cce157e1d8cd7471096c3daf8c6e366e0e24cc4ea7d3",
+        "xdom_temperature_ood_d4": "dd953687810bba51632d301f11705f21edf26993706b58d7da14d877d29671c2",
+        "xdom_temperature_ood_d5": "4ad01072bb387509200df168731b11ccc890807f3d79551532101600cd17494a",
+        "xdom_temperature_ood_d6": "fb2804898821b7bc2f0f7853ad4b54b12fb48a29a4b72e0485fa9f1e24bead52"
+      },
+      "slice_stats": {
+        "xdom_speed_id_d23": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 774,
+          "depth_ge_min_with_nonconsecutive": 512,
+          "depth_ge_min_eligible": 512,
+          "depth_ge_min_eligible_with_nonconsecutive": 512,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_speed_ood_d4": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_speed_ood_d5": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_speed_ood_d6": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_strength_id_d23": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 740,
+          "depth_ge_min_with_nonconsecutive": 491,
+          "depth_ge_min_eligible": 491,
+          "depth_ge_min_eligible_with_nonconsecutive": 491,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_strength_ood_d4": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_strength_ood_d5": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_strength_ood_d6": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_diligence_id_d23": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 738,
+          "depth_ge_min_with_nonconsecutive": 471,
+          "depth_ge_min_eligible": 471,
+          "depth_ge_min_eligible_with_nonconsecutive": 471,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_diligence_ood_d4": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_diligence_ood_d5": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_diligence_ood_d6": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_temperature_id_d23": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 744,
+          "depth_ge_min_with_nonconsecutive": 494,
+          "depth_ge_min_eligible": 494,
+          "depth_ge_min_eligible_with_nonconsecutive": 494,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_temperature_ood_d4": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_temperature_ood_d5": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        },
+        "xdom_temperature_ood_d6": {
+          "size": 1500,
+          "prompt_collisions_resampled": 0,
+          "depth_ge_min": 1500,
+          "depth_ge_min_with_nonconsecutive": 1500,
+          "depth_ge_min_eligible": 1500,
+          "depth_ge_min_eligible_with_nonconsecutive": 1500,
+          "bound_adjacency_relaxed": 0
+        }
+      },
+      "counts": {
+        "xdom_speed_id_d23": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "2": 726,
+            "3": 774
+          },
+          "question_type": {
+            "extremum": 616,
+            "pairwise": 262,
+            "ordering": 622
+          },
+          "domain": {
+            "speed": 1500
+          }
+        },
+        "xdom_speed_ood_d4": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "4": 1500
+          },
+          "question_type": {
+            "ordering": 507,
+            "pairwise": 497,
+            "extremum": 496
+          },
+          "domain": {
+            "speed": 1500
+          }
+        },
+        "xdom_speed_ood_d5": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "5": 1500
+          },
+          "question_type": {
+            "pairwise": 496,
+            "ordering": 505,
+            "extremum": 499
+          },
+          "domain": {
+            "speed": 1500
+          }
+        },
+        "xdom_speed_ood_d6": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "6": 1500
+          },
+          "question_type": {
+            "pairwise": 496,
+            "ordering": 506,
+            "extremum": 498
+          },
+          "domain": {
+            "speed": 1500
+          }
+        },
+        "xdom_strength_id_d23": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "2": 760,
+            "3": 740
+          },
+          "question_type": {
+            "ordering": 592,
+            "extremum": 659,
+            "pairwise": 249
+          },
+          "domain": {
+            "strength": 1500
+          }
+        },
+        "xdom_strength_ood_d4": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "4": 1500
+          },
+          "question_type": {
+            "pairwise": 514,
+            "ordering": 482,
+            "extremum": 504
+          },
+          "domain": {
+            "strength": 1500
+          }
+        },
+        "xdom_strength_ood_d5": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "5": 1500
+          },
+          "question_type": {
+            "extremum": 546,
+            "pairwise": 466,
+            "ordering": 488
+          },
+          "domain": {
+            "strength": 1500
+          }
+        },
+        "xdom_strength_ood_d6": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "6": 1500
+          },
+          "question_type": {
+            "extremum": 481,
+            "ordering": 485,
+            "pairwise": 534
+          },
+          "domain": {
+            "strength": 1500
+          }
+        },
+        "xdom_diligence_id_d23": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "2": 762,
+            "3": 738
+          },
+          "question_type": {
+            "pairwise": 267,
+            "ordering": 605,
+            "extremum": 628
+          },
+          "domain": {
+            "diligence": 1500
+          }
+        },
+        "xdom_diligence_ood_d4": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "4": 1500
+          },
+          "question_type": {
+            "ordering": 502,
+            "pairwise": 487,
+            "extremum": 511
+          },
+          "domain": {
+            "diligence": 1500
+          }
+        },
+        "xdom_diligence_ood_d5": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "5": 1500
+          },
+          "question_type": {
+            "ordering": 489,
+            "extremum": 508,
+            "pairwise": 503
+          },
+          "domain": {
+            "diligence": 1500
+          }
+        },
+        "xdom_diligence_ood_d6": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "6": 1500
+          },
+          "question_type": {
+            "ordering": 513,
+            "pairwise": 468,
+            "extremum": 519
+          },
+          "domain": {
+            "diligence": 1500
+          }
+        },
+        "xdom_temperature_id_d23": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "2": 756,
+            "3": 744
+          },
+          "question_type": {
+            "ordering": 609,
+            "extremum": 641,
+            "pairwise": 250
+          },
+          "domain": {
+            "temperature": 1500
+          }
+        },
+        "xdom_temperature_ood_d4": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "4": 1500
+          },
+          "question_type": {
+            "ordering": 530,
+            "extremum": 517,
+            "pairwise": 453
+          },
+          "domain": {
+            "temperature": 1500
+          }
+        },
+        "xdom_temperature_ood_d5": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "5": 1500
+          },
+          "question_type": {
+            "extremum": 500,
+            "ordering": 487,
+            "pairwise": 513
+          },
+          "domain": {
+            "temperature": 1500
+          }
+        },
+        "xdom_temperature_ood_d6": {
+          "split": "test",
+          "size": 1500,
+          "family": {
+            "relation": 1500
+          },
+          "depth": {
+            "6": 1500
+          },
+          "question_type": {
+            "extremum": 508,
+            "ordering": 480,
+            "pairwise": 512
+          },
+          "domain": {
+            "temperature": 1500
+          }
+        }
+      },
+      "variety": {
+        "domains": 4,
+        "families": 1,
+        "question_types": 3,
+        "depths": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "polarity_patterns": 254,
+        "family_domain_question_depth_combinations": 56
+      },
+      "samples": [
+        {
+          "group": [
+            "relation",
+            "extremum",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000000",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "speed",
+            "question_type": "extremum",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: देवेंद्रराज वीरेंद्रनाथ से धीमा है। सबसे धीमा कौन है?\nउत्तर:",
+            "completion": " देवेंद्रराज < वीरेंद्रनाथ यानी वीरेंद्रनाथ > देवेंद्रराज। क्रम: वीरेंद्रनाथ > देवेंद्रराज। सबसे धीमा देवेंद्रराज है। उत्तर: देवेंद्रराज।",
+            "answer": "देवेंद्रराज",
+            "true_order": [
+              "वीरेंद्रनाथ",
+              "देवेंद्रराज"
+            ],
+            "premises": [
+              {
+                "a": "देवेंद्रराज",
+                "b": "वीरेंद्रनाथ",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "extremum",
+              "end": "min"
+            },
+            "split": "test",
+            "slice": "xdom_speed_id_d23",
+            "seed": 20261109449729,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "extremum",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000003",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "speed",
+            "question_type": "extremum",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: नरेंद्रप्रकाश सुमितकुमार से धीमा है। मोहितप्रकाश नरेंद्रप्रकाश से धीमा है। मोहितप्रकाश सुमितकुमार से धीमा है। सबसे तेज़ कौन है?\nउत्तर:",
+            "completion": " नरेंद्रप्रकाश < सुमितकुमार यानी सुमितकुमार > नरेंद्रप्रकाश, मोहितप्रकाश < नरेंद्रप्रकाश यानी नरेंद्रप्रकाश > मोहितप्रकाश, मोहितप्रकाश < सुमितकुमार यानी सुमितकुमार > मोहितप्रकाश। क्रम: सुमितकुमार > नरेंद्रप्रकाश > मोहितप्रकाश। सबसे तेज़ सुमितकुमार है। उत्तर: सुमितकुमार।",
+            "answer": "सुमितकुमार",
+            "true_order": [
+              "सुमितकुमार",
+              "नरेंद्रप्रकाश",
+              "मोहितप्रकाश"
+            ],
+            "premises": [
+              {
+                "a": "नरेंद्रप्रकाश",
+                "b": "सुमितकुमार",
+                "rel": "<"
+              },
+              {
+                "a": "मोहितप्रकाश",
+                "b": "नरेंद्रप्रकाश",
+                "rel": "<"
+              },
+              {
+                "a": "मोहितप्रकाश",
+                "b": "सुमितकुमार",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "extremum",
+              "end": "max"
+            },
+            "split": "test",
+            "slice": "xdom_speed_id_d23",
+            "seed": 20261109449822,
+            "n_nonconsecutive_premises": 1,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "ordering",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000004",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "speed",
+            "question_type": "ordering",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: कार्तिकबाबू विश्वपाल से धीमा है। विश्वपाल रंजीतकिशोर से तेज़ है। रंजीतकिशोर कार्तिकबाबू से तेज़ है। सभी को गति के घटते क्रम में लगाओ।\nउत्तर:",
+            "completion": " कार्तिकबाबू < विश्वपाल यानी विश्वपाल > कार्तिकबाबू, विश्वपाल > रंजीतकिशोर, रंजीतकिशोर > कार्तिकबाबू। क्रम: विश्वपाल > रंजीतकिशोर > कार्तिकबाबू। इसलिए सही क्रम यही है। उत्तर: विश्वपाल > रंजीतकिशोर > कार्तिकबाबू।",
+            "answer": "विश्वपाल > रंजीतकिशोर > कार्तिकबाबू",
+            "true_order": [
+              "विश्वपाल",
+              "रंजीतकिशोर",
+              "कार्तिकबाबू"
+            ],
+            "premises": [
+              {
+                "a": "कार्तिकबाबू",
+                "b": "विश्वपाल",
+                "rel": "<"
+              },
+              {
+                "a": "विश्वपाल",
+                "b": "रंजीतकिशोर",
+                "rel": ">"
+              },
+              {
+                "a": "रंजीतकिशोर",
+                "b": "कार्तिकबाबू",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "ordering"
+            },
+            "split": "test",
+            "slice": "xdom_speed_id_d23",
+            "seed": 20261109449853,
+            "n_nonconsecutive_premises": 1,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "ordering",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000006",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "speed",
+            "question_type": "ordering",
+            "question_variant": "relation",
+            "depth": 2,
+            "prompt": "प्रश्न: अनुजपाल गोविंददत्त से धीमा है। सभी को गति के घटते क्रम में लगाओ।\nउत्तर:",
+            "completion": " अनुजपाल < गोविंददत्त यानी गोविंददत्त > अनुजपाल। क्रम: गोविंददत्त > अनुजपाल। इसलिए सही क्रम यही है। उत्तर: गोविंददत्त > अनुजपाल।",
+            "answer": "गोविंददत्त > अनुजपाल",
+            "true_order": [
+              "गोविंददत्त",
+              "अनुजपाल"
+            ],
+            "premises": [
+              {
+                "a": "अनुजपाल",
+                "b": "गोविंददत्त",
+                "rel": "<"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "ordering"
+            },
+            "split": "test",
+            "slice": "xdom_speed_id_d23",
+            "seed": 20261109449915,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "pairwise",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000001",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "speed",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: उमाकांतराज हरीशमोहन से धीमा है। उमाकांतराज प्रशांतदास से तेज़ है। क्या हरीशमोहन, प्रशांतदास से तेज़ है?\nउत्तर:",
+            "completion": " उमाकांतराज < हरीशमोहन यानी हरीशमोहन > उमाकांतराज, उमाकांतराज > प्रशांतदास। क्रम: हरीशमोहन > उमाकांतराज > प्रशांतदास। इसलिए हरीशमोहन प्रशांतदास से तेज़ है। उत्तर: हाँ।",
+            "answer": "हाँ",
+            "true_order": [
+              "हरीशमोहन",
+              "उमाकांतराज",
+              "प्रशांतदास"
+            ],
+            "premises": [
+              {
+                "a": "उमाकांतराज",
+                "b": "हरीशमोहन",
+                "rel": "<"
+              },
+              {
+                "a": "उमाकांतराज",
+                "b": "प्रशांतदास",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "pairwise",
+              "a": "हरीशमोहन",
+              "b": "प्रशांतदास",
+              "direction": "more"
+            },
+            "split": "test",
+            "slice": "xdom_speed_id_d23",
+            "seed": 20261109449760,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "relation",
+            "pairwise",
+            "relation"
+          ],
+          "record": {
+            "id": "hi-rel-000002",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "speed",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: वैभव दिवाकरस्वरूप से तेज़ है। भरतचरण वैभव से तेज़ है। क्या भरतचरण, दिवाकरस्वरूप से धीमा है?\nउत्तर:",
+            "completion": " वैभव > दिवाकरस्वरूप, भरतचरण > वैभव। क्रम: भरतचरण > वैभव > दिवाकरस्वरूप। इसलिए भरतचरण दिवाकरस्वरूप से तेज़ है। उत्तर: नहीं।",
+            "answer": "नहीं",
+            "true_order": [
+              "भरतचरण",
+              "वैभव",
+              "दिवाकरस्वरूप"
+            ],
+            "premises": [
+              {
+                "a": "वैभव",
+                "b": "दिवाकरस्वरूप",
+                "rel": ">"
+              },
+              {
+                "a": "भरतचरण",
+                "b": "वैभव",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "pairwise",
+              "a": "भरतचरण",
+              "b": "दिवाकरस्वरूप",
+              "direction": "less"
+            },
+            "split": "test",
+            "slice": "xdom_speed_id_d23",
+            "seed": 20261109449791,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        }
+      ],
+      "agreement_samples": [
+        {
+          "group": [
+            "diligence — feminine subject"
+          ],
+          "record": {
+            "id": "hi-rel-000000",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "diligence",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: जतिननाथ अंजलिबाई से ज़्यादा आलसी है। यामिनीमाला अंजलिबाई से ज़्यादा मेहनती है। क्या यामिनीमाला, जतिननाथ से ज़्यादा आलसी है?\nउत्तर:",
+            "completion": " जतिननाथ < अंजलिबाई यानी अंजलिबाई > जतिननाथ, यामिनीमाला > अंजलिबाई। क्रम: यामिनीमाला > अंजलिबाई > जतिननाथ। इसलिए यामिनीमाला जतिननाथ से ज़्यादा मेहनती है। उत्तर: नहीं।",
+            "answer": "नहीं",
+            "true_order": [
+              "यामिनीमाला",
+              "अंजलिबाई",
+              "जतिननाथ"
+            ],
+            "premises": [
+              {
+                "a": "जतिननाथ",
+                "b": "अंजलिबाई",
+                "rel": "<"
+              },
+              {
+                "a": "यामिनीमाला",
+                "b": "अंजलिबाई",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "pairwise",
+              "a": "यामिनीमाला",
+              "b": "जतिननाथ",
+              "direction": "less"
+            },
+            "split": "test",
+            "slice": "xdom_diligence_id_d23",
+            "seed": 20261184492222,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "speed — feminine subject"
+          ],
+          "record": {
+            "id": "hi-rel-000008",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "speed",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: काव्या कीर्तिदेवी से धीमी है। भवानीमाला कीर्तिदेवी से तेज़ है। क्या भवानीमाला, काव्या से तेज़ है?\nउत्तर:",
+            "completion": " काव्या < कीर्तिदेवी यानी कीर्तिदेवी > काव्या, भवानीमाला > कीर्तिदेवी। क्रम: भवानीमाला > कीर्तिदेवी > काव्या। इसलिए भवानीमाला काव्या से तेज़ है। उत्तर: हाँ।",
+            "answer": "हाँ",
+            "true_order": [
+              "भवानीमाला",
+              "कीर्तिदेवी",
+              "काव्या"
+            ],
+            "premises": [
+              {
+                "a": "काव्या",
+                "b": "कीर्तिदेवी",
+                "rel": "<"
+              },
+              {
+                "a": "भवानीमाला",
+                "b": "कीर्तिदेवी",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "pairwise",
+              "a": "भवानीमाला",
+              "b": "काव्या",
+              "direction": "more"
+            },
+            "split": "test",
+            "slice": "xdom_speed_id_d23",
+            "seed": 20261109449977,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "strength — feminine subject"
+          ],
+          "record": {
+            "id": "hi-rel-000011",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "strength",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: सुरेंद्रराज अभयपाल से कमज़ोर है। सुरेंद्रराज काव्याबाई से बलवान है। क्या काव्याबाई, अभयपाल से कमज़ोर है?\nउत्तर:",
+            "completion": " सुरेंद्रराज < अभयपाल यानी अभयपाल > सुरेंद्रराज, सुरेंद्रराज > काव्याबाई। क्रम: अभयपाल > सुरेंद्रराज > काव्याबाई। इसलिए काव्याबाई अभयपाल से कमज़ोर है। उत्तर: हाँ।",
+            "answer": "हाँ",
+            "true_order": [
+              "अभयपाल",
+              "सुरेंद्रराज",
+              "काव्याबाई"
+            ],
+            "premises": [
+              {
+                "a": "सुरेंद्रराज",
+                "b": "अभयपाल",
+                "rel": "<"
+              },
+              {
+                "a": "सुरेंद्रराज",
+                "b": "काव्याबाई",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "pairwise",
+              "a": "काव्याबाई",
+              "b": "अभयपाल",
+              "direction": "less"
+            },
+            "split": "test",
+            "slice": "xdom_strength_id_d23",
+            "seed": 20261168461349,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        },
+        {
+          "group": [
+            "temperature — feminine subject"
+          ],
+          "record": {
+            "id": "hi-rel-000005",
+            "language": "hi",
+            "task_family": "relation",
+            "domain": "temperature",
+            "question_type": "pairwise",
+            "question_variant": "relation",
+            "depth": 3,
+            "prompt": "प्रश्न: वाणीरानी का तापमान सुरभि से ज़्यादा है। सुरभि का तापमान रियामाला से ज़्यादा है। क्या रियामाला का तापमान वाणीरानी से ज़्यादा है?\nउत्तर:",
+            "completion": " वाणीरानी > सुरभि, सुरभि > रियामाला। क्रम: वाणीरानी > सुरभि > रियामाला। इसलिए रियामाला का तापमान वाणीरानी से कम है। उत्तर: नहीं।",
+            "answer": "नहीं",
+            "true_order": [
+              "वाणीरानी",
+              "सुरभि",
+              "रियामाला"
+            ],
+            "premises": [
+              {
+                "a": "वाणीरानी",
+                "b": "सुरभि",
+                "rel": ">"
+              },
+              {
+                "a": "सुरभि",
+                "b": "रियामाला",
+                "rel": ">"
+              }
+            ],
+            "numeric_anchor": null,
+            "query": {
+              "kind": "pairwise",
+              "a": "रियामाला",
+              "b": "वाणीरानी",
+              "direction": "more"
+            },
+            "split": "test",
+            "slice": "xdom_temperature_id_d23",
+            "seed": 20261235217860,
+            "n_nonconsecutive_premises": 0,
+            "bound_adjacency_relaxed": false
+          }
+        }
+      ],
+      "total_records": 24000,
+      "checks": [
+        {
+          "check": "G1",
+          "status": "PASS",
+          "detail": "24000/24000 uniquely determined",
+          "numbers": {
+            "total": 24000,
+            "underdetermined": 0,
+            "examples": []
+          }
+        },
+        {
+          "check": "G2",
+          "status": "PASS",
+          "detail": "0 answer / 0 order mismatches over 24000 records",
+          "numbers": {
+            "total": 24000,
+            "answer_mismatches": 0,
+            "order_mismatches": 0,
+            "examples": []
+          }
+        },
+        {
+          "check": "G3",
+          "status": "PASS",
+          "detail": "6967/6967 relational pairwise questions query an underived pair",
+          "numbers": {
+            "checked": 6967,
+            "violations": 0,
+            "examples": []
+          }
+        },
+        {
+          "check": "G4",
+          "status": "PASS",
+          "detail": "1.0000 of eligible depth>=3 problems carry >=1 non-consecutive premise, mean 1.45 each; over ALL depth>=3 problems the mean is 1.38, below the target of 1 because depth-3 relational pairwise items cannot carry one",
+          "numbers": {
+            "depth_ge_min": 20996,
+            "with_nonconsecutive": 19968,
+            "eligible": 19968,
+            "eligible_with_nonconsecutive": 19968,
+            "eligible_fraction": 1.0,
+            "mean_nonconsecutive_eligible": 1.4511,
+            "mean_nonconsecutive_all": 1.3801,
+            "structurally_excluded": 1028,
+            "all_fraction": 0.951038
+          }
+        },
+        {
+          "check": "G5",
+          "status": "PASS",
+          "detail": "longest sequence 295 tokens against a 512-token context (217 to spare)",
+          "numbers": {
+            "context_len": 512,
+            "warn_at": 400,
+            "overall_max": 295,
+            "overflowing": [],
+            "warned": [],
+            "per_slice": {
+              "xdom_diligence_id_d23": {
+                "n": 1500,
+                "mean": 82.3,
+                "p99": 136,
+                "max": 152
+              },
+              "xdom_diligence_ood_d4": {
+                "n": 1500,
+                "mean": 152.3,
+                "p99": 197,
+                "max": 206
+              },
+              "xdom_diligence_ood_d5": {
+                "n": 1500,
+                "mean": 181.1,
+                "p99": 237,
+                "max": 259
+              },
+              "xdom_diligence_ood_d6": {
+                "n": 1500,
+                "mean": 209.5,
+                "p99": 273,
+                "max": 289
+              },
+              "xdom_speed_id_d23": {
+                "n": 1500,
+                "mean": 80.0,
+                "p99": 133,
+                "max": 170
+              },
+              "xdom_speed_ood_d4": {
+                "n": 1500,
+                "mean": 144.2,
+                "p99": 194,
+                "max": 224
+              },
+              "xdom_speed_ood_d5": {
+                "n": 1500,
+                "mean": 172.0,
+                "p99": 225,
+                "max": 258
+              },
+              "xdom_speed_ood_d6": {
+                "n": 1500,
+                "mean": 198.3,
+                "p99": 254,
+                "max": 295
+              },
+              "xdom_strength_id_d23": {
+                "n": 1500,
+                "mean": 78.6,
+                "p99": 130,
+                "max": 162
+              },
+              "xdom_strength_ood_d4": {
+                "n": 1500,
+                "mean": 145.0,
+                "p99": 194,
+                "max": 209
+              },
+              "xdom_strength_ood_d5": {
+                "n": 1500,
+                "mean": 171.2,
+                "p99": 218,
+                "max": 253
+              },
+              "xdom_strength_ood_d6": {
+                "n": 1500,
+                "mean": 197.8,
+                "p99": 253,
+                "max": 287
+              },
+              "xdom_temperature_id_d23": {
+                "n": 1500,
+                "mean": 83.0,
+                "p99": 136,
+                "max": 152
+              },
+              "xdom_temperature_ood_d4": {
+                "n": 1500,
+                "mean": 153.6,
+                "p99": 199,
+                "max": 226
+              },
+              "xdom_temperature_ood_d5": {
+                "n": 1500,
+                "mean": 182.3,
+                "p99": 236,
+                "max": 259
+              },
+              "xdom_temperature_ood_d6": {
+                "n": 1500,
+                "mean": 209.4,
+                "p99": 264,
+                "max": 285
+              }
+            }
+          }
+        },
+        {
+          "check": "G6.names",
+          "status": "PASS",
+          "detail": "train pool 3675, test pool 1161, 0 shared",
+          "numbers": {
+            "train_pool": 3675,
+            "test_pool": 1161,
+            "overlap": []
+          }
+        },
+        {
+          "check": "G6.name_length",
+          "status": "PASS",
+          "detail": "train 2.398 vs test 2.401 tokens per name, gap +0.002 (tolerance 0.15)",
+          "numbers": {
+            "train_mean": 2.3981,
+            "test_mean": 2.4005,
+            "gap": 0.0024,
+            "tolerance": 0.15
+          }
+        },
+        {
+          "check": "G6.prompts",
+          "status": "PASS",
+          "detail": "24000 records, 24000 distinct prompts, 0 collisions",
+          "numbers": {
+            "records": 24000,
+            "distinct_prompts": 24000,
+            "collisions": 0,
+            "colliding_pairs": []
+          }
+        },
+        {
+          "check": "G6.balance",
+          "status": "PASS",
+          "detail": "yes/no 0.0029 (z=+0.49), max/min 0.0028 (z=+0.53); |z| limit 3.5",
+          "numbers": {
+            "max_z": 3.5,
+            "worst_z": 0.527,
+            "boolean": {
+              "counts": {
+                "हाँ": 3504,
+                "नहीं": 3463
+              },
+              "n": 6967,
+              "deviation": 0.002942,
+              "z": 0.491
+            },
+            "extremum": {
+              "counts": {
+                "min": 4291,
+                "max": 4340
+              },
+              "n": 8631,
+              "deviation": 0.002839,
+              "z": 0.527
+            }
+          }
+        },
+        {
+          "check": "G6.extremum_gender",
+          "status": "PASS",
+          "detail": "1081/1081 extremum prompts use the gender-neutral (masculine) adjective, leaking nothing about the answer's gender",
+          "numbers": {
+            "checked": 1081,
+            "violations": 0,
+            "examples": []
+          }
+        },
+        {
+          "check": "G6.names_carry_no_label",
+          "status": "PASS",
+          "detail": "chi2=1222.9 on 1160 df, p=0.097; max |z|=4.23 against a Bonferroni limit of 4.45; max raw deviation 0.2910, mean |deviation| 0.0607",
+          "numbers": {
+            "names_scored": 1161,
+            "pooled_answer_rate": 0.236323,
+            "chi_square": 1222.931,
+            "dof": 1160,
+            "p_value": 0.097241,
+            "min_p_value": 0.001,
+            "max_abs_z": 4.226,
+            "z_threshold": 4.449,
+            "family_alpha": 0.01,
+            "max_raw_deviation": 0.290952,
+            "mean_abs_deviation": 0.06067,
+            "worst": [
+              {
+                "name": "आभामाला",
+                "z": 4.226,
+                "raw_deviation": 0.291,
+                "appearances": 35,
+                "expected": 7.82,
+                "observed": 18
+              },
+              {
+                "name": "दीपकनारायण",
+                "z": 3.32,
+                "raw_deviation": 0.2619,
+                "appearances": 28,
+                "expected": 6.67,
+                "observed": 14
+              },
+              {
+                "name": "काव्याबाई",
+                "z": -3.141,
+                "raw_deviation": -0.1917,
+                "appearances": 44,
+                "expected": 9.43,
+                "observed": 1
+              },
+              {
+                "name": "कमलेशबाबू",
+                "z": 3.08,
+                "raw_deviation": 0.231,
+                "appearances": 29,
+                "expected": 6.3,
+                "observed": 13
+              },
+              {
+                "name": "कमललाल",
+                "z": 2.758,
+                "raw_deviation": 0.2054,
+                "appearances": 31,
+                "expected": 7.63,
+                "observed": 14
+              }
+            ]
+          }
+        },
+        {
+          "check": "G6.ood_domain",
+          "status": "PASS",
+          "detail": "OOD-only domains ['speed', 'strength', 'diligence', 'temperature'] absent from every training file",
+          "numbers": {
+            "ood_domains": [
+              "speed",
+              "strength",
+              "diligence",
+              "temperature"
+            ],
+            "offenders": {}
+          }
+        },
+        {
+          "check": "G7",
+          "status": "PASS",
+          "detail": "16/16 slices reproduced byte-identically from the same seed",
+          "numbers": {
+            "slices": 16,
+            "mismatches": [],
+            "digests": {
+              "xdom_speed_id_d23": "81750b99e40fb58f93655ea6a1164bef78e5ecb19c2c187c12d98d6d29a9341f",
+              "xdom_speed_ood_d4": "ba3fb27386590887b0c77a0c219c6879832b5e4f47455ea3bfd01f4984d0ca17",
+              "xdom_speed_ood_d5": "f1d1dce7ff17edcd0a66f96b1fd63347f933434a0d9a2b1e2aae10e543e81b92",
+              "xdom_speed_ood_d6": "1272e2a55c5bfe3a6f5857e1a4c9854e345059fdd315b2c0b3b63ecf624b6883",
+              "xdom_strength_id_d23": "1916662c05f3713675cb7310785f5e67f70f16c4b3657a9e3124bceba1251734",
+              "xdom_strength_ood_d4": "e46bf1387f1dd756df55d9eda113de5b5e827eb8e80562a01b14f1e638cb147b",
+              "xdom_strength_ood_d5": "d1b22d058a28b63e09b7366352267fbdec7a2f9d6bf7e046a7215745fafbb09f",
+              "xdom_strength_ood_d6": "28a5b8c4ab32518892d0517da3bb319365f05cc51c1380cc645f1a1e70a3ad39",
+              "xdom_diligence_id_d23": "eecd912893d10966367a48e7bf1d91439a0bd3c4b4de8b2caa6145bb7efa6377",
+              "xdom_diligence_ood_d4": "4f29926b53ccf18ac55696e1aceb1fbd2a2c1f07f29ff0d270356a7228e8a243",
+              "xdom_diligence_ood_d5": "f17d6f2ebe72733db3f7c7bd820dfb8d54a9778de1bba0779adbc1d492219cd7",
+              "xdom_diligence_ood_d6": "62c40319d37de30ef2a126d237d20ec022520c400ade46fed4f65ae7db3d0ded",
+              "xdom_temperature_id_d23": "d287981de38b0ec48e00cce157e1d8cd7471096c3daf8c6e366e0e24cc4ea7d3",
+              "xdom_temperature_ood_d4": "dd953687810bba51632d301f11705f21edf26993706b58d7da14d877d29671c2",
+              "xdom_temperature_ood_d5": "4ad01072bb387509200df168731b11ccc890807f3d79551532101600cd17494a",
+              "xdom_temperature_ood_d6": "fb2804898821b7bc2f0f7853ad4b54b12fb48a29a4b72e0485fa9f1e24bead52"
+            }
+          }
+        },
+        {
+          "check": "G8",
+          "status": "PASS",
+          "detail": "24000/24000 answers recovered by the rule 'text between the last answer cue and the final danda'",
+          "numbers": {
+            "total": 24000,
+            "failures": 0,
+            "examples": []
+          }
+        }
+      ],
+      "name_lengths": {
+        "train": {
+          "n": 3675,
+          "mean": 2.398,
+          "max": 6,
+          "min": 1
+        },
+        "test": {
+          "n": 1161,
+          "mean": 2.401,
+          "max": 6,
+          "min": 1
+        },
+        "gap_mean": 0.003
+      }
+    }
+  ]
+}

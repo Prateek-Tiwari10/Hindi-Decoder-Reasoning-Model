@@ -1,0 +1,60 @@
+{
+  "language": "hindi",
+  "device": "cuda",
+  "grid": [
+    0.00045,
+    0.0006
+  ],
+  "fraction_of_epoch": 0.5,
+  "effective_batch": 64,
+  "runs": [
+    {
+      "peak_lr": 0.00045,
+      "steps": 312,
+      "planned_total_steps": 1875,
+      "fraction_of_epoch": 0.5,
+      "best_val_em": 0.792,
+      "best_step": 312,
+      "final_val_loss": 0.018296212664451732,
+      "final_val_em": 0.792,
+      "final_no_answer_cue": 0,
+      "final_hit_length_cap": 0,
+      "wall_clock_seconds": 155.3,
+      "out_dir": "/home/prateek/LMA_project1/phase3/runs/sweep_hindi/lr_0.00045",
+      "diverged": false
+    },
+    {
+      "peak_lr": 0.0006,
+      "steps": 312,
+      "planned_total_steps": 1875,
+      "fraction_of_epoch": 0.5,
+      "best_val_em": 0.814,
+      "best_step": 312,
+      "final_val_loss": 0.01791469990191545,
+      "final_val_em": 0.814,
+      "final_no_answer_cue": 0,
+      "final_hit_length_cap": 0,
+      "wall_clock_seconds": 155.1,
+      "out_dir": "/home/prateek/LMA_project1/phase3/runs/sweep_hindi/lr_0.0006",
+      "diverged": false
+    }
+  ],
+  "winner": {
+    "peak_lr": 0.0006,
+    "best_val_em": 0.814,
+    "bracketed": false,
+    "reason": "best on the grid, but at its edge: the true optimum may lie beyond the grid and is not bracketed",
+    "ranking": [
+      {
+        "peak_lr": 0.0006,
+        "best_val_em": 0.814,
+        "final_val_loss": 0.01791469990191545
+      },
+      {
+        "peak_lr": 0.00045,
+        "best_val_em": 0.792,
+        "final_val_loss": 0.018296212664451732
+      }
+    ]
+  }
+}

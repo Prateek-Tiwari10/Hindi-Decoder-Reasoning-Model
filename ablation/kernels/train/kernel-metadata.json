@@ -1,0 +1,18 @@
+{
+  "id": "prateek99491/lma-bonus-nopos-train",
+  "title": "LMA Bonus Nopos Train",
+  "code_file": "ablation_train_nopos.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "prateek99491/lma-bonus-code"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [
+    "prateek99491/lma-phase-2-export-bins-16k"
+  ]
+}

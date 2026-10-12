@@ -1,0 +1,61 @@
+{
+  "measured_at": "2026-08-14 17:40:38",
+  "purpose": "replace the guessed 4.0 chars/token planning constant",
+  "method": "throwaway SentencePiece BPE vocab=32000 trained on a ~50 MB normalized public-corpus sample per language; measured on held-out documents (every 50th, never trained on)",
+  "note": "throwaway models, deleted after measurement; graded sweep is separate",
+  "results": [
+    {
+      "language": "hindi",
+      "vocab_size": 32000,
+      "model_type": "bpe",
+      "sample_mb": 51.3,
+      "train_documents": 6710,
+      "sample_mix_pct_chars": {
+        "sangraha_verified": 61.1,
+        "wikipedia": 38.9
+      },
+      "public_heldout": {
+        "documents": 136,
+        "characters": 450730,
+        "tokens": 106908,
+        "words": 85172,
+        "chars_per_token": 4.216054925730535,
+        "bytes_per_token": 10.677657425075767,
+        "tokens_per_word": 1.2552012398440802,
+        "bytes_per_char": 2.5326181971468507
+      },
+      "per_source_heldout": {
+        "sangraha_verified": {
+          "documents": 112,
+          "characters": 247400,
+          "tokens": 59746,
+          "words": 48130,
+          "chars_per_token": 4.140862986643457,
+          "bytes_per_token": 10.465185953871389,
+          "tokens_per_word": 1.2413463536255973,
+          "bytes_per_char": 2.5272958771220697
+        },
+        "wikipedia": {
+          "documents": 24,
+          "characters": 203330,
+          "tokens": 47162,
+          "words": 37042,
+          "chars_per_token": 4.311309952928205,
+          "bytes_per_token": 10.94682159365591,
+          "tokens_per_word": 1.2732033907456402,
+          "bytes_per_char": 2.539094083509566
+        }
+      },
+      "manual_sample": {
+        "documents": 196,
+        "characters": 424562,
+        "tokens": 99615,
+        "words": 79492,
+        "chars_per_token": 4.26202881092205,
+        "bytes_per_token": 10.668925362646188,
+        "tokens_per_word": 1.2531449705630755,
+        "bytes_per_char": 2.5032504086564504
+      }
+    }
+  ]
+}

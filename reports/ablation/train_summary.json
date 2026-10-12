@@ -1,0 +1,10 @@
+{
+  "language": "hindi",
+  "steps": 16125,
+  "final_val_loss": 3.426186828613281,
+  "best_val_loss": 3.426186828613281,
+  "peak_lr": 0.003,
+  "tokens_seen": 528384000,
+  "wall_seconds": 16490.2,
+  "interrupted": false
+}

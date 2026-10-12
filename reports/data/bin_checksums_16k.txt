@@ -1,0 +1,3 @@
+1bfa57d73456e5c0bec978243216b06124cc9bfbe7f64ae1e0992aeb03488cde  artifacts/data/bin/train_16k.bin
+b2d67d5d96d019e70456e79acfcc07d6d32d73b85e2d9ff0249a7b12e6ae513b  artifacts/data/bin/val_16k.bin
+e59681ddbb681aa807a9bb93ce8005bdd12c70f56d94a0e3872681b76845cce3  artifacts/data/bin/test_16k.bin

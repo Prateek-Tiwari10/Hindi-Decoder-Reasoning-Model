@@ -1,0 +1,75 @@
+{
+  "language": "hindi",
+  "cleaned_at": "2026-08-15 17:05:55",
+  "chars_per_token_measured": 4.166,
+  "input_shards": 41,
+  "stage_a": {
+    "documents_in": 1712057,
+    "characters_in": 4127188598,
+    "tokens_in": 990683772,
+    "dropped_lid_total": 8283,
+    "dropped_lid_ambiguous": 8269,
+    "dropped_quality": 219836,
+    "quality_rejections_by_reason": {
+      "boilerplate": 171435,
+      "unpunctuated": 1170,
+      "repetitive_bigram": 25156,
+      "too_short": 18338,
+      "low_devanagari_ratio": 1374,
+      "too_few_words": 2093,
+      "digit_heavy": 252,
+      "punctuation_heavy": 18
+    },
+    "sentences_seen": 39264050,
+    "sentences_removed": 295811,
+    "sentence_removal_fraction": 0.00753388914286733,
+    "documents_kept": 1483938,
+    "characters_kept": 3160817589,
+    "split_counts": {
+      "test": 3192,
+      "train": 1477578,
+      "val": 3168
+    }
+  },
+  "stage_b_dedup": {
+    "documents_in": 1483938,
+    "documents_out": 1455976,
+    "documents_removed": 27962,
+    "exact_duplicates": 20627,
+    "near_duplicates": 7335,
+    "characters_in": 3160817589,
+    "characters_out": 3106420328,
+    "tokens_in": 758717616,
+    "tokens_out": 745660184,
+    "token_retention": 0.9827901296204791,
+    "candidate_pairs": 4219808,
+    "verified_pairs": 250728,
+    "manual_saved_from_public": 1213,
+    "removed_by_source": {
+      "sangraha_verified": 24848,
+      "Hindustan (Live Hindustan)": 748,
+      "BBC Hindi": 416,
+      "wikipedia": 1910,
+      "Dainik Bhaskar": 19,
+      "Navbharat Times": 2,
+      "Patrika": 3,
+      "Aaj Tak": 11,
+      "ABP Live Hindi": 3,
+      "Prabhat Khabar": 2
+    },
+    "removed_by_source_type": {
+      "public": 26758,
+      "manual": 1204
+    },
+    "config": {
+      "shingle_size": 5,
+      "num_permutations": 128,
+      "bands": 16,
+      "rows_per_band": 8,
+      "lsh_threshold": 0.7071,
+      "jaccard_threshold": 0.8,
+      "recall_at_threshold": 0.947
+    }
+  },
+  "elapsed_seconds": 2489.3
+}
